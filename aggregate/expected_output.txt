@@ -35,6 +35,8 @@ Section 4.1 -- numbers quoted in the text
     Bearing3_5: V 74  H+V 100
   Mamba-3 H+V-V: SD of paired differences 6.5 pp, standard uncertainty of the mean 2.3 pp (section 3.4)
   late fusion Mamba-3 (seeds [0, 1, 2, 3, 4], weight from source hold-out, sub-models): 86.5 +- 5.1;  late - early fusion -8.1 [-12.0, -4.3] (pos/neg 0/5, n=5, exact Wilcoxon p=0.0625)
+  late fusion Mamba-3, same weight applied to full-data models: 84.9 +- 5.9
+  late fusion 1D-CNN, full-data models: 88.82 +- 0.00
   late fusion 1D-CNN: 88.59 +- 0.25 vs its V sub-model 88.61 +- 0.27 and V-only (Table 1) 88.82 +- 0.00
   condition-2 training windows OR:IR = 4624:624 = 7.4:1 (section 3.1)
 
@@ -69,6 +71,9 @@ TABLE 3 (tab:lobo) -- condition-3 LOBO, present-class recall (%), environment 2
   Mamba-3 V                        OR folds 76.0  IR folds 73.4  Mean 74.7   (n=8)
   Mamba-3 H+V (early fusion)       OR folds 34.2  IR folds 94.9  Mean 64.5   (n=8)
   Mamba-3 late fusion (seeds [0, 1, 2])  OR folds 77.1  IR folds 96.0  Mean 86.5   (weight chosen on source hold-out, applied to full-data H and V models)
+  Mamba-3 fusion_sub (hold-out sub-models)  OR folds 62.6  IR folds 97.1  Mean 79.8
+  Mamba-3 H_sub      (hold-out sub-models)  OR folds 64.2  IR folds 97.8  Mean 81.0
+  Mamba-3 V_sub      (hold-out sub-models)  OR folds 46.6  IR folds 78.6  Mean 62.6
   1D-CNN  H                        OR folds 89.4  IR folds 99.8  Mean 94.6   (n=5)
   1D-CNN  V                        OR folds 77.1  IR folds 41.2  Mean 59.1   (n=5)
   1D-CNN  H+V                      OR folds 31.6  IR folds 59.0  Mean 45.3   (n=5)

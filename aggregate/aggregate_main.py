@@ -206,8 +206,13 @@ def table1():
     rr = paired(lf, ef)
     print(f'  late fusion Mamba-3 (seeds {seeds}, weight from source hold-out, sub-models): {fmt_ms(lf)};  late - early fusion {fmt_p(rr)}')
     put('S41.latefusion_M3', mean=ms(lf)[0], sd=ms(lf)[1]); put('S41.latefusion_M3_minus_early', **rr)
+    lff = np.array([x['fusion_full']['f1'] for x in F]) * 100
+    print(f'  late fusion Mamba-3, same weight applied to full-data models: {fmt_ms(lff)}')
+    put('S41.latefusion_M3_full', mean=ms(lff)[0], sd=ms(lff)[1])
     Fc = json.load(open(R / E2 / 'late_fusion/fusion_cross_cnn1d.json'))
     lfc = np.array([x['fusion_sub']['f1'] for x in Fc]) * 100; vc = np.array([x['V_sub']['f1'] for x in Fc]) * 100
+    lfcf = np.array([x['fusion_full']['f1'] for x in Fc]) * 100
+    print(f'  late fusion 1D-CNN, full-data models: {fmt_ms(lfcf, 2)}')
     print(f'  late fusion 1D-CNN: {fmt_ms(lfc, 2)} vs its V sub-model {fmt_ms(vc, 2)} and V-only (Table 1) {fmt_ms(arr(seedvals(rows["1D-CNN"][1]["V"]))[0], 2)}')
     put('S41.latefusion_cnn', mean=ms(lfc)[0], sd=ms(lfc)[1])
     tc = json.load(open(R / E1 / 'exp_xjtu_cross_nokin_leakfree/seed_0.json'))['train_class_counts']
@@ -300,6 +305,11 @@ def table3():
     print(f'  Mamba-3 late fusion (seeds {sorted(set(x["seed"] for x in F))})  OR folds {lo_:.1f}  IR folds {li_:.1f}  Mean {(lo_ + li_) / 2:.1f}'
           '   (weight chosen on source hold-out, applied to full-data H and V models)')
     put('T3.Mamba-3.latefusion', OR=lo_, IR=li_, Mean=(lo_ + li_) / 2)
+    for key in ('fusion_sub', 'H_sub', 'V_sub'):
+        g = {f: np.mean([x[key] for x in F if x['fold'] == f]) * 100 for f in range(4)}
+        go, gi = (g[0] + g[3]) / 2, (g[1] + g[2]) / 2
+        print(f'  Mamba-3 {key:10s} (hold-out sub-models)  OR folds {go:.1f}  IR folds {gi:.1f}  Mean {(go + gi) / 2:.1f}')
+        put(f'T3.Mamba-3.{key}', OR=go, IR=gi, Mean=(go + gi) / 2)
     s5 = list(range(5))
     for a, nm in [('H', 'H'), ('V', 'V'), ('HV', 'H+V')]:
         o, i, m = summ(lobo_rec([L2 + f'lobo_cnn_{a}'], s5))

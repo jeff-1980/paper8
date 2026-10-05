@@ -1,5 +1,14 @@
 # TABLE_MAP — from every main-text number to its files
 
+> **Final MST numbering (manuscript mst-v1).** Section headings below use the working labels of the
+> aggregator. In the submitted manuscript: Table 1 = literature comparison (`tab:litcomp`, not computed),
+> Table 2 = influence quantities (`tab:influence`, not computed), **Table 3 = `tab:xc`** (below "Table 1"),
+> **Table 4 = `tab:loco`** ("Table 2"), **Table 5 = `tab:lobo`** ("Table 3"), **Table 6 = `tab:cov`**
+> ("Table 4"), **Table 7 = `tab:cwru`** ("Table 5"), Table 8 = claim boundaries (`tab:claims`).
+> Figures 1-3 keep their numbers. Use the LaTeX labels to match unambiguously.
+> Late fusion: both variants (weight from the source hold-out applied to the hold-out sub-models, or to the
+> full-data models) are printed for both designs, as reported in the manuscript.
+
 Every value below is printed by
 
 ```bash
