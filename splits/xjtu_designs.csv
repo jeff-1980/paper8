@@ -1,0 +1,204 @@
+design,env,role,bearing,class,onset_file_H,n_files,windows
+cross_condition_2to3,1 and 2,train,Bearing2_1,IR,452,491,624
+cross_condition_2to3,1 and 2,train,Bearing2_2,OR,48,161,1808
+cross_condition_2to3,1 and 2,train,Bearing2_4,OR,27,42,240
+cross_condition_2to3,1 and 2,train,Bearing2_5,OR,178,339,2576
+cross_condition_2to3,1 and 2,test,Bearing3_1,OR,2412,2538,2016
+cross_condition_2to3,1 and 2,test,Bearing3_3,IR,341,371,480
+cross_condition_2to3,1 and 2,test,Bearing3_4,IR,1436,1515,1264
+cross_condition_2to3,1 and 2,test,Bearing3_5,OR,21,114,1488
+lobo_cond3_fold0,1 and 2,train,Bearing3_3,IR,341,371,480
+lobo_cond3_fold0,1 and 2,train,Bearing3_4,IR,1436,1515,1264
+lobo_cond3_fold0,1 and 2,train,Bearing3_5,OR,21,114,1488
+lobo_cond3_fold0,1 and 2,test,Bearing3_1,OR,2412,2538,2016
+lobo_cond3_fold1,1 and 2,train,Bearing3_1,OR,2412,2538,2016
+lobo_cond3_fold1,1 and 2,train,Bearing3_4,IR,1436,1515,1264
+lobo_cond3_fold1,1 and 2,train,Bearing3_5,OR,21,114,1488
+lobo_cond3_fold1,1 and 2,test,Bearing3_3,IR,341,371,480
+lobo_cond3_fold2,1 and 2,train,Bearing3_1,OR,2412,2538,2016
+lobo_cond3_fold2,1 and 2,train,Bearing3_3,IR,341,371,480
+lobo_cond3_fold2,1 and 2,train,Bearing3_5,OR,21,114,1488
+lobo_cond3_fold2,1 and 2,test,Bearing3_4,IR,1436,1515,1264
+lobo_cond3_fold3,1 and 2,train,Bearing3_1,OR,2412,2538,2016
+lobo_cond3_fold3,1 and 2,train,Bearing3_3,IR,341,371,480
+lobo_cond3_fold3,1 and 2,train,Bearing3_4,IR,1436,1515,1264
+lobo_cond3_fold3,1 and 2,test,Bearing3_5,OR,21,114,1488
+bm3_L1,2,train,Bearing2_1,IR,452,491,624
+bm3_L1,2,train,Bearing2_2,OR,48,161,1808
+bm3_L1,2,train,Bearing2_4,OR,27,42,240
+bm3_L1,2,train,Bearing2_5,OR,178,339,2576
+bm3_L1,2,train,Bearing3_1,OR,2412,2538,2016
+bm3_L1,2,train,Bearing3_3,IR,341,371,480
+bm3_L1,2,train,Bearing3_4,IR,1436,1515,1264
+bm3_L1,2,train,Bearing3_5,OR,21,114,1488
+bm3_L1,2,test,Bearing1_1,OR,18,123,1680
+bm3_L1,2,test,Bearing1_2,OR,43,161,1888
+bm3_L1,2,test,Bearing1_3,OR,105,158,848
+bm3_L2,2,train,Bearing1_1,OR,18,123,1680
+bm3_L2,2,train,Bearing1_2,OR,43,161,1888
+bm3_L2,2,train,Bearing1_3,OR,105,158,848
+bm3_L2,2,train,Bearing3_1,OR,2412,2538,2016
+bm3_L2,2,train,Bearing3_3,IR,341,371,480
+bm3_L2,2,train,Bearing3_4,IR,1436,1515,1264
+bm3_L2,2,train,Bearing3_5,OR,21,114,1488
+bm3_L2,2,test,Bearing2_1,IR,452,491,624
+bm3_L2,2,test,Bearing2_2,OR,48,161,1808
+bm3_L2,2,test,Bearing2_4,OR,27,42,240
+bm3_L2,2,test,Bearing2_5,OR,178,339,2576
+q3_bm3_L3,2,train,Bearing1_1,OR,18,123,1680
+q3_bm3_L3,2,train,Bearing1_2,OR,43,161,1888
+q3_bm3_L3,2,train,Bearing1_3,OR,105,158,848
+q3_bm3_L3,2,train,Bearing2_1,IR,452,491,624
+q3_bm3_L3,2,train,Bearing2_2,OR,48,161,1808
+q3_bm3_L3,2,train,Bearing2_4,OR,27,42,240
+q3_bm3_L3,2,train,Bearing2_5,OR,178,339,2576
+q3_bm3_L3,2,test,Bearing3_1,OR,2412,2538,2016
+q3_bm3_L3,2,test,Bearing3_3,IR,341,371,480
+q3_bm3_L3,2,test,Bearing3_4,IR,1436,1515,1264
+q3_bm3_L3,2,test,Bearing3_5,OR,21,114,1488
+bm3_COV1,2,train,Bearing2_1,IR,452,491,624
+bm3_COV1,2,train,Bearing3_3,IR,341,371,480
+bm3_COV1,2,train,Bearing3_4,IR,1436,1515,1264
+bm3_COV1,2,train,Bearing3_5,OR,21,114,1488
+bm3_COV1,2,test,Bearing3_1,OR,2412,2538,2016
+bm3_COV2,2,train,Bearing2_1,IR,452,491,624
+bm3_COV2,2,train,Bearing3_3,IR,341,371,480
+bm3_COV2,2,train,Bearing3_4,IR,1436,1515,1264
+bm3_COV2,2,train,Bearing3_5,OR,21,114,1488
+bm3_COV2,2,train,Bearing2_2,OR,48,161,1808
+bm3_COV2,2,test,Bearing3_1,OR,2412,2538,2016
+bm3_COV4,2,train,Bearing2_1,IR,452,491,624
+bm3_COV4,2,train,Bearing3_3,IR,341,371,480
+bm3_COV4,2,train,Bearing3_4,IR,1436,1515,1264
+bm3_COV4,2,train,Bearing3_5,OR,21,114,1488
+bm3_COV4,2,train,Bearing2_2,OR,48,161,1808
+bm3_COV4,2,train,Bearing2_4,OR,27,42,240
+bm3_COV4,2,train,Bearing2_5,OR,178,339,2576
+bm3_COV4,2,test,Bearing3_1,OR,2412,2538,2016
+bm3_COV7,2,train,Bearing2_1,IR,452,491,624
+bm3_COV7,2,train,Bearing3_3,IR,341,371,480
+bm3_COV7,2,train,Bearing3_4,IR,1436,1515,1264
+bm3_COV7,2,train,Bearing3_5,OR,21,114,1488
+bm3_COV7,2,train,Bearing2_2,OR,48,161,1808
+bm3_COV7,2,train,Bearing2_4,OR,27,42,240
+bm3_COV7,2,train,Bearing2_5,OR,178,339,2576
+bm3_COV7,2,train,Bearing1_1,OR,18,123,1680
+bm3_COV7,2,train,Bearing1_2,OR,43,161,1888
+bm3_COV7,2,train,Bearing1_3,OR,105,158,848
+bm3_COV7,2,test,Bearing3_1,OR,2412,2538,2016
+q2_T1_1_OTHER_k1,2,train,Bearing2_1,IR,452,491,624
+q2_T1_1_OTHER_k1,2,train,Bearing3_3,IR,341,371,480
+q2_T1_1_OTHER_k1,2,train,Bearing3_4,IR,1436,1515,1264
+q2_T1_1_OTHER_k1,2,train,Bearing3_1,OR,2412,2538,2016
+q2_T1_1_OTHER_k1,2,test,Bearing1_1,OR,18,123,1680
+q2_T1_1_OTHER_k2,2,train,Bearing2_1,IR,452,491,624
+q2_T1_1_OTHER_k2,2,train,Bearing3_3,IR,341,371,480
+q2_T1_1_OTHER_k2,2,train,Bearing3_4,IR,1436,1515,1264
+q2_T1_1_OTHER_k2,2,train,Bearing3_1,OR,2412,2538,2016
+q2_T1_1_OTHER_k2,2,train,Bearing3_5,OR,21,114,1488
+q2_T1_1_OTHER_k2,2,test,Bearing1_1,OR,18,123,1680
+q2_T1_1_OTHER_k3,2,train,Bearing2_1,IR,452,491,624
+q2_T1_1_OTHER_k3,2,train,Bearing3_3,IR,341,371,480
+q2_T1_1_OTHER_k3,2,train,Bearing3_4,IR,1436,1515,1264
+q2_T1_1_OTHER_k3,2,train,Bearing3_1,OR,2412,2538,2016
+q2_T1_1_OTHER_k3,2,train,Bearing3_5,OR,21,114,1488
+q2_T1_1_OTHER_k3,2,train,Bearing2_2,OR,48,161,1808
+q2_T1_1_OTHER_k3,2,test,Bearing1_1,OR,18,123,1680
+q2_T1_1_SAME_k1,2,train,Bearing2_1,IR,452,491,624
+q2_T1_1_SAME_k1,2,train,Bearing3_3,IR,341,371,480
+q2_T1_1_SAME_k1,2,train,Bearing3_4,IR,1436,1515,1264
+q2_T1_1_SAME_k1,2,train,Bearing1_2,OR,43,161,1888
+q2_T1_1_SAME_k1,2,test,Bearing1_1,OR,18,123,1680
+q2_T1_1_SAME_k2,2,train,Bearing2_1,IR,452,491,624
+q2_T1_1_SAME_k2,2,train,Bearing3_3,IR,341,371,480
+q2_T1_1_SAME_k2,2,train,Bearing3_4,IR,1436,1515,1264
+q2_T1_1_SAME_k2,2,train,Bearing1_2,OR,43,161,1888
+q2_T1_1_SAME_k2,2,train,Bearing1_3,OR,105,158,848
+q2_T1_1_SAME_k2,2,test,Bearing1_1,OR,18,123,1680
+q2_T1_1_SAME_k3,2,train,Bearing2_1,IR,452,491,624
+q2_T1_1_SAME_k3,2,train,Bearing3_3,IR,341,371,480
+q2_T1_1_SAME_k3,2,train,Bearing3_4,IR,1436,1515,1264
+q2_T1_1_SAME_k3,2,train,Bearing1_2,OR,43,161,1888
+q2_T1_1_SAME_k3,2,train,Bearing1_3,OR,105,158,848
+q2_T1_1_SAME_k3,2,train,Bearing3_1,OR,2412,2538,2016
+q2_T1_1_SAME_k3,2,test,Bearing1_1,OR,18,123,1680
+q2_T2_2_OTHER_k1,2,train,Bearing2_1,IR,452,491,624
+q2_T2_2_OTHER_k1,2,train,Bearing3_3,IR,341,371,480
+q2_T2_2_OTHER_k1,2,train,Bearing3_4,IR,1436,1515,1264
+q2_T2_2_OTHER_k1,2,train,Bearing3_1,OR,2412,2538,2016
+q2_T2_2_OTHER_k1,2,test,Bearing2_2,OR,48,161,1808
+q2_T2_2_OTHER_k2,2,train,Bearing2_1,IR,452,491,624
+q2_T2_2_OTHER_k2,2,train,Bearing3_3,IR,341,371,480
+q2_T2_2_OTHER_k2,2,train,Bearing3_4,IR,1436,1515,1264
+q2_T2_2_OTHER_k2,2,train,Bearing3_1,OR,2412,2538,2016
+q2_T2_2_OTHER_k2,2,train,Bearing3_5,OR,21,114,1488
+q2_T2_2_OTHER_k2,2,test,Bearing2_2,OR,48,161,1808
+q2_T2_2_OTHER_k3,2,train,Bearing2_1,IR,452,491,624
+q2_T2_2_OTHER_k3,2,train,Bearing3_3,IR,341,371,480
+q2_T2_2_OTHER_k3,2,train,Bearing3_4,IR,1436,1515,1264
+q2_T2_2_OTHER_k3,2,train,Bearing3_1,OR,2412,2538,2016
+q2_T2_2_OTHER_k3,2,train,Bearing3_5,OR,21,114,1488
+q2_T2_2_OTHER_k3,2,train,Bearing1_1,OR,18,123,1680
+q2_T2_2_OTHER_k3,2,test,Bearing2_2,OR,48,161,1808
+q2_T2_2_SAME_k1,2,train,Bearing2_1,IR,452,491,624
+q2_T2_2_SAME_k1,2,train,Bearing3_3,IR,341,371,480
+q2_T2_2_SAME_k1,2,train,Bearing3_4,IR,1436,1515,1264
+q2_T2_2_SAME_k1,2,train,Bearing2_4,OR,27,42,240
+q2_T2_2_SAME_k1,2,test,Bearing2_2,OR,48,161,1808
+q2_T2_2_SAME_k2,2,train,Bearing2_1,IR,452,491,624
+q2_T2_2_SAME_k2,2,train,Bearing3_3,IR,341,371,480
+q2_T2_2_SAME_k2,2,train,Bearing3_4,IR,1436,1515,1264
+q2_T2_2_SAME_k2,2,train,Bearing2_4,OR,27,42,240
+q2_T2_2_SAME_k2,2,train,Bearing2_5,OR,178,339,2576
+q2_T2_2_SAME_k2,2,test,Bearing2_2,OR,48,161,1808
+q2_T2_2_SAME_k3,2,train,Bearing2_1,IR,452,491,624
+q2_T2_2_SAME_k3,2,train,Bearing3_3,IR,341,371,480
+q2_T2_2_SAME_k3,2,train,Bearing3_4,IR,1436,1515,1264
+q2_T2_2_SAME_k3,2,train,Bearing2_4,OR,27,42,240
+q2_T2_2_SAME_k3,2,train,Bearing2_5,OR,178,339,2576
+q2_T2_2_SAME_k3,2,train,Bearing3_5,OR,21,114,1488
+q2_T2_2_SAME_k3,2,test,Bearing2_2,OR,48,161,1808
+q2_T3_1_OTHER_k1,2,train,Bearing2_1,IR,452,491,624
+q2_T3_1_OTHER_k1,2,train,Bearing3_3,IR,341,371,480
+q2_T3_1_OTHER_k1,2,train,Bearing3_4,IR,1436,1515,1264
+q2_T3_1_OTHER_k1,2,train,Bearing2_2,OR,48,161,1808
+q2_T3_1_OTHER_k1,2,test,Bearing3_1,OR,2412,2538,2016
+q2_T3_1_OTHER_k2,2,train,Bearing2_1,IR,452,491,624
+q2_T3_1_OTHER_k2,2,train,Bearing3_3,IR,341,371,480
+q2_T3_1_OTHER_k2,2,train,Bearing3_4,IR,1436,1515,1264
+q2_T3_1_OTHER_k2,2,train,Bearing2_2,OR,48,161,1808
+q2_T3_1_OTHER_k2,2,train,Bearing2_4,OR,27,42,240
+q2_T3_1_OTHER_k2,2,test,Bearing3_1,OR,2412,2538,2016
+q2_T3_1_OTHER_k3,2,train,Bearing2_1,IR,452,491,624
+q2_T3_1_OTHER_k3,2,train,Bearing3_3,IR,341,371,480
+q2_T3_1_OTHER_k3,2,train,Bearing3_4,IR,1436,1515,1264
+q2_T3_1_OTHER_k3,2,train,Bearing2_2,OR,48,161,1808
+q2_T3_1_OTHER_k3,2,train,Bearing2_4,OR,27,42,240
+q2_T3_1_OTHER_k3,2,train,Bearing2_5,OR,178,339,2576
+q2_T3_1_OTHER_k3,2,test,Bearing3_1,OR,2412,2538,2016
+q2_T3_1_SAME_k3,2,train,Bearing2_1,IR,452,491,624
+q2_T3_1_SAME_k3,2,train,Bearing3_3,IR,341,371,480
+q2_T3_1_SAME_k3,2,train,Bearing3_4,IR,1436,1515,1264
+q2_T3_1_SAME_k3,2,train,Bearing3_5,OR,21,114,1488
+q2_T3_1_SAME_k3,2,train,Bearing2_2,OR,48,161,1808
+q2_T3_1_SAME_k3,2,train,Bearing2_4,OR,27,42,240
+q2_T3_1_SAME_k3,2,test,Bearing3_1,OR,2412,2538,2016
+ir_coverage_p14_k1_c0_Bearing3_3,1,train,Bearing3_3,IR,341,371,480
+ir_coverage_p14_k1_c0_Bearing3_3,1,test,Bearing3_1,OR,2412,2538,2016
+ir_coverage_p14_k1_c1_Bearing3_4,1,train,Bearing3_4,IR,1436,1515,1264
+ir_coverage_p14_k1_c1_Bearing3_4,1,test,Bearing3_1,OR,2412,2538,2016
+ir_coverage_p14_k1_c2_Bearing3_5,1,train,Bearing3_5,OR,21,114,1488
+ir_coverage_p14_k1_c2_Bearing3_5,1,test,Bearing3_1,OR,2412,2538,2016
+ir_coverage_p14_k2_c0_Bearing3_3-Bearing3_4,1,train,Bearing3_3,IR,341,371,480
+ir_coverage_p14_k2_c0_Bearing3_3-Bearing3_4,1,train,Bearing3_4,IR,1436,1515,1264
+ir_coverage_p14_k2_c0_Bearing3_3-Bearing3_4,1,test,Bearing3_1,OR,2412,2538,2016
+ir_coverage_p14_k2_c1_Bearing3_3-Bearing3_5,1,train,Bearing3_3,IR,341,371,480
+ir_coverage_p14_k2_c1_Bearing3_3-Bearing3_5,1,train,Bearing3_5,OR,21,114,1488
+ir_coverage_p14_k2_c1_Bearing3_3-Bearing3_5,1,test,Bearing3_1,OR,2412,2538,2016
+ir_coverage_p14_k2_c2_Bearing3_4-Bearing3_5,1,train,Bearing3_4,IR,1436,1515,1264
+ir_coverage_p14_k2_c2_Bearing3_4-Bearing3_5,1,train,Bearing3_5,OR,21,114,1488
+ir_coverage_p14_k2_c2_Bearing3_4-Bearing3_5,1,test,Bearing3_1,OR,2412,2538,2016
+ir_coverage_p14_k3_c0_Bearing3_3-Bearing3_4-Bearing3_5,1,train,Bearing3_3,IR,341,371,480
+ir_coverage_p14_k3_c0_Bearing3_3-Bearing3_4-Bearing3_5,1,train,Bearing3_4,IR,1436,1515,1264
+ir_coverage_p14_k3_c0_Bearing3_3-Bearing3_4-Bearing3_5,1,train,Bearing3_5,OR,21,114,1488
+ir_coverage_p14_k3_c0_Bearing3_3-Bearing3_4-Bearing3_5,1,test,Bearing3_1,OR,2412,2538,2016

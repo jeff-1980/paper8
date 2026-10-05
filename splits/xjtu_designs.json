@@ -1,0 +1,2116 @@
+[
+ {
+  "design": "cross_condition_2to3",
+  "env": "1 and 2",
+  "train": [
+   "Bearing2_1",
+   "Bearing2_2",
+   "Bearing2_4",
+   "Bearing2_5"
+  ],
+  "test": [
+   "Bearing3_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_5"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   },
+   {
+    "bearing": "Bearing2_4",
+    "cls": "OR",
+    "onset_file_H": 27,
+    "n_files": 42,
+    "windows": 240
+   },
+   {
+    "bearing": "Bearing2_5",
+    "cls": "OR",
+    "onset_file_H": 178,
+    "n_files": 339,
+    "windows": 2576
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   }
+  ],
+  "n_train_windows": 5248,
+  "n_test_windows": 5248
+ },
+ {
+  "design": "lobo_cond3_fold0",
+  "env": "1 and 2",
+  "train": [
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_5"
+  ],
+  "test": [
+   "Bearing3_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "n_train_windows": 3232,
+  "n_test_windows": 2016
+ },
+ {
+  "design": "lobo_cond3_fold1",
+  "env": "1 and 2",
+  "train": [
+   "Bearing3_1",
+   "Bearing3_4",
+   "Bearing3_5"
+  ],
+  "test": [
+   "Bearing3_3"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   }
+  ],
+  "n_train_windows": 4768,
+  "n_test_windows": 480
+ },
+ {
+  "design": "lobo_cond3_fold2",
+  "env": "1 and 2",
+  "train": [
+   "Bearing3_1",
+   "Bearing3_3",
+   "Bearing3_5"
+  ],
+  "test": [
+   "Bearing3_4"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   }
+  ],
+  "n_train_windows": 3984,
+  "n_test_windows": 1264
+ },
+ {
+  "design": "lobo_cond3_fold3",
+  "env": "1 and 2",
+  "train": [
+   "Bearing3_1",
+   "Bearing3_3",
+   "Bearing3_4"
+  ],
+  "test": [
+   "Bearing3_5"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   }
+  ],
+  "n_train_windows": 3760,
+  "n_test_windows": 1488
+ },
+ {
+  "design": "bm3_L1",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing2_2",
+   "Bearing2_4",
+   "Bearing2_5",
+   "Bearing3_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_5"
+  ],
+  "test": [
+   "Bearing1_1",
+   "Bearing1_2",
+   "Bearing1_3"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   },
+   {
+    "bearing": "Bearing2_4",
+    "cls": "OR",
+    "onset_file_H": 27,
+    "n_files": 42,
+    "windows": 240
+   },
+   {
+    "bearing": "Bearing2_5",
+    "cls": "OR",
+    "onset_file_H": 178,
+    "n_files": 339,
+    "windows": 2576
+   },
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing1_1",
+    "cls": "OR",
+    "onset_file_H": 18,
+    "n_files": 123,
+    "windows": 1680
+   },
+   {
+    "bearing": "Bearing1_2",
+    "cls": "OR",
+    "onset_file_H": 43,
+    "n_files": 161,
+    "windows": 1888
+   },
+   {
+    "bearing": "Bearing1_3",
+    "cls": "OR",
+    "onset_file_H": 105,
+    "n_files": 158,
+    "windows": 848
+   }
+  ],
+  "n_train_windows": 10496,
+  "n_test_windows": 4416
+ },
+ {
+  "design": "bm3_L2",
+  "env": "2",
+  "train": [
+   "Bearing1_1",
+   "Bearing1_2",
+   "Bearing1_3",
+   "Bearing3_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_5"
+  ],
+  "test": [
+   "Bearing2_1",
+   "Bearing2_2",
+   "Bearing2_4",
+   "Bearing2_5"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing1_1",
+    "cls": "OR",
+    "onset_file_H": 18,
+    "n_files": 123,
+    "windows": 1680
+   },
+   {
+    "bearing": "Bearing1_2",
+    "cls": "OR",
+    "onset_file_H": 43,
+    "n_files": 161,
+    "windows": 1888
+   },
+   {
+    "bearing": "Bearing1_3",
+    "cls": "OR",
+    "onset_file_H": 105,
+    "n_files": 158,
+    "windows": 848
+   },
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   },
+   {
+    "bearing": "Bearing2_4",
+    "cls": "OR",
+    "onset_file_H": 27,
+    "n_files": 42,
+    "windows": 240
+   },
+   {
+    "bearing": "Bearing2_5",
+    "cls": "OR",
+    "onset_file_H": 178,
+    "n_files": 339,
+    "windows": 2576
+   }
+  ],
+  "n_train_windows": 9664,
+  "n_test_windows": 5248
+ },
+ {
+  "design": "q3_bm3_L3",
+  "env": "2",
+  "train": [
+   "Bearing1_1",
+   "Bearing1_2",
+   "Bearing1_3",
+   "Bearing2_1",
+   "Bearing2_2",
+   "Bearing2_4",
+   "Bearing2_5"
+  ],
+  "test": [
+   "Bearing3_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_5"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing1_1",
+    "cls": "OR",
+    "onset_file_H": 18,
+    "n_files": 123,
+    "windows": 1680
+   },
+   {
+    "bearing": "Bearing1_2",
+    "cls": "OR",
+    "onset_file_H": 43,
+    "n_files": 161,
+    "windows": 1888
+   },
+   {
+    "bearing": "Bearing1_3",
+    "cls": "OR",
+    "onset_file_H": 105,
+    "n_files": 158,
+    "windows": 848
+   },
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   },
+   {
+    "bearing": "Bearing2_4",
+    "cls": "OR",
+    "onset_file_H": 27,
+    "n_files": 42,
+    "windows": 240
+   },
+   {
+    "bearing": "Bearing2_5",
+    "cls": "OR",
+    "onset_file_H": 178,
+    "n_files": 339,
+    "windows": 2576
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   }
+  ],
+  "n_train_windows": 9664,
+  "n_test_windows": 5248
+ },
+ {
+  "design": "bm3_COV1",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_5"
+  ],
+  "test": [
+   "Bearing3_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "n_train_windows": 3856,
+  "n_test_windows": 2016
+ },
+ {
+  "design": "bm3_COV2",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_5",
+   "Bearing2_2"
+  ],
+  "test": [
+   "Bearing3_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   },
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "n_train_windows": 5664,
+  "n_test_windows": 2016
+ },
+ {
+  "design": "bm3_COV4",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_5",
+   "Bearing2_2",
+   "Bearing2_4",
+   "Bearing2_5"
+  ],
+  "test": [
+   "Bearing3_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   },
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   },
+   {
+    "bearing": "Bearing2_4",
+    "cls": "OR",
+    "onset_file_H": 27,
+    "n_files": 42,
+    "windows": 240
+   },
+   {
+    "bearing": "Bearing2_5",
+    "cls": "OR",
+    "onset_file_H": 178,
+    "n_files": 339,
+    "windows": 2576
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "n_train_windows": 8480,
+  "n_test_windows": 2016
+ },
+ {
+  "design": "bm3_COV7",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_5",
+   "Bearing2_2",
+   "Bearing2_4",
+   "Bearing2_5",
+   "Bearing1_1",
+   "Bearing1_2",
+   "Bearing1_3"
+  ],
+  "test": [
+   "Bearing3_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   },
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   },
+   {
+    "bearing": "Bearing2_4",
+    "cls": "OR",
+    "onset_file_H": 27,
+    "n_files": 42,
+    "windows": 240
+   },
+   {
+    "bearing": "Bearing2_5",
+    "cls": "OR",
+    "onset_file_H": 178,
+    "n_files": 339,
+    "windows": 2576
+   },
+   {
+    "bearing": "Bearing1_1",
+    "cls": "OR",
+    "onset_file_H": 18,
+    "n_files": 123,
+    "windows": 1680
+   },
+   {
+    "bearing": "Bearing1_2",
+    "cls": "OR",
+    "onset_file_H": 43,
+    "n_files": 161,
+    "windows": 1888
+   },
+   {
+    "bearing": "Bearing1_3",
+    "cls": "OR",
+    "onset_file_H": 105,
+    "n_files": 158,
+    "windows": 848
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "n_train_windows": 12896,
+  "n_test_windows": 2016
+ },
+ {
+  "design": "q2_T1_1_OTHER_k1",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_1"
+  ],
+  "test": [
+   "Bearing1_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing1_1",
+    "cls": "OR",
+    "onset_file_H": 18,
+    "n_files": 123,
+    "windows": 1680
+   }
+  ],
+  "n_train_windows": 4384,
+  "n_test_windows": 1680
+ },
+ {
+  "design": "q2_T1_1_OTHER_k2",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_1",
+   "Bearing3_5"
+  ],
+  "test": [
+   "Bearing1_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing1_1",
+    "cls": "OR",
+    "onset_file_H": 18,
+    "n_files": 123,
+    "windows": 1680
+   }
+  ],
+  "n_train_windows": 5872,
+  "n_test_windows": 1680
+ },
+ {
+  "design": "q2_T1_1_OTHER_k3",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_1",
+   "Bearing3_5",
+   "Bearing2_2"
+  ],
+  "test": [
+   "Bearing1_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   },
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing1_1",
+    "cls": "OR",
+    "onset_file_H": 18,
+    "n_files": 123,
+    "windows": 1680
+   }
+  ],
+  "n_train_windows": 7680,
+  "n_test_windows": 1680
+ },
+ {
+  "design": "q2_T1_1_SAME_k1",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing1_2"
+  ],
+  "test": [
+   "Bearing1_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing1_2",
+    "cls": "OR",
+    "onset_file_H": 43,
+    "n_files": 161,
+    "windows": 1888
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing1_1",
+    "cls": "OR",
+    "onset_file_H": 18,
+    "n_files": 123,
+    "windows": 1680
+   }
+  ],
+  "n_train_windows": 4256,
+  "n_test_windows": 1680
+ },
+ {
+  "design": "q2_T1_1_SAME_k2",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing1_2",
+   "Bearing1_3"
+  ],
+  "test": [
+   "Bearing1_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing1_2",
+    "cls": "OR",
+    "onset_file_H": 43,
+    "n_files": 161,
+    "windows": 1888
+   },
+   {
+    "bearing": "Bearing1_3",
+    "cls": "OR",
+    "onset_file_H": 105,
+    "n_files": 158,
+    "windows": 848
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing1_1",
+    "cls": "OR",
+    "onset_file_H": 18,
+    "n_files": 123,
+    "windows": 1680
+   }
+  ],
+  "n_train_windows": 5104,
+  "n_test_windows": 1680
+ },
+ {
+  "design": "q2_T1_1_SAME_k3",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing1_2",
+   "Bearing1_3",
+   "Bearing3_1"
+  ],
+  "test": [
+   "Bearing1_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing1_2",
+    "cls": "OR",
+    "onset_file_H": 43,
+    "n_files": 161,
+    "windows": 1888
+   },
+   {
+    "bearing": "Bearing1_3",
+    "cls": "OR",
+    "onset_file_H": 105,
+    "n_files": 158,
+    "windows": 848
+   },
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing1_1",
+    "cls": "OR",
+    "onset_file_H": 18,
+    "n_files": 123,
+    "windows": 1680
+   }
+  ],
+  "n_train_windows": 7120,
+  "n_test_windows": 1680
+ },
+ {
+  "design": "q2_T2_2_OTHER_k1",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_1"
+  ],
+  "test": [
+   "Bearing2_2"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   }
+  ],
+  "n_train_windows": 4384,
+  "n_test_windows": 1808
+ },
+ {
+  "design": "q2_T2_2_OTHER_k2",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_1",
+   "Bearing3_5"
+  ],
+  "test": [
+   "Bearing2_2"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   }
+  ],
+  "n_train_windows": 5872,
+  "n_test_windows": 1808
+ },
+ {
+  "design": "q2_T2_2_OTHER_k3",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_1",
+   "Bearing3_5",
+   "Bearing1_1"
+  ],
+  "test": [
+   "Bearing2_2"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   },
+   {
+    "bearing": "Bearing1_1",
+    "cls": "OR",
+    "onset_file_H": 18,
+    "n_files": 123,
+    "windows": 1680
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   }
+  ],
+  "n_train_windows": 7552,
+  "n_test_windows": 1808
+ },
+ {
+  "design": "q2_T2_2_SAME_k1",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing2_4"
+  ],
+  "test": [
+   "Bearing2_2"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing2_4",
+    "cls": "OR",
+    "onset_file_H": 27,
+    "n_files": 42,
+    "windows": 240
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   }
+  ],
+  "n_train_windows": 2608,
+  "n_test_windows": 1808
+ },
+ {
+  "design": "q2_T2_2_SAME_k2",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing2_4",
+   "Bearing2_5"
+  ],
+  "test": [
+   "Bearing2_2"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing2_4",
+    "cls": "OR",
+    "onset_file_H": 27,
+    "n_files": 42,
+    "windows": 240
+   },
+   {
+    "bearing": "Bearing2_5",
+    "cls": "OR",
+    "onset_file_H": 178,
+    "n_files": 339,
+    "windows": 2576
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   }
+  ],
+  "n_train_windows": 5184,
+  "n_test_windows": 1808
+ },
+ {
+  "design": "q2_T2_2_SAME_k3",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing2_4",
+   "Bearing2_5",
+   "Bearing3_5"
+  ],
+  "test": [
+   "Bearing2_2"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing2_4",
+    "cls": "OR",
+    "onset_file_H": 27,
+    "n_files": 42,
+    "windows": 240
+   },
+   {
+    "bearing": "Bearing2_5",
+    "cls": "OR",
+    "onset_file_H": 178,
+    "n_files": 339,
+    "windows": 2576
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   }
+  ],
+  "n_train_windows": 6672,
+  "n_test_windows": 1808
+ },
+ {
+  "design": "q2_T3_1_OTHER_k1",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing2_2"
+  ],
+  "test": [
+   "Bearing3_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "n_train_windows": 4176,
+  "n_test_windows": 2016
+ },
+ {
+  "design": "q2_T3_1_OTHER_k2",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing2_2",
+   "Bearing2_4"
+  ],
+  "test": [
+   "Bearing3_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   },
+   {
+    "bearing": "Bearing2_4",
+    "cls": "OR",
+    "onset_file_H": 27,
+    "n_files": 42,
+    "windows": 240
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "n_train_windows": 4416,
+  "n_test_windows": 2016
+ },
+ {
+  "design": "q2_T3_1_OTHER_k3",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing2_2",
+   "Bearing2_4",
+   "Bearing2_5"
+  ],
+  "test": [
+   "Bearing3_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   },
+   {
+    "bearing": "Bearing2_4",
+    "cls": "OR",
+    "onset_file_H": 27,
+    "n_files": 42,
+    "windows": 240
+   },
+   {
+    "bearing": "Bearing2_5",
+    "cls": "OR",
+    "onset_file_H": 178,
+    "n_files": 339,
+    "windows": 2576
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "n_train_windows": 6992,
+  "n_test_windows": 2016
+ },
+ {
+  "design": "q2_T3_1_SAME_k3",
+  "env": "2",
+  "train": [
+   "Bearing2_1",
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_5",
+   "Bearing2_2",
+   "Bearing2_4"
+  ],
+  "test": [
+   "Bearing3_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing2_1",
+    "cls": "IR",
+    "onset_file_H": 452,
+    "n_files": 491,
+    "windows": 624
+   },
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   },
+   {
+    "bearing": "Bearing2_2",
+    "cls": "OR",
+    "onset_file_H": 48,
+    "n_files": 161,
+    "windows": 1808
+   },
+   {
+    "bearing": "Bearing2_4",
+    "cls": "OR",
+    "onset_file_H": 27,
+    "n_files": 42,
+    "windows": 240
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "n_train_windows": 5904,
+  "n_test_windows": 2016
+ },
+ {
+  "design": "ir_coverage_p14_k1_c0_Bearing3_3",
+  "env": "1",
+  "train": [
+   "Bearing3_3"
+  ],
+  "test": [
+   "Bearing3_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "n_train_windows": 480,
+  "n_test_windows": 2016
+ },
+ {
+  "design": "ir_coverage_p14_k1_c1_Bearing3_4",
+  "env": "1",
+  "train": [
+   "Bearing3_4"
+  ],
+  "test": [
+   "Bearing3_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "n_train_windows": 1264,
+  "n_test_windows": 2016
+ },
+ {
+  "design": "ir_coverage_p14_k1_c2_Bearing3_5",
+  "env": "1",
+  "train": [
+   "Bearing3_5"
+  ],
+  "test": [
+   "Bearing3_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "n_train_windows": 1488,
+  "n_test_windows": 2016
+ },
+ {
+  "design": "ir_coverage_p14_k2_c0_Bearing3_3-Bearing3_4",
+  "env": "1",
+  "train": [
+   "Bearing3_3",
+   "Bearing3_4"
+  ],
+  "test": [
+   "Bearing3_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "n_train_windows": 1744,
+  "n_test_windows": 2016
+ },
+ {
+  "design": "ir_coverage_p14_k2_c1_Bearing3_3-Bearing3_5",
+  "env": "1",
+  "train": [
+   "Bearing3_3",
+   "Bearing3_5"
+  ],
+  "test": [
+   "Bearing3_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "n_train_windows": 1968,
+  "n_test_windows": 2016
+ },
+ {
+  "design": "ir_coverage_p14_k2_c2_Bearing3_4-Bearing3_5",
+  "env": "1",
+  "train": [
+   "Bearing3_4",
+   "Bearing3_5"
+  ],
+  "test": [
+   "Bearing3_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "n_train_windows": 2752,
+  "n_test_windows": 2016
+ },
+ {
+  "design": "ir_coverage_p14_k3_c0_Bearing3_3-Bearing3_4-Bearing3_5",
+  "env": "1",
+  "train": [
+   "Bearing3_3",
+   "Bearing3_4",
+   "Bearing3_5"
+  ],
+  "test": [
+   "Bearing3_1"
+  ],
+  "train_info": [
+   {
+    "bearing": "Bearing3_3",
+    "cls": "IR",
+    "onset_file_H": 341,
+    "n_files": 371,
+    "windows": 480
+   },
+   {
+    "bearing": "Bearing3_4",
+    "cls": "IR",
+    "onset_file_H": 1436,
+    "n_files": 1515,
+    "windows": 1264
+   },
+   {
+    "bearing": "Bearing3_5",
+    "cls": "OR",
+    "onset_file_H": 21,
+    "n_files": 114,
+    "windows": 1488
+   }
+  ],
+  "test_info": [
+   {
+    "bearing": "Bearing3_1",
+    "cls": "OR",
+    "onset_file_H": 2412,
+    "n_files": 2538,
+    "windows": 2016
+   }
+  ],
+  "n_train_windows": 3232,
+  "n_test_windows": 2016
+ }
+]

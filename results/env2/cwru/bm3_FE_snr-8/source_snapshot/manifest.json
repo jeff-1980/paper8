@@ -1,0 +1,26 @@
+[
+  {
+    "original_path": "scripts/cwru/train_leakfree.py",
+    "snapshot_path": "results/bm3_FE_snr-8/source_snapshot/train_leakfree.py",
+    "md5": "04429db8c2c925bd616895e47ff58059",
+    "mtime_utc": 1790693708.0
+  },
+  {
+    "original_path": "bearmamba3/data_cwru_leakfree.py",
+    "snapshot_path": "results/bm3_FE_snr-8/source_snapshot/data_cwru_leakfree.py",
+    "md5": "144b6835278dea67aff7343aa42b360f",
+    "mtime_utc": 1790693436.0
+  },
+  {
+    "original_path": "bearmamba3/data_cwru.py",
+    "snapshot_path": "results/bm3_FE_snr-8/source_snapshot/data_cwru.py",
+    "md5": "133dae6893b4a858757b918591dfc112",
+    "mtime_utc": 1790693436.0
+  },
+  {
+    "original_path": "<ENV2_WORKDIR>/code/cfg/cwru_fe/bm3_FE_snr-8.yaml",
+    "snapshot_path": "results/bm3_FE_snr-8/source_snapshot/bm3_FE_snr-8.yaml",
+    "md5": "6f8ca0c8500df7019036f74eaa94c57c",
+    "mtime_utc": 1790694391.8381166
+  }
+]

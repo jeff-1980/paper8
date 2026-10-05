@@ -1,0 +1,27 @@
+{
+  "seed": 0,
+  "best_val_acc": 0.5195121951219512,
+  "best_val_epoch": 2,
+  "test_acc_at_best_val": 0.553030303030303,
+  "final_val_acc": 0.5195121951219512,
+  "n_train": 4104,
+  "n_val": 820,
+  "n_test": 660,
+  "elapsed_s": 32.3877899646759,
+  "history": [
+    {
+      "epoch": 1,
+      "l_ce": 1.3895992636680603,
+      "l_kin": 0.2004842609167099,
+      "val_acc": 0.5048780487804878
+    },
+    {
+      "epoch": 2,
+      "l_ce": 1.3661871552467346,
+      "l_kin": 0.2050805240869522,
+      "val_acc": 0.5195121951219512
+    }
+  ],
+  "checkpoint_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_e6_single_kin_snrm4_newseed_leakfree/checkpoints/seed0",
+  "n_checkpoints_saved": 2
+}

@@ -1,0 +1,41 @@
+{
+  "config": "exp03_10class_snr0_nokin.yaml",
+  "backbone": "mamba3",
+  "lambda_kin": 0.0,
+  "noise_snr_db": 0.0,
+  "noise_type": "awgn",
+  "label_mode": "10class",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "test_accs_at_best_val": [
+    0.9848484848484849,
+    0.9742424242424242,
+    0.9833333333333333,
+    0.9772727272727273,
+    0.9742424242424242
+  ],
+  "mean_test_acc": 0.9787878787878789,
+  "std_test_acc": 0.005025189076296051,
+  "best_val_accs": [
+    0.9926829268292683,
+    0.9865853658536585,
+    0.9878048780487805,
+    0.9878048780487805,
+    0.9890243902439024
+  ],
+  "protocol": "leakfree_v2 (train/val/test time-axis split, guard-gapped, per-file; per-epoch checkpoints + source snapshot, see checkpoints/ and source_snapshot/)",
+  "disjointness_pass": true,
+  "disjointness_check_file": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp03_10class_snr0_nokin/disjointness_check.json",
+  "source_snapshot_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp03_10class_snr0_nokin/source_snapshot",
+  "source_snapshot_files": [
+    "<REPO_ROOT>/experiments/exp01_cwru_baseline/train_leakfree.py",
+    "<REPO_ROOT>/bearmamba3/data_cwru_leakfree.py",
+    "<REPO_ROOT>/bearmamba3/data_cwru.py",
+    "<REPO_ROOT>/experiments/exp_bm3_cwru_leakfree/configs/exp03_10class_snr0_nokin.yaml"
+  ]
+}

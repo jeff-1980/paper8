@@ -1,0 +1,90 @@
+{
+ "test_bearings": [
+  "Bearing1_1",
+  "Bearing1_2",
+  "Bearing1_3"
+ ],
+ "seeds": {
+  "0": {
+   "per_bearing": {
+    "Bearing1_1": {
+     "label": "OR",
+     "n": 1680,
+     "acc": 0.9976190476190476
+    },
+    "Bearing1_2": {
+     "label": "OR",
+     "n": 1888,
+     "acc": 0.9729872881355932
+    },
+    "Bearing1_3": {
+     "label": "OR",
+     "n": 848,
+     "acc": 1.0
+    }
+   },
+   "recall_recomputed": [
+    0.9875452898550725,
+    NaN
+   ],
+   "recall_recorded": [
+    0.9875452898550725,
+    0.0
+   ]
+  },
+  "1": {
+   "per_bearing": {
+    "Bearing1_1": {
+     "label": "OR",
+     "n": 1680,
+     "acc": 0.9898809523809524
+    },
+    "Bearing1_2": {
+     "label": "OR",
+     "n": 1888,
+     "acc": 0.9751059322033898
+    },
+    "Bearing1_3": {
+     "label": "OR",
+     "n": 848,
+     "acc": 1.0
+    }
+   },
+   "recall_recomputed": [
+    0.9855072463768116,
+    NaN
+   ],
+   "recall_recorded": [
+    0.9855072463768116,
+    0.0
+   ]
+  },
+  "2": {
+   "per_bearing": {
+    "Bearing1_1": {
+     "label": "OR",
+     "n": 1680,
+     "acc": 1.0
+    },
+    "Bearing1_2": {
+     "label": "OR",
+     "n": 1888,
+     "acc": 1.0
+    },
+    "Bearing1_3": {
+     "label": "OR",
+     "n": 848,
+     "acc": 1.0
+    }
+   },
+   "recall_recomputed": [
+    1.0,
+    NaN
+   ],
+   "recall_recorded": [
+    1.0,
+    0.0
+   ]
+  }
+ }
+}

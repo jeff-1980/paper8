@@ -1,0 +1,14 @@
+{
+  "fold_tag": "fold1_Bearing3_3",
+  "seed": 4,
+  "selection_mode": "fixed_epoch",
+  "final_epoch": 50,
+  "macro_recall": 0.47604166666666664,
+  "macro_f1": 0.487726787620064,
+  "per_class_recall": [
+    0.0,
+    0.9520833333333333
+  ],
+  "elapsed_s": 50.879905700683594,
+  "checkpoint_path": "<ENV2_WORKDIR>/code/out/lobo_cnn_HV/checkpoints/fold1_Bearing3_3_seed4.pt"
+}

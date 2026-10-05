@@ -1,0 +1,41 @@
+{
+ "test_bearings": [
+  "Bearing3_1"
+ ],
+ "seeds": {
+  "0": {
+   "per_bearing": {
+    "Bearing3_1": {
+     "label": "OR",
+     "n": 2016,
+     "acc": 0.9553571428571429
+    }
+   },
+   "recall_recomputed": [
+    0.9553571428571429,
+    NaN
+   ],
+   "recall_recorded": [
+    0.9553571428571429,
+    0.0
+   ]
+  },
+  "1": {
+   "per_bearing": {
+    "Bearing3_1": {
+     "label": "OR",
+     "n": 2016,
+     "acc": 1.0
+    }
+   },
+   "recall_recomputed": [
+    1.0,
+    NaN
+   ],
+   "recall_recorded": [
+    1.0,
+    0.0
+   ]
+  }
+ }
+}

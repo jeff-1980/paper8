@@ -1,0 +1,27 @@
+Device: cuda  mode=cross  backbone=mamba2  lambda_kin=0.0  fs_eff=12800.0  seeds=[0, 1, 2, 3, 4, 5, 6, 7]  epochs=50
+[leakfree-xjtu] source snapshot: 3 files -> <ENV2_WORKDIR>/vctrl/out/bm2_V_only/source_snapshot
+Cross-condition: 37.5Hz11kN → 40Hz10kN
+Train: ['Bearing2_1', 'Bearing2_2', 'Bearing2_4', 'Bearing2_5']
+Test:  ['Bearing3_1', 'Bearing3_3', 'Bearing3_4', 'Bearing3_5']
+Train class counts: OR=4624, IR=624, ratio=7.4:1
+
+============================================================
+Seed 0
+  cross_seed0 seed=0 ep=  1/50  l_ce=0.2241  l_kin=0.0000  [133s]
+  cross_seed0 seed=0 ep=  2/50  l_ce=0.0045  l_kin=0.0000  [161s]
+  cross_seed0 seed=0 ep=  3/50  l_ce=0.0020  l_kin=0.0000  [196s]
+  cross_seed0 seed=0 ep= 10/50  l_ce=0.0004  l_kin=0.0000  [461s]
+  cross_seed0 seed=0 ep= 20/50  l_ce=0.0002  l_kin=0.0000  [867s]
+  cross_seed0 seed=0 ep= 30/50  l_ce=0.0001  l_kin=0.0000  [1266s]
+  cross_seed0 seed=0 ep= 40/50  l_ce=0.0001  l_kin=0.0000  [1691s]
+  cross_seed0 seed=0 ep= 50/50  l_ce=0.0001  l_kin=0.0000  [2096s]
+  cross_seed0 seed=0 FINAL (fixed-epoch, test evaluated once)  recall=[0.995,0.725]  macro_recall=0.8598  macro_f1=0.8844
+  → saved <ENV2_WORKDIR>/vctrl/out/bm2_V_only/seed_0.json
+
+============================================================
+Seed 1
+  cross_seed1 seed=1 ep=  1/50  l_ce=0.2233  l_kin=0.0000  [42s]
+  cross_seed1 seed=1 ep=  2/50  l_ce=0.0070  l_kin=0.0000  [81s]
+  cross_seed1 seed=1 ep=  3/50  l_ce=0.0019  l_kin=0.0000  [119s]
+  cross_seed1 seed=1 ep= 10/50  l_ce=0.0004  l_kin=0.0000  [480s]
+  cross_seed1 seed=1 ep= 20/50  l_ce=0.0001  l_kin=0.0000  [1249s]

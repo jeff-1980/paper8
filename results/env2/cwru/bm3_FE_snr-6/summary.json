@@ -1,0 +1,41 @@
+{
+  "config": "bm3_FE_snr-6.yaml",
+  "backbone": "mamba3",
+  "lambda_kin": 0.0,
+  "noise_snr_db": -6.0,
+  "noise_type": "awgn",
+  "label_mode": "4class",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "test_accs_at_best_val": [
+    0.8515151515151516,
+    0.8409090909090909,
+    0.85,
+    0.8287878787878787,
+    0.85
+  ],
+  "mean_test_acc": 0.8442424242424241,
+  "std_test_acc": 0.00960658635402872,
+  "best_val_accs": [
+    0.85,
+    0.8439024390243902,
+    0.8634146341463415,
+    0.8317073170731707,
+    0.8463414634146341
+  ],
+  "protocol": "leakfree_v2 (train/val/test time-axis split, guard-gapped, per-file; per-epoch checkpoints + source snapshot, see checkpoints/ and source_snapshot/)",
+  "disjointness_pass": true,
+  "disjointness_check_file": "results/bm3_FE_snr-6/disjointness_check.json",
+  "source_snapshot_dir": "results/bm3_FE_snr-6/source_snapshot",
+  "source_snapshot_files": [
+    "scripts/cwru/train_leakfree.py",
+    "bearmamba3/data_cwru_leakfree.py",
+    "bearmamba3/data_cwru.py",
+    "<ENV2_WORKDIR>/code/cfg/cwru_fe/bm3_FE_snr-6.yaml"
+  ]
+}

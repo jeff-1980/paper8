@@ -1,0 +1,41 @@
+{
+  "config": "exp06_pu_bm2_nokin_leakfree.yaml",
+  "protocol": "leakfree_pu_v1 (P12: source-domain-val selection, test evaluated once)",
+  "lambda_kin": 0.0,
+  "noise_snr_db": null,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "test_acc_best_val_per_seed": [
+    0.9491310852802394,
+    0.949591437449649,
+    0.9509724939578778,
+    0.9480952928990678,
+    0.9508574059155254
+  ],
+  "test_acc_last_epoch_per_seed": [
+    0.9536195189319829,
+    0.9498216135343538,
+    0.9509724939578778,
+    0.9493612613649441,
+    0.952468638508459
+  ],
+  "mean_test_acc_best_val": 0.949729543100472,
+  "std_test_acc_best_val": 0.001210888105656577,
+  "mean_test_acc_last_epoch": 0.9512487052595235,
+  "std_test_acc_last_epoch": 0.0017877585499563723,
+  "best_epochs_per_seed": [
+    32,
+    37,
+    40,
+    40,
+    35
+  ],
+  "n_runs_best_epoch_in_first10": 0,
+  "max_local_jitter_std_around_best": 0.004136742315426601,
+  "stability_flag_P12f": "OK"
+}

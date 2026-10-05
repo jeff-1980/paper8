@@ -1,0 +1,27 @@
+{
+  "mode": "cross",
+  "protocol": "leakfree_v1 (P10(a) fixed final epoch)",
+  "config": "exp_e1b_xjtu_cross_dual_cnn_newseed",
+  "lambda_kin": 0.0,
+  "train_condition": "37.5Hz11kN",
+  "test_condition": "40Hz10kN",
+  "seeds": [
+    5,
+    6,
+    7
+  ],
+  "macro_f1s": [
+    0.4071372720039921,
+    0.48333438346670027,
+    0.49238313549765655
+  ],
+  "macro_recalls": [
+    0.5031536697247706,
+    0.5412844036697247,
+    0.5461582568807339
+  ],
+  "mean_macro_f1": 0.4609515969894497,
+  "std_macro_f1": 0.046823670921444904,
+  "mean_macro_recall": 0.5301987767584098,
+  "std_macro_recall": 0.023548184051564676
+}

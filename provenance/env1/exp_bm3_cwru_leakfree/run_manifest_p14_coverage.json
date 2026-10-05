@@ -1,0 +1,32 @@
+[
+  {
+    "family": "BM3_single_nokin",
+    "arm": "single",
+    "orig_config": "experiments/exp_e3_lobo_leakfree/config_lobo_nokin_leakfree.yaml",
+    "p14_config": "experiments/exp_bm3_cwru_leakfree/configs_p14_coverage/config_p14_single.yaml",
+    "results_dir": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single",
+    "driver": "experiments/exp_bm3_cwru_leakfree/train_p14_coverage_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "family": "BM3_dual_nokin",
+    "arm": "dual",
+    "orig_config": "experiments/exp_e3_lobo_leakfree/config_lobo_dual_nokin_leakfree.yaml",
+    "p14_config": "experiments/exp_bm3_cwru_leakfree/configs_p14_coverage/config_p14_dual.yaml",
+    "results_dir": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/dual",
+    "driver": "experiments/exp_bm3_cwru_leakfree/train_p14_coverage_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+]

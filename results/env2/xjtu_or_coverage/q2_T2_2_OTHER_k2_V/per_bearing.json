@@ -1,0 +1,58 @@
+{
+ "test_bearings": [
+  "Bearing2_2"
+ ],
+ "seeds": {
+  "0": {
+   "per_bearing": {
+    "Bearing2_2": {
+     "label": "OR",
+     "n": 1808,
+     "acc": 0.9032079646017699
+    }
+   },
+   "recall_recomputed": [
+    0.9032079646017699,
+    NaN
+   ],
+   "recall_recorded": [
+    0.9032079646017699,
+    0.0
+   ]
+  },
+  "1": {
+   "per_bearing": {
+    "Bearing2_2": {
+     "label": "OR",
+     "n": 1808,
+     "acc": 0.956858407079646
+    }
+   },
+   "recall_recomputed": [
+    0.956858407079646,
+    NaN
+   ],
+   "recall_recorded": [
+    0.956858407079646,
+    0.0
+   ]
+  },
+  "2": {
+   "per_bearing": {
+    "Bearing2_2": {
+     "label": "OR",
+     "n": 1808,
+     "acc": 0.9297566371681416
+    }
+   },
+   "recall_recomputed": [
+    0.9297566371681416,
+    NaN
+   ],
+   "recall_recorded": [
+    0.9297566371681416,
+    0.0
+   ]
+  }
+ }
+}

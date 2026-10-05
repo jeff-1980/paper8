@@ -1,0 +1,25 @@
+{
+  "mode": "lobo_leakfree",
+  "selection_mode": "fixed_epoch",
+  "config": "e3_lobo_nokin_leakfree",
+  "lambda_kin": 0.0,
+  "n_sensors": 1,
+  "lobo_bearings": [
+    "Bearing3_1",
+    "Bearing3_3",
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "seeds": [
+    5,
+    6,
+    7
+  ],
+  "per_seed_macro_recall": [
+    0.847948506679111,
+    0.8696979897852704,
+    0.8524014904042466
+  ],
+  "mean_macro_recall": 0.8566826622895426,
+  "std_macro_recall": 0.01148940069715842
+}

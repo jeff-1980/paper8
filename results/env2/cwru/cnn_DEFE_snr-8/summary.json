@@ -1,0 +1,41 @@
+{
+  "config": "cnn_DEFE_snr-8.yaml",
+  "backbone": "cnn1d",
+  "lambda_kin": 0.0,
+  "noise_snr_db": -8.0,
+  "noise_type": "awgn",
+  "label_mode": "4class",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "test_accs_at_best_val": [
+    0.9893939393939394,
+    0.9818181818181818,
+    0.9878787878787879,
+    0.9863636363636363,
+    0.990909090909091
+  ],
+  "mean_test_acc": 0.9872727272727273,
+  "std_test_acc": 0.0034881407373398175,
+  "best_val_accs": [
+    0.9841463414634146,
+    0.9829268292682927,
+    0.9865853658536585,
+    0.9890243902439024,
+    0.9865853658536585
+  ],
+  "protocol": "leakfree_v2 (train/val/test time-axis split, guard-gapped, per-file; per-epoch checkpoints + source snapshot, see checkpoints/ and source_snapshot/)",
+  "disjointness_pass": true,
+  "disjointness_check_file": "results/cnn_DEFE_snr-8/disjointness_check.json",
+  "source_snapshot_dir": "results/cnn_DEFE_snr-8/source_snapshot",
+  "source_snapshot_files": [
+    "scripts/cwru/train_leakfree.py",
+    "bearmamba3/data_cwru_leakfree.py",
+    "bearmamba3/data_cwru.py",
+    "<ENV2_WORKDIR>/code/cfg/cwru_fe/cnn_DEFE_snr-8.yaml"
+  ]
+}

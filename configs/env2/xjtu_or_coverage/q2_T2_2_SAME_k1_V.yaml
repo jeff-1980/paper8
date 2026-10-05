@@ -1,0 +1,33 @@
+batch_size: 64
+conv_stride: 2
+d_model: 64
+d_state: 128
+data_root: data/XJTU-SY_Bearing_Datasets
+epochs: 50
+fs_eff: 12800.0
+grad_clip: 1.0
+kin_variant: cover
+lambda_kin: 0.0
+lr: 0.0003
+mode: cross
+n_classes: 2
+n_layers: 4
+n_sensors: 1
+name: q2_T2_2_SAME_k1_V
+num_workers: 0
+results_dir: out_q/q2_T2_2_SAME_k1_V
+scheduler: cosine
+seeds:
+- 0
+- 1
+- 2
+sensor_channel: 1
+test_bearings:
+- Bearing2_2
+train_bearings:
+- Bearing2_1
+- Bearing3_3
+- Bearing3_4
+- Bearing2_4
+weight_decay: 0.0001
+window_size: 2048

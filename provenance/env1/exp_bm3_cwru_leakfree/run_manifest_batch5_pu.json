@@ -1,0 +1,100 @@
+[
+  {
+    "family": "nokin",
+    "orig_config": "experiments/exp06_pu/config_nokin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_pu/exp06_pu_nokin_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/pu_leakfree_20260918/exp06_pu_nokin_leakfree",
+    "driver": "experiments/exp_bm3_cwru_leakfree/train_pu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "family": "kin",
+    "orig_config": "experiments/exp06_pu/config_kin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_pu/exp06_pu_kin_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/pu_leakfree_20260918/exp06_pu_kin_leakfree",
+    "driver": "experiments/exp_bm3_cwru_leakfree/train_pu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "family": "bm2_nokin",
+    "orig_config": "experiments/exp06_pu/config_bm2_nokin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_pu/exp06_pu_bm2_nokin_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/pu_leakfree_20260918/exp06_pu_bm2_nokin_leakfree",
+    "driver": "experiments/exp_bm3_cwru_leakfree/train_pu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "family": "nokin_snr0",
+    "orig_config": "experiments/exp06_pu/config_nokin_snr0.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_pu/exp06_pu_nokin_snr0_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/pu_leakfree_20260918/exp06_pu_nokin_snr0_leakfree",
+    "driver": "experiments/exp_bm3_cwru_leakfree/train_pu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "family": "kin_snr0",
+    "orig_config": "experiments/exp06_pu/config_kin_snr0.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_pu/exp06_pu_kin_snr0_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/pu_leakfree_20260918/exp06_pu_kin_snr0_leakfree",
+    "driver": "experiments/exp_bm3_cwru_leakfree/train_pu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "family": "nokin_snrm4",
+    "orig_config": "experiments/exp06_pu/config_nokin_snrm4.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_pu/exp06_pu_nokin_snrm4_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/pu_leakfree_20260918/exp06_pu_nokin_snrm4_leakfree",
+    "driver": "experiments/exp_bm3_cwru_leakfree/train_pu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "family": "kin_snrm4",
+    "orig_config": "experiments/exp06_pu/config_kin_snrm4.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_pu/exp06_pu_kin_snrm4_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/pu_leakfree_20260918/exp06_pu_kin_snrm4_leakfree",
+    "driver": "experiments/exp_bm3_cwru_leakfree/train_pu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+]

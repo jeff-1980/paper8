@@ -1,0 +1,54 @@
+[
+  {
+    "family": "BM3_single_nokin",
+    "orig_config": "experiments/exp_e3_lobo_leakfree/config_lobo_nokin_leakfree.yaml",
+    "n8_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_lobo_n8/config_lobo_nokin_leakfree_n8ext.yaml",
+    "n5_results_dir": "<REPO_ROOT>/results/e3_lobo_leakfree_20260709-205255/single_nokin",
+    "n8_results_dir": "<REPO_ROOT>/results/e3_lobo_leakfree_20260709-205255/single_nokin_n8ext",
+    "driver": "experiments/exp_e3_lobo_leakfree/train_lobo_leakfree.py",
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "family": "BM3_single_kin",
+    "orig_config": "experiments/exp_e3_lobo_leakfree/config_lobo_kin_leakfree.yaml",
+    "n8_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_lobo_n8/config_lobo_kin_leakfree_n8ext.yaml",
+    "n5_results_dir": "<REPO_ROOT>/results/e3_lobo_leakfree_20260709-205255/single_kin",
+    "n8_results_dir": "<REPO_ROOT>/results/e3_lobo_leakfree_20260709-205255/single_kin_n8ext",
+    "driver": "experiments/exp_e3_lobo_leakfree/train_lobo_leakfree.py",
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "family": "BM3_dual_nokin",
+    "orig_config": "experiments/exp_e3_lobo_leakfree/config_lobo_dual_nokin_leakfree.yaml",
+    "n8_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_lobo_n8/config_lobo_dual_nokin_leakfree_n8ext.yaml",
+    "n5_results_dir": "<REPO_ROOT>/results/e3_lobo_leakfree_20260709-205255/dual_nokin",
+    "n8_results_dir": "<REPO_ROOT>/results/e3_lobo_leakfree_20260709-205255/dual_nokin_n8ext",
+    "driver": "experiments/exp_e3_lobo_leakfree/train_lobo_leakfree.py",
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "family": "BM3_dual_kin",
+    "orig_config": "experiments/exp_e3_lobo_leakfree/config_lobo_dual_kin_leakfree.yaml",
+    "n8_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_lobo_n8/config_lobo_dual_kin_leakfree_n8ext.yaml",
+    "n5_results_dir": "<REPO_ROOT>/results/e3_lobo_leakfree_20260709-205255/dual_kin",
+    "n8_results_dir": "<REPO_ROOT>/results/e3_lobo_leakfree_20260709-205255/dual_kin_n8ext",
+    "driver": "experiments/exp_e3_lobo_leakfree/train_lobo_leakfree.py",
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  }
+]

@@ -1,0 +1,768 @@
+{
+  "mode": "p14_coverage_sweep",
+  "selection_mode": "fixed_epoch",
+  "config": "p14_BM3_single_nokin",
+  "lambda_kin": 0.0,
+  "n_sensors": 1,
+  "test_bearing": "Bearing3_1",
+  "test_label": "OR",
+  "train_pool": [
+    "Bearing3_3",
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "per_k_recall": {
+    "1": {
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mean": 0.3333333333333333,
+      "std": 0.48795003647426666
+    },
+    "2": {
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9875992063492064,
+        0.9692460317460317,
+        1.0,
+        0.8100198412698413,
+        0.9950396825396826,
+        0.9970238095238095,
+        0.9975198412698413,
+        1.0,
+        0.9950396825396826,
+        1.0
+      ],
+      "mean": 0.6500992063492064,
+      "std": 0.4781510359403437
+    },
+    "3": {
+      "values": [
+        0.998015873015873,
+        0.9796626984126984,
+        1.0,
+        0.998015873015873,
+        1.0
+      ],
+      "mean": 0.9951388888888889,
+      "std": 0.008708147757392256
+    }
+  },
+  "all_rows": [
+    {
+      "k": 1,
+      "combo_idx": 0,
+      "train_bearings": [
+        "Bearing3_3"
+      ],
+      "fold_tag": "k1_c0_Bearing3_3",
+      "seed": 0,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.0,
+      "macro_f1": 0.0,
+      "per_class_recall": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 63.89723229408264,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k1_c0_Bearing3_3_seed0.pt"
+    },
+    {
+      "k": 1,
+      "combo_idx": 0,
+      "train_bearings": [
+        "Bearing3_3"
+      ],
+      "fold_tag": "k1_c0_Bearing3_3",
+      "seed": 1,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.0,
+      "macro_f1": 0.0,
+      "per_class_recall": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 63.555190563201904,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k1_c0_Bearing3_3_seed1.pt"
+    },
+    {
+      "k": 1,
+      "combo_idx": 0,
+      "train_bearings": [
+        "Bearing3_3"
+      ],
+      "fold_tag": "k1_c0_Bearing3_3",
+      "seed": 2,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.0,
+      "macro_f1": 0.0,
+      "per_class_recall": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 71.92482566833496,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k1_c0_Bearing3_3_seed2.pt"
+    },
+    {
+      "k": 1,
+      "combo_idx": 0,
+      "train_bearings": [
+        "Bearing3_3"
+      ],
+      "fold_tag": "k1_c0_Bearing3_3",
+      "seed": 3,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.0,
+      "macro_f1": 0.0,
+      "per_class_recall": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 68.48907828330994,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k1_c0_Bearing3_3_seed3.pt"
+    },
+    {
+      "k": 1,
+      "combo_idx": 0,
+      "train_bearings": [
+        "Bearing3_3"
+      ],
+      "fold_tag": "k1_c0_Bearing3_3",
+      "seed": 4,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.0,
+      "macro_f1": 0.0,
+      "per_class_recall": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 55.396443605422974,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k1_c0_Bearing3_3_seed4.pt"
+    },
+    {
+      "k": 1,
+      "combo_idx": 1,
+      "train_bearings": [
+        "Bearing3_4"
+      ],
+      "fold_tag": "k1_c1_Bearing3_4",
+      "seed": 0,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.0,
+      "macro_f1": 0.0,
+      "per_class_recall": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 67.1487340927124,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k1_c1_Bearing3_4_seed0.pt"
+    },
+    {
+      "k": 1,
+      "combo_idx": 1,
+      "train_bearings": [
+        "Bearing3_4"
+      ],
+      "fold_tag": "k1_c1_Bearing3_4",
+      "seed": 1,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.0,
+      "macro_f1": 0.0,
+      "per_class_recall": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 74.95278596878052,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k1_c1_Bearing3_4_seed1.pt"
+    },
+    {
+      "k": 1,
+      "combo_idx": 1,
+      "train_bearings": [
+        "Bearing3_4"
+      ],
+      "fold_tag": "k1_c1_Bearing3_4",
+      "seed": 2,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.0,
+      "macro_f1": 0.0,
+      "per_class_recall": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 73.61647391319275,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k1_c1_Bearing3_4_seed2.pt"
+    },
+    {
+      "k": 1,
+      "combo_idx": 1,
+      "train_bearings": [
+        "Bearing3_4"
+      ],
+      "fold_tag": "k1_c1_Bearing3_4",
+      "seed": 3,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.0,
+      "macro_f1": 0.0,
+      "per_class_recall": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 73.84204959869385,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k1_c1_Bearing3_4_seed3.pt"
+    },
+    {
+      "k": 1,
+      "combo_idx": 1,
+      "train_bearings": [
+        "Bearing3_4"
+      ],
+      "fold_tag": "k1_c1_Bearing3_4",
+      "seed": 4,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.0,
+      "macro_f1": 0.0,
+      "per_class_recall": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 74.28541231155396,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k1_c1_Bearing3_4_seed4.pt"
+    },
+    {
+      "k": 1,
+      "combo_idx": 2,
+      "train_bearings": [
+        "Bearing3_5"
+      ],
+      "fold_tag": "k1_c2_Bearing3_5",
+      "seed": 0,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.5,
+      "macro_f1": 0.5,
+      "per_class_recall": [
+        1.0,
+        0.0
+      ],
+      "elapsed_s": 83.0071108341217,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k1_c2_Bearing3_5_seed0.pt"
+    },
+    {
+      "k": 1,
+      "combo_idx": 2,
+      "train_bearings": [
+        "Bearing3_5"
+      ],
+      "fold_tag": "k1_c2_Bearing3_5",
+      "seed": 1,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.5,
+      "macro_f1": 0.5,
+      "per_class_recall": [
+        1.0,
+        0.0
+      ],
+      "elapsed_s": 108.64881491661072,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k1_c2_Bearing3_5_seed1.pt"
+    },
+    {
+      "k": 1,
+      "combo_idx": 2,
+      "train_bearings": [
+        "Bearing3_5"
+      ],
+      "fold_tag": "k1_c2_Bearing3_5",
+      "seed": 2,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.5,
+      "macro_f1": 0.5,
+      "per_class_recall": [
+        1.0,
+        0.0
+      ],
+      "elapsed_s": 110.3393805027008,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k1_c2_Bearing3_5_seed2.pt"
+    },
+    {
+      "k": 1,
+      "combo_idx": 2,
+      "train_bearings": [
+        "Bearing3_5"
+      ],
+      "fold_tag": "k1_c2_Bearing3_5",
+      "seed": 3,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.5,
+      "macro_f1": 0.5,
+      "per_class_recall": [
+        1.0,
+        0.0
+      ],
+      "elapsed_s": 109.15868973731995,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k1_c2_Bearing3_5_seed3.pt"
+    },
+    {
+      "k": 1,
+      "combo_idx": 2,
+      "train_bearings": [
+        "Bearing3_5"
+      ],
+      "fold_tag": "k1_c2_Bearing3_5",
+      "seed": 4,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.5,
+      "macro_f1": 0.5,
+      "per_class_recall": [
+        1.0,
+        0.0
+      ],
+      "elapsed_s": 117.18415307998657,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k1_c2_Bearing3_5_seed4.pt"
+    },
+    {
+      "k": 2,
+      "combo_idx": 0,
+      "train_bearings": [
+        "Bearing3_3",
+        "Bearing3_4"
+      ],
+      "fold_tag": "k2_c0_Bearing3_3-Bearing3_4",
+      "seed": 0,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.0,
+      "macro_f1": 0.0,
+      "per_class_recall": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 95.24865460395813,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k2_c0_Bearing3_3-Bearing3_4_seed0.pt"
+    },
+    {
+      "k": 2,
+      "combo_idx": 0,
+      "train_bearings": [
+        "Bearing3_3",
+        "Bearing3_4"
+      ],
+      "fold_tag": "k2_c0_Bearing3_3-Bearing3_4",
+      "seed": 1,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.0,
+      "macro_f1": 0.0,
+      "per_class_recall": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 117.67117547988892,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k2_c0_Bearing3_3-Bearing3_4_seed1.pt"
+    },
+    {
+      "k": 2,
+      "combo_idx": 0,
+      "train_bearings": [
+        "Bearing3_3",
+        "Bearing3_4"
+      ],
+      "fold_tag": "k2_c0_Bearing3_3-Bearing3_4",
+      "seed": 2,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.0,
+      "macro_f1": 0.0,
+      "per_class_recall": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 107.20509362220764,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k2_c0_Bearing3_3-Bearing3_4_seed2.pt"
+    },
+    {
+      "k": 2,
+      "combo_idx": 0,
+      "train_bearings": [
+        "Bearing3_3",
+        "Bearing3_4"
+      ],
+      "fold_tag": "k2_c0_Bearing3_3-Bearing3_4",
+      "seed": 3,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.0,
+      "macro_f1": 0.0,
+      "per_class_recall": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 98.53633403778076,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k2_c0_Bearing3_3-Bearing3_4_seed3.pt"
+    },
+    {
+      "k": 2,
+      "combo_idx": 0,
+      "train_bearings": [
+        "Bearing3_3",
+        "Bearing3_4"
+      ],
+      "fold_tag": "k2_c0_Bearing3_3-Bearing3_4",
+      "seed": 4,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.0,
+      "macro_f1": 0.0,
+      "per_class_recall": [
+        0.0,
+        0.0
+      ],
+      "elapsed_s": 108.29061675071716,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k2_c0_Bearing3_3-Bearing3_4_seed4.pt"
+    },
+    {
+      "k": 2,
+      "combo_idx": 1,
+      "train_bearings": [
+        "Bearing3_3",
+        "Bearing3_5"
+      ],
+      "fold_tag": "k2_c1_Bearing3_3-Bearing3_5",
+      "seed": 0,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.4937996031746032,
+      "macro_f1": 0.4968804591964063,
+      "per_class_recall": [
+        0.9875992063492064,
+        0.0
+      ],
+      "elapsed_s": 116.0212516784668,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k2_c1_Bearing3_3-Bearing3_5_seed0.pt"
+    },
+    {
+      "k": 2,
+      "combo_idx": 1,
+      "train_bearings": [
+        "Bearing3_3",
+        "Bearing3_5"
+      ],
+      "fold_tag": "k2_c1_Bearing3_3-Bearing3_5",
+      "seed": 1,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.48462301587301587,
+      "macro_f1": 0.49219143576826196,
+      "per_class_recall": [
+        0.9692460317460317,
+        0.0
+      ],
+      "elapsed_s": 142.6999762058258,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k2_c1_Bearing3_3-Bearing3_5_seed1.pt"
+    },
+    {
+      "k": 2,
+      "combo_idx": 1,
+      "train_bearings": [
+        "Bearing3_3",
+        "Bearing3_5"
+      ],
+      "fold_tag": "k2_c1_Bearing3_3-Bearing3_5",
+      "seed": 2,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.5,
+      "macro_f1": 0.5,
+      "per_class_recall": [
+        1.0,
+        0.0
+      ],
+      "elapsed_s": 151.18244814872742,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k2_c1_Bearing3_3-Bearing3_5_seed2.pt"
+    },
+    {
+      "k": 2,
+      "combo_idx": 1,
+      "train_bearings": [
+        "Bearing3_3",
+        "Bearing3_5"
+      ],
+      "fold_tag": "k2_c1_Bearing3_3-Bearing3_5",
+      "seed": 3,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.40500992063492064,
+      "macro_f1": 0.4475198684571115,
+      "per_class_recall": [
+        0.8100198412698413,
+        0.0
+      ],
+      "elapsed_s": 134.77734637260437,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k2_c1_Bearing3_3-Bearing3_5_seed3.pt"
+    },
+    {
+      "k": 2,
+      "combo_idx": 1,
+      "train_bearings": [
+        "Bearing3_3",
+        "Bearing3_5"
+      ],
+      "fold_tag": "k2_c1_Bearing3_3-Bearing3_5",
+      "seed": 4,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.4975198412698413,
+      "macro_f1": 0.4987568373943312,
+      "per_class_recall": [
+        0.9950396825396826,
+        0.0
+      ],
+      "elapsed_s": 149.01791548728943,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k2_c1_Bearing3_3-Bearing3_5_seed4.pt"
+    },
+    {
+      "k": 2,
+      "combo_idx": 2,
+      "train_bearings": [
+        "Bearing3_4",
+        "Bearing3_5"
+      ],
+      "fold_tag": "k2_c2_Bearing3_4-Bearing3_5",
+      "seed": 0,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.49851190476190477,
+      "macro_f1": 0.4992548435171386,
+      "per_class_recall": [
+        0.9970238095238095,
+        0.0
+      ],
+      "elapsed_s": 175.83640670776367,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k2_c2_Bearing3_4-Bearing3_5_seed0.pt"
+    },
+    {
+      "k": 2,
+      "combo_idx": 2,
+      "train_bearings": [
+        "Bearing3_4",
+        "Bearing3_5"
+      ],
+      "fold_tag": "k2_c2_Bearing3_4-Bearing3_5",
+      "seed": 1,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.49875992063492064,
+      "macro_f1": 0.4993791904643655,
+      "per_class_recall": [
+        0.9975198412698413,
+        0.0
+      ],
+      "elapsed_s": 206.03904175758362,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k2_c2_Bearing3_4-Bearing3_5_seed1.pt"
+    },
+    {
+      "k": 2,
+      "combo_idx": 2,
+      "train_bearings": [
+        "Bearing3_4",
+        "Bearing3_5"
+      ],
+      "fold_tag": "k2_c2_Bearing3_4-Bearing3_5",
+      "seed": 2,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.5,
+      "macro_f1": 0.5,
+      "per_class_recall": [
+        1.0,
+        0.0
+      ],
+      "elapsed_s": 204.48760414123535,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k2_c2_Bearing3_4-Bearing3_5_seed2.pt"
+    },
+    {
+      "k": 2,
+      "combo_idx": 2,
+      "train_bearings": [
+        "Bearing3_4",
+        "Bearing3_5"
+      ],
+      "fold_tag": "k2_c2_Bearing3_4-Bearing3_5",
+      "seed": 3,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.4975198412698413,
+      "macro_f1": 0.4987568373943312,
+      "per_class_recall": [
+        0.9950396825396826,
+        0.0
+      ],
+      "elapsed_s": 216.55213832855225,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k2_c2_Bearing3_4-Bearing3_5_seed3.pt"
+    },
+    {
+      "k": 2,
+      "combo_idx": 2,
+      "train_bearings": [
+        "Bearing3_4",
+        "Bearing3_5"
+      ],
+      "fold_tag": "k2_c2_Bearing3_4-Bearing3_5",
+      "seed": 4,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.5,
+      "macro_f1": 0.5,
+      "per_class_recall": [
+        1.0,
+        0.0
+      ],
+      "elapsed_s": 194.4790177345276,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k2_c2_Bearing3_4-Bearing3_5_seed4.pt"
+    },
+    {
+      "k": 3,
+      "combo_idx": 0,
+      "train_bearings": [
+        "Bearing3_3",
+        "Bearing3_4",
+        "Bearing3_5"
+      ],
+      "fold_tag": "k3_c0_Bearing3_3-Bearing3_4-Bearing3_5",
+      "seed": 0,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.4990079365079365,
+      "macro_f1": 0.49950347567030784,
+      "per_class_recall": [
+        0.998015873015873,
+        0.0
+      ],
+      "elapsed_s": 208.95189929008484,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k3_c0_Bearing3_3-Bearing3_4-Bearing3_5_seed0.pt"
+    },
+    {
+      "k": 3,
+      "combo_idx": 0,
+      "train_bearings": [
+        "Bearing3_3",
+        "Bearing3_4",
+        "Bearing3_5"
+      ],
+      "fold_tag": "k3_c0_Bearing3_3-Bearing3_4-Bearing3_5",
+      "seed": 1,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.4898313492063492,
+      "macro_f1": 0.4948634427461789,
+      "per_class_recall": [
+        0.9796626984126984,
+        0.0
+      ],
+      "elapsed_s": 245.24103450775146,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k3_c0_Bearing3_3-Bearing3_4-Bearing3_5_seed1.pt"
+    },
+    {
+      "k": 3,
+      "combo_idx": 0,
+      "train_bearings": [
+        "Bearing3_3",
+        "Bearing3_4",
+        "Bearing3_5"
+      ],
+      "fold_tag": "k3_c0_Bearing3_3-Bearing3_4-Bearing3_5",
+      "seed": 2,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.5,
+      "macro_f1": 0.5,
+      "per_class_recall": [
+        1.0,
+        0.0
+      ],
+      "elapsed_s": 241.2100727558136,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k3_c0_Bearing3_3-Bearing3_4-Bearing3_5_seed2.pt"
+    },
+    {
+      "k": 3,
+      "combo_idx": 0,
+      "train_bearings": [
+        "Bearing3_3",
+        "Bearing3_4",
+        "Bearing3_5"
+      ],
+      "fold_tag": "k3_c0_Bearing3_3-Bearing3_4-Bearing3_5",
+      "seed": 3,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.4990079365079365,
+      "macro_f1": 0.49950347567030784,
+      "per_class_recall": [
+        0.998015873015873,
+        0.0
+      ],
+      "elapsed_s": 211.96631717681885,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k3_c0_Bearing3_3-Bearing3_4-Bearing3_5_seed3.pt"
+    },
+    {
+      "k": 3,
+      "combo_idx": 0,
+      "train_bearings": [
+        "Bearing3_3",
+        "Bearing3_4",
+        "Bearing3_5"
+      ],
+      "fold_tag": "k3_c0_Bearing3_3-Bearing3_4-Bearing3_5",
+      "seed": 4,
+      "selection_mode": "fixed_epoch",
+      "final_epoch": 50,
+      "macro_recall": 0.5,
+      "macro_f1": 0.5,
+      "per_class_recall": [
+        1.0,
+        0.0
+      ],
+      "elapsed_s": 216.80255222320557,
+      "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/single/checkpoints/k3_c0_Bearing3_3-Bearing3_4-Bearing3_5_seed4.pt"
+    }
+  ]
+}

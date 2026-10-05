@@ -1,0 +1,14 @@
+{
+  "fold_tag": "k3_c0_Bearing3_3-Bearing3_4-Bearing3_5",
+  "seed": 2,
+  "selection_mode": "fixed_epoch",
+  "final_epoch": 50,
+  "macro_recall": 0.14087301587301587,
+  "macro_f1": 0.21981424148606812,
+  "per_class_recall": [
+    0.28174603174603174,
+    0.0
+  ],
+  "elapsed_s": 170.77607250213623,
+  "checkpoint_path": "<REPO_ROOT>/results/e3_p14_coverage_leakfree_20260928/dual/checkpoints/k3_c0_Bearing3_3-Bearing3_4-Bearing3_5_seed2.pt"
+}

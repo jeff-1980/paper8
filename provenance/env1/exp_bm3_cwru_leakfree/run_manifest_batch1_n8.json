@@ -1,0 +1,119 @@
+[
+  {
+    "orig_config": "experiments/exp_e6_newseeds/single_nokin/config_snr-4.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch1_n8/exp_e6_single_nokin_snrm4_newseed_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_e6_single_nokin_snrm4_newseed_leakfree",
+    "driver": "train_leakfree.py",
+    "arm": "single_nokin",
+    "snr": -4,
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "orig_config": "experiments/exp_e6_newseeds/single_nokin/config_snr-6.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch1_n8/exp_e6_single_nokin_snrm6_newseed_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_e6_single_nokin_snrm6_newseed_leakfree",
+    "driver": "train_leakfree.py",
+    "arm": "single_nokin",
+    "snr": -6,
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "orig_config": "experiments/exp_e6_newseeds/single_nokin/config_snr-8.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch1_n8/exp_e6_single_nokin_snrm8_newseed_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_e6_single_nokin_snrm8_newseed_leakfree",
+    "driver": "train_leakfree.py",
+    "arm": "single_nokin",
+    "snr": -8,
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "orig_config": "experiments/exp_e6_newseeds/dual_nokin/config_snr-4.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch1_n8/exp_e6_dual_nokin_snrm4_newseed_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_e6_dual_nokin_snrm4_newseed_leakfree",
+    "driver": "train_leakfree.py",
+    "arm": "dual_nokin",
+    "snr": -4,
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "orig_config": "experiments/exp_e6_newseeds/dual_nokin/config_snr-6.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch1_n8/exp_e6_dual_nokin_snrm6_newseed_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_e6_dual_nokin_snrm6_newseed_leakfree",
+    "driver": "train_leakfree.py",
+    "arm": "dual_nokin",
+    "snr": -6,
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "orig_config": "experiments/exp_e6_newseeds/dual_nokin/config_snr-8.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch1_n8/exp_e6_dual_nokin_snrm8_newseed_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_e6_dual_nokin_snrm8_newseed_leakfree",
+    "driver": "train_leakfree.py",
+    "arm": "dual_nokin",
+    "snr": -8,
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "orig_config": "experiments/exp_e6_newseeds/dual_kin/config_snr-4.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch1_n8/exp_e6_dual_kin_snrm4_newseed_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_e6_dual_kin_snrm4_newseed_leakfree",
+    "driver": "train_leakfree.py",
+    "arm": "dual_kin",
+    "snr": -4,
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "orig_config": "experiments/exp_e6_newseeds/dual_kin/config_snr-6.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch1_n8/exp_e6_dual_kin_snrm6_newseed_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_e6_dual_kin_snrm6_newseed_leakfree",
+    "driver": "train_leakfree.py",
+    "arm": "dual_kin",
+    "snr": -6,
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "orig_config": "experiments/exp_e6_newseeds/dual_kin/config_snr-8.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch1_n8/exp_e6_dual_kin_snrm8_newseed_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_e6_dual_kin_snrm8_newseed_leakfree",
+    "driver": "train_leakfree.py",
+    "arm": "dual_kin",
+    "snr": -8,
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  }
+]

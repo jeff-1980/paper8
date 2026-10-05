@@ -1,0 +1,254 @@
+[
+  {
+    "orig_config": "experiments/exp01_cwru_baseline/config.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp01_cwru_baseline.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp01_cwru_baseline",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp01_cwru_baseline/config_kin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp01_cwru_kin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp01_cwru_kin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp02_snr_ablation/config_snr-2_kin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp02_snr-2_kin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp02_snr-2_kin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp02_snr_ablation/config_snr-2_nokin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp02_snr-2_nokin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp02_snr-2_nokin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp02_snr_ablation/config_snr-4_kin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp02_snr-4_kin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp02_snr-4_kin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp02_snr_ablation/config_snr-4_nokin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp02_snr-4_nokin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp02_snr-4_nokin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp02_snr_ablation/config_snr-5_kin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp02_snr-5_kin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp02_snr-5_kin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp02_snr_ablation/config_snr-5_nokin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp02_snr-5_nokin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp02_snr-5_nokin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp02_snr_ablation/config_snr-6_kin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp02_snr-6_kin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp02_snr-6_kin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp02_snr_ablation/config_snr-6_nokin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp02_snr-6_nokin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp02_snr-6_nokin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp02_snr_ablation/config_snr-8_kin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp02_snr-8_kin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp02_snr-8_kin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp02_snr_ablation/config_snr-8_nokin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp02_snr-8_nokin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp02_snr-8_nokin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp02_snr_ablation/config_snr0_kin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp02_snr0_kin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp02_snr0_kin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp02_snr_ablation/config_snr0_nokin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp02_snr0_nokin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp02_snr0_nokin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp02_snr_ablation/config_snr10_kin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp02_snr10_kin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp02_snr10_kin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp02_snr_ablation/config_snr10_nokin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp02_snr10_nokin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp02_snr10_nokin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp02_snr_ablation/config_snr5_kin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp02_snr5_kin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp02_snr5_kin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp02_snr_ablation/config_snr5_nokin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp02_snr5_nokin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp02_snr5_nokin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp03_10class/config_snr0_kin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp03_10class_snr0_kin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp03_10class_snr0_kin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp03_10class/config_snr0_nokin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp03_10class_snr0_nokin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp03_10class_snr0_nokin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp04_mamba2/config_snr-2.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp04_mamba2_snr-2.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp04_mamba2_snr-2",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp04_mamba2/config_snr-4.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp04_mamba2_snr-4.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp04_mamba2_snr-4",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp04_mamba2/config_snr-5.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp04_mamba2_snr-5.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp04_mamba2_snr-5",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp04_mamba2/config_snr-6.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp04_mamba2_snr-6.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp04_mamba2_snr-6",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp04_mamba2/config_snr-8.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp04_mamba2_snr-8.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp04_mamba2_snr-8",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp04_mamba2/config_snr0.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp04_mamba2_snr0.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp04_mamba2_snr0",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp04_mamba2/config_snr10.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp04_mamba2_snr10.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp04_mamba2_snr10",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp04_mamba2/config_snr5.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp04_mamba2_snr5.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp04_mamba2_snr5",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp05_lambda_scan/config_lk1em1.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp05_lk1em1.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp05_lk1em1",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp05_lambda_scan/config_lk1em2.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp05_lk1em2.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp05_lk1em2",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp05_lambda_scan/config_lk1em3.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp05_lk1em3.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp05_lk1em3",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp05_lambda_scan/config_lk1p0.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp05_lk1p0.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp05_lk1p0",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp_b2_dual_sensor/run_b2_snr_curve.py::make_config('nokin', -8)",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp_b2_dual_nokin_snrm8.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_b2_dual_nokin_snrm8",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp_b2_dual_sensor/run_b2_snr_curve.py::make_config('nokin', -6)",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp_b2_dual_nokin_snrm6.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_b2_dual_nokin_snrm6",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp_b2_dual_sensor/run_b2_snr_curve.py::make_config('nokin', -4)",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp_b2_dual_nokin_snrm4.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_b2_dual_nokin_snrm4",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp_b2_dual_sensor/run_b2_snr_curve.py::make_config('nokin', -2)",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp_b2_dual_nokin_snrm2.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_b2_dual_nokin_snrm2",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp_b2_dual_sensor/run_b2_snr_curve.py::make_config('nokin', 0)",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp_b2_dual_nokin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_b2_dual_nokin",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp_b2_dual_sensor/run_b2_snr_curve.py::make_config('kin', -8)",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp_b2_dual_kin_snrm8.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_b2_dual_kin_snrm8",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp_b2_dual_sensor/run_b2_snr_curve.py::make_config('kin', -6)",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp_b2_dual_kin_snrm6.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_b2_dual_kin_snrm6",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp_b2_dual_sensor/run_b2_snr_curve.py::make_config('kin', -4)",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp_b2_dual_kin_snrm4.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_b2_dual_kin_snrm4",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp_b2_dual_sensor/run_b2_snr_curve.py::make_config('kin', -2)",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp_b2_dual_kin_snrm2.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_b2_dual_kin_snrm2",
+    "driver": "train_leakfree.py"
+  },
+  {
+    "orig_config": "experiments/exp_b2_dual_sensor/run_b2_snr_curve.py::make_config('kin', 0)",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs/exp_b2_dual_kin.yaml",
+    "results_dir": "<REPO_ROOT>/results/bm3_cwru_leakfree_20260911-leakfree/exp_b2_dual_kin",
+    "driver": "train_leakfree.py"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "fold_tag": "fold0_Bearing3_1",
+  "seed": 3,
+  "selection_mode": "fixed_epoch",
+  "final_epoch": 50,
+  "macro_recall": 0.49776785714285715,
+  "macro_f1": 0.4988814317673378,
+  "per_class_recall": [
+    0.9955357142857143,
+    0.0
+  ],
+  "elapsed_s": 211.02038145065308,
+  "checkpoint_path": "<REPO_ROOT>/results/e3_lobo_leakfree_20260709-205255/single_kin/checkpoints/fold0_Bearing3_1_seed3.pt"
+}

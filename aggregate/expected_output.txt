@@ -1,0 +1,213 @@
+aggregate_main.py -- bootstrap B=20000, numpy.random.default_rng(12345) per contrast; numpy 2.4.6, scipy 1.17.1
+
+====================================================================================================
+TABLE 1 (tab:xc) -- XJTU-SY condition 2 -> 3, macro-F1 (%)
+====================================================================================================
+Panel A (1D-CNN: H and H+V arms from environment-1 result files; V arm trained later with the same script,
+         result files in results/env2/xjtu_cross/cnn_V_only -- see TABLE_MAP.md)
+  1D-CNN   (env 1, seeds 0-7, n=8): H=40.2 +- 0.2  V=88.8 +- 0.0  HV=45.5 +- 4.3
+      HV-H: +5.3 [+2.5, +8.0] (pos/neg 8/0, n=8, exact Wilcoxon p=0.0078)
+      HV-V: -43.3 [-46.1, -40.5] (pos/neg 0/8, n=8, exact Wilcoxon p=0.0078)
+      V-H: +48.6 [+48.5, +48.7] (pos/neg 8/0, n=8, exact Wilcoxon p=0.0078)
+  Mamba-3  (env 2, seeds 0-7, n=8): H=59.0 +- 10.5  V=83.2 +- 4.6  HV=91.4 +- 5.8
+      HV-H: +32.4 [+25.0, +38.8] (pos/neg 8/0, n=8, exact Wilcoxon p=0.0078)
+      HV-V: +8.2 [+4.1, +12.5] (pos/neg 7/1, n=8, exact Wilcoxon p=0.0156)
+      V-H: +24.2 [+16.8, +31.4] (pos/neg 8/0, n=8, exact Wilcoxon p=0.0078)
+  Mamba-2  (env 2, seeds 0-7, n=8): H=44.6 +- 2.4  V=88.5 +- 0.5
+      V-H: +43.9 [+41.8, +45.3] (pos/neg 8/0, n=8, exact Wilcoxon p=0.0078)
+Panel B (environment 1, seeds 0-7)
+  Mamba-2 : H=43.3 +- 0.9  H+V=70.6 +- 9.7  H+V-H: +27.3 [+20.7, +33.9] (pos/neg 8/0, n=8, exact Wilcoxon p=0.0078)   IR recall H=3.1  H+V=38.9
+  Mamba-3 : H=63.1 +- 8.4  H+V=89.7 +- 10.0  H+V-H: +26.6 [+19.2, +33.2] (pos/neg 8/0, n=8, exact Wilcoxon p=0.0078)   IR recall H=27.1  H+V=76.3
+  1D-CNN  : H=40.2 +- 0.2  H+V=45.5 +- 4.3  H+V-H: +5.3 [+2.5, +8.0] (pos/neg 8/0, n=8, exact Wilcoxon p=0.0078)   IR recall H=0.2  H+V=5.4
+  footnote b: Mamba-2 env-1 H+V (70.6) minus env-2 V (88.5) = -17.9 pp (cross-environment, not paired-tested)
+  footnote a: 1D-CNN env2-env1 per seed 0-4: H [0.0, 0.0, 0.0, 0.0, 0.0]  H+V [-0.06, 0.0, 0.06, 0.06, -0.1] (max |H+V diff| 0.10 pp)
+
+====================================================================================================
+Section 4.1 -- numbers quoted in the text
+====================================================================================================
+  V-only IR recall: 1D-CNN 72.48 (per seed [72.48, 72.48, 72.48, 72.48, 72.48, 72.48, 72.48, 72.48]), Mamba-2 72.46; share of Bearing3_4 in IR test windows 1264/1744 = 72.48
+    1D-CNN (env-2 seeds 0-4, xc_cnn_V): per-seed acc Bearing3_3 [0.0], Bearing3_4 [100.0]
+    Mamba-2 (r2_bm2_V): per-seed acc Bearing3_3 [0.0], Bearing3_4 [99.8, 100.0]
+  Mamba-3 env2 IR recall: H+V 79.0  V 78.9
+    Bearing3_1: V 98  H+V 100
+    Bearing3_3: V 23  H+V 93
+    Bearing3_4: V 100  H+V 74
+    Bearing3_5: V 74  H+V 100
+  Mamba-3 H+V-V: SD of paired differences 6.5 pp, standard uncertainty of the mean 2.3 pp (section 3.4)
+  late fusion Mamba-3 (seeds [0, 1, 2, 3, 4], weight from source hold-out, sub-models): 86.5 +- 5.1;  late - early fusion -8.1 [-12.0, -4.3] (pos/neg 0/5, n=5, exact Wilcoxon p=0.0625)
+  late fusion 1D-CNN: 88.59 +- 0.25 vs its V sub-model 88.61 +- 0.27 and V-only (Table 1) 88.82 +- 0.00
+  condition-2 training windows OR:IR = 4624:624 = 7.4:1 (section 3.1)
+
+====================================================================================================
+TABLE 2 (tab:loco) -- leave-one-condition-out, macro-F1 (%), environment 2
+====================================================================================================
+  Cond. 2 Mamba-3  n=8: H=46.0 +- 1.2  V=93.5 +- 1.9  H+V=75.9 +- 8.8  (H+V)-V: -17.6 [-24.0, -10.7] (pos/neg 1/7, n=8, exact Wilcoxon p=0.0156)  [neg/pos 7/1]
+      per-bearing accuracy H/V/H+V: Bearing2_1 92/81/88; Bearing2_2 95/99/98; Bearing2_4 100/100/100; Bearing2_5 4/100/74
+      per-bearing H+V - V (pp):    +7, -1, +0, -26
+  Cond. 2 1D-CNN   n=5: H=46.4 +- 1.5  V=90.9 +- 3.2  H+V=68.6 +- 10.3  (H+V)-V: -22.3 [-28.6, -15.4] (pos/neg 0/5, n=5, exact Wilcoxon p=0.0625)  [neg/pos 5/0]
+      per-bearing accuracy H/V/H+V: Bearing2_1 88/100/100; Bearing2_2 99/87/99; Bearing2_4 100/100/100; Bearing2_5 5/100/54
+      per-bearing H+V - V (pp):    -0, +12, +0, -46
+  Cond. 3 Mamba-3  n=8: H=56.0 +- 8.6  V=80.4 +- 4.5  H+V=89.0 +- 6.8  (H+V)-V: +8.6 [+3.7, +13.4] (pos/neg 6/2, n=8, exact Wilcoxon p=0.0391)  [neg/pos 2/6]
+      per-bearing accuracy H/V/H+V: Bearing3_1 100/100/100; Bearing3_3 38/12/88; Bearing3_4 10/100/68; Bearing3_5 100/67/100
+      per-bearing H+V - V (pp):    +0, +76, -32, +33
+  Cond. 3 1D-CNN   n=5: H=40.0 +- 0.0  V=88.7 +- 0.2  H+V=43.2 +- 5.0  (H+V)-V: -45.5 [-48.3, -41.1] (pos/neg 0/5, n=5, exact Wilcoxon p=0.0625)  [neg/pos 5/0]
+      per-bearing accuracy H/V/H+V: Bearing3_1 100/100/100; Bearing3_3 0/0/1; Bearing3_4 0/100/4; Bearing3_5 100/100/100
+      per-bearing H+V - V (pp):    +0, +1, -96, +0
+  Cond. 1 Mamba-3: seeds [0, 1, 2], OR recall per bearing (seed means, all systems) 98.3-100.0
+  Cond. 1 1D-CNN: seeds [0, 1, 2], OR recall per bearing (seed means, all systems) 99.9-100.0
+
+====================================================================================================
+Section 4.3 -- LOBO main comparison (environment 1, Mamba-3, seeds 0-7)
+====================================================================================================
+  macro-recall H=86.4 +- 2.4  H+V=67.9 +- 9.7  H+V-H: -18.5 [-25.4, -12.0] (pos/neg 0/8, n=8, exact Wilcoxon p=0.0078)
+  OR-fold mean H=75.4 H+V=41.0;  IR-fold mean H=97.3 H+V=94.8
+
+====================================================================================================
+TABLE 3 (tab:lobo) -- condition-3 LOBO, present-class recall (%), environment 2
+====================================================================================================
+  Mamba-3 H                        OR folds 75.7  IR folds 97.7  Mean 86.7   (n=8)
+  Mamba-3 V                        OR folds 76.0  IR folds 73.4  Mean 74.7   (n=8)
+  Mamba-3 H+V (early fusion)       OR folds 34.2  IR folds 94.9  Mean 64.5   (n=8)
+  Mamba-3 late fusion (seeds [0, 1, 2])  OR folds 77.1  IR folds 96.0  Mean 86.5   (weight chosen on source hold-out, applied to full-data H and V models)
+  1D-CNN  H                        OR folds 89.4  IR folds 99.8  Mean 94.6   (n=5)
+  1D-CNN  V                        OR folds 77.1  IR folds 41.2  Mean 59.1   (n=5)
+  1D-CNN  H+V                      OR folds 31.6  IR folds 59.0  Mean 45.3   (n=5)
+  Section 4.3 text, OR-fold recall contrasts (Mamba-3, n=8):
+    H+V - H: -41.5 [-48.8, -35.7] (pos/neg 0/8, n=8, exact Wilcoxon p=0.0078);  per OR test bearing Bearing3_1 -52.3, Bearing3_5 -30.7
+    H+V - V: -41.9 [-48.8, -34.3] (pos/neg 0/8, n=8, exact Wilcoxon p=0.0078);  per OR test bearing Bearing3_1 -26.0, Bearing3_5 -57.7
+
+====================================================================================================
+Section 4.3 -- pre-specified IR (other-class) coverage sweep at Bearing3_1 (environment 1, 5 seeds)
+====================================================================================================
+  k1_c0_Bearing3_3                           [no OR training bearing    ] dual-H OR recall +0.0 pp (per seed [0.0, 0.0, 0.0, 0.0, 0.0], negative 0/5)
+  k1_c1_Bearing3_4                           [no OR training bearing    ] dual-H OR recall +0.0 pp (per seed [0.0, 0.0, 0.0, 0.0, 0.0], negative 0/5)
+  k1_c2_Bearing3_5                           [OR only                   ] dual-H OR recall +0.0 pp (per seed [0.0, 0.0, 0.0, 0.0, 0.0], negative 0/5)
+  k2_c0_Bearing3_3-Bearing3_4                [no OR training bearing    ] dual-H OR recall +0.0 pp (per seed [0.0, 0.0, 0.0, 0.0, 0.0], negative 0/5)
+  k2_c1_Bearing3_3-Bearing3_5                [single OR bearing + 1 IR  ] dual-H OR recall -30.0 pp (per seed [-19.0, -35.6, -66.8, -10.5, -18.3], negative 5/5)
+  k2_c2_Bearing3_4-Bearing3_5                [single OR bearing + 1 IR  ] dual-H OR recall -41.6 pp (per seed [-14.3, -67.2, -54.6, -50.4, -21.6], negative 5/5)
+  k3_c0_Bearing3_3-Bearing3_4-Bearing3_5     [single OR bearing + 2 IR  ] dual-H OR recall -48.0 pp (per seed [-22.1, -62.8, -71.8, -55.6, -27.6], negative 5/5)
+  range over the subsets with the single OR training bearing plus IR bearings: 30.0 to 48.0 pp below H
+
+====================================================================================================
+TABLE 4 (tab:cov) and FIGURE 3 (fig:cov) -- OR coverage sweep, Mamba-3, environment 2, 3 seeds; accuracy (%) on the OR test bearing
+====================================================================================================
+  Bearing3_1 same : k=1 H 98  V 40  H+V 22  D_best(k=1) -76  D_best(k=2) -3  D_best(k=3) +0
+  Bearing3_1 other: k=1 H 100  V 77  H+V 43  D_best(k=1) -57  D_best(k=2) -0  D_best(k=3) +0
+  Bearing2_2 same : k=1 H 66  V 82  H+V 12  D_best(k=1) -69  D_best(k=2) -10  D_best(k=3) -7
+  Bearing2_2 other: k=1 H 38  V 91  H+V 4  D_best(k=1) -87  D_best(k=2) -21  D_best(k=3) -7
+  Bearing1_1 same : k=1 H 97  V 49  H+V 64  D_best(k=1) -32  D_best(k=2) -27  D_best(k=3) -3
+  Bearing1_1 other: k=1 H 73  V 88  H+V 63  D_best(k=1) -25  D_best(k=2) -51  D_best(k=3) -0
+  k=1 cells in which H+V is below both single sensors: 5/6;  all cells (k=1,2,3) in which H+V is the worst of three: 10/18
+  Figure 3 points (per seed 0,1,2):
+    3_1_SAME_k1_H          [95.44, 100.0, 100.0]
+    3_1_SAME_k1_V          [42.96, 31.2, 46.83]
+    3_1_SAME_k1_HV         [25.6, 18.7, 22.02]
+    3_1_SAME_k2_H          [100.0, 100.0, 100.0]
+    3_1_SAME_k2_V          [99.85, 82.19, 75.05]
+    3_1_SAME_k2_HV         [91.87, 98.16, 100.0]
+    3_1_SAME_k3_H          [100.0, 100.0, 100.0]
+    3_1_SAME_k3_V          [99.95, 95.04, 77.23]
+    3_1_SAME_k3_HV         [100.0, 100.0, 100.0]
+    3_1_OTHER_k1_H         [100.0, 100.0, 100.0]
+    3_1_OTHER_k1_V         [84.08, 72.27, 75.1]
+    3_1_OTHER_k1_HV        [17.71, 50.79, 59.28]
+    3_1_OTHER_k2_H         [100.0, 100.0, 100.0]
+    3_1_OTHER_k2_V         [98.56, 92.71, 91.52]
+    3_1_OTHER_k2_HV        [99.8, 100.0, 100.0]
+    3_1_OTHER_k3_H         [100.0, 100.0, 100.0]
+    3_1_OTHER_k3_V         [99.36, 99.31, 96.68]
+    3_1_OTHER_k3_HV        [100.0, 100.0, 100.0]
+    2_2_SAME_k1_H          [67.37, 59.57, 69.75]
+    2_2_SAME_k1_V          [90.49, 76.77, 77.27]
+    2_2_SAME_k1_HV         [10.34, 23.06, 3.93]
+    2_2_SAME_k2_H          [85.84, 94.8, 93.53]
+    2_2_SAME_k2_V          [90.54, 87.11, 89.21]
+    2_2_SAME_k2_HV         [77.65, 86.23, 79.81]
+    2_2_SAME_k3_H          [88.5, 94.91, 94.69]
+    2_2_SAME_k3_V          [89.82, 94.36, 90.54]
+    2_2_SAME_k3_HV         [83.46, 87.17, 85.23]
+    2_2_OTHER_k1_H         [32.19, 39.55, 42.31]
+    2_2_OTHER_k1_V         [90.98, 92.31, 90.1]
+    2_2_OTHER_k1_HV        [0.28, 10.67, 0.39]
+    2_2_OTHER_k2_H         [70.85, 88.33, 84.68]
+    2_2_OTHER_k2_V         [90.32, 95.69, 92.98]
+    2_2_OTHER_k2_HV        [62.67, 78.48, 74.72]
+    2_2_OTHER_k3_H         [93.58, 97.18, 90.15]
+    2_2_OTHER_k3_V         [92.04, 96.74, 95.02]
+    2_2_OTHER_k3_HV        [84.35, 92.59, 86.06]
+    1_1_SAME_k1_H          [94.64, 96.49, 98.63]
+    1_1_SAME_k1_V          [38.04, 65.36, 42.92]
+    1_1_SAME_k1_HV         [51.61, 74.52, 67.2]
+    1_1_SAME_k2_H          [99.58, 99.7, 99.17]
+    1_1_SAME_k2_V          [50.06, 77.08, 43.45]
+    1_1_SAME_k2_HV         [61.01, 70.65, 85.89]
+    1_1_SAME_k3_H          [99.64, 99.46, 99.11]
+    1_1_SAME_k3_V          [86.61, 98.33, 96.49]
+    1_1_SAME_k3_HV         [98.45, 98.75, 91.67]
+    1_1_OTHER_k1_H         [64.76, 68.33, 87.38]
+    1_1_OTHER_k1_V         [80.12, 96.49, 88.04]
+    1_1_OTHER_k1_HV        [74.23, 53.63, 60.89]
+    1_1_OTHER_k2_H         [44.46, 49.29, 55.48]
+    1_1_OTHER_k2_V         [93.87, 94.88, 92.44]
+    1_1_OTHER_k2_HV        [42.32, 42.56, 43.33]
+    1_1_OTHER_k3_H         [100.0, 100.0, 99.82]
+    1_1_OTHER_k3_V         [98.75, 96.13, 98.27]
+    1_1_OTHER_k3_HV        [99.88, 98.87, 100.0]
+
+====================================================================================================
+FIGURE 2 (fig:forest) -- dual minus single sensor, seed-paired, 95% bootstrap interval (pp)
+====================================================================================================
+  Condition 2->3                       1D-CNN   dual-H: +5.27 [+2.50, +8.03]
+  Condition 2->3                       1D-CNN   dual-V: -43.32 [-46.14, -40.50]
+  Condition 2->3                       Mamba-2  dual-H: +27.32 [+20.73, +33.86]
+  Condition 2->3                       Mamba-3  dual-H: +32.41 [+24.96, +38.82]
+  Condition 2->3                       Mamba-3  dual-V: +8.17 [+4.06, +12.49]
+  Held-out condition 2                 Mamba-3  dual-H: +29.90 [+23.93, +36.12]
+  Held-out condition 2                 Mamba-3  dual-V: -17.56 [-23.97, -10.71]
+  Held-out condition 2                 1D-CNN   dual-H: +22.21 [+14.29, +30.64]
+  Held-out condition 2                 1D-CNN   dual-V: -22.27 [-28.57, -15.41]
+  Held-out condition 3                 Mamba-3  dual-H: +32.98 [+27.81, +37.56]
+  Held-out condition 3                 Mamba-3  dual-V: +8.60 [+3.66, +13.35]
+  Held-out condition 3                 1D-CNN   dual-H: +3.13 [+0.32, +7.71]
+  Held-out condition 3                 1D-CNN   dual-V: -45.53 [-48.31, -41.06]
+  Held-out bearing (LOBO, OR folds)    Mamba-3  dual-H: -41.51 [-48.76, -35.66]
+  Held-out bearing (LOBO, OR folds)    Mamba-3  dual-V: -41.86 [-48.77, -34.31]
+  Condition 2->3                       Mamba-2  dual-V: -17.87 (cross-environment, no interval)
+
+====================================================================================================
+TABLE 5 (tab:cwru) -- CWRU accuracy (%) under AWGN, seeds 0-4 (test accuracy at the validation-selected epoch)
+====================================================================================================
+  Mamba-3  -4 dB: FE-only 92.55 +- 0.91  DE-only 97.12 +- 0.99  DE+FE 98.33 +- 0.47
+      DE+FE - DE: +1.21 [+0.52, +2.21] (pos/neg 5/0, n=5)  one-sided p=0.0312  two-sided p=0.0625
+  Mamba-3  -6 dB: FE-only 84.42 +- 0.96  DE-only 92.67 +- 1.79  DE+FE 94.12 +- 1.13
+      DE+FE - DE: +1.45 [-0.27, +3.18] (pos/neg 3/2, n=5)  one-sided p=0.2188  two-sided p=0.4375
+  Mamba-3  -8 dB: FE-only 76.09 +- 2.20  DE-only 85.09 +- 1.76  DE+FE 87.88 +- 1.80
+      DE+FE - DE: +2.79 [+0.58, +5.45] (pos/neg 5/0, n=5)  one-sided p=0.0312  two-sided p=0.0625
+  1D-CNN   -4 dB: FE-only 96.48 +- 0.91  DE-only 99.85 +- 0.11  DE+FE 99.97 +- 0.07
+      DE+FE - DE: +0.12 [+0.06, +0.15] (pos/neg 4/0, n=5, zero 1)  one-sided p=0.0625  two-sided p=0.1250
+  1D-CNN   -6 dB: FE-only 91.76 +- 0.93  DE-only 99.18 +- 0.14  DE+FE 99.91 +- 0.08
+      DE+FE - DE: +0.73 [+0.58, +0.88] (pos/neg 5/0, n=5)  one-sided p=0.0312  two-sided p=0.0625
+  1D-CNN   -8 dB: FE-only 84.18 +- 1.52  DE-only 94.45 +- 0.79  DE+FE 98.73 +- 0.35
+      DE+FE - DE: +4.27 [+3.64, +5.00] (pos/neg 5/0, n=5)  one-sided p=0.0312  two-sided p=0.0625
+  FE-only below DE-only by 3.4-10.3 pp (cell means); seed pairs with DE > FE: 30/30
+
+====================================================================================================
+Section 4.4 -- eight-seed Mamba-3 pool (environment 1, seeds 0-7), one-sided exact Wilcoxon (pre-specified DE+FE > DE)
+====================================================================================================
+  -4 dB: DE 97.37 +- 0.88  DE+FE 97.95 +- 0.66  gain +0.59 [-0.15, +1.48]  SD of differences 1.26  one-sided p=0.1328  (pos/neg 6/2)
+  -6 dB: DE 93.48 +- 2.13  DE+FE 94.11 +- 1.02  gain +0.62 [-0.81, +2.16]  SD of differences 2.29  one-sided p=0.3203  (pos/neg 4/4)
+  -8 dB: DE 85.76 +- 1.95  DE+FE 88.47 +- 1.69  gain +2.71 [+1.27, +4.43]  SD of differences 2.44  one-sided p=0.0039  (pos/neg 8/0)
+  cross-check against results/env1/cwru/b2_n8_leakfree_summary.json: -4 dB +0.59 (p=0.1328), -6 dB +0.62 (p=0.3203), -8 dB +2.71 (p=0.0039)
+
+====================================================================================================
+Section 4.4 -- pink noise (Mamba-3, environment 1, seeds 0-4)
+====================================================================================================
+  -4 dB pink: DE 99.73 +- 0.29  DE+FE 99.52 +- 0.22  DE+FE-DE -0.21 [-0.42, -0.03] (pos/neg 0/3, n=5, zero 2, exact Wilcoxon p=0.2500)
+  -6 dB pink: DE 99.21 +- 0.35  DE+FE 98.76 +- 0.46  DE+FE-DE -0.45 [-0.82, -0.09] (pos/neg 1/4, n=5, exact Wilcoxon p=0.1875)
+  -8 dB pink: DE 97.58 +- 1.55  DE+FE 97.18 +- 1.00  DE+FE-DE -0.39 [-1.33, +0.55] (pos/neg 2/3, n=5, exact Wilcoxon p=0.6250)
+  DE-only at nominal -8 dB: pink 97.6  AWGN (8 seeds) 85.8
+  matched accuracy, gain(AWGN -4 dB, n=8) - gain(pink -8 dB, n=5): +0.98 [-0.27, +2.31] (independent-group bootstrap)
+  in-band SNR, 2-5 kHz resonance band, nominal -8 dB (stored output of provenance/env2/analysis/inband.py): pink +0.1 dB, AWGN -5.8 dB
+  DE-FE fault-band magnitude-squared coherence (stored output, results/env1/cwru_coherence): 0 dB 0.013, -8 dB 0.001
+
+wrote aggregate/aggregate_values.json

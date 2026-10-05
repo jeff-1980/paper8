@@ -1,0 +1,214 @@
+[
+  {
+    "family": "BM3_single_nokin",
+    "orig_config": "experiments/exp_xjtu/config_cross_nokin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_cross/exp_xjtu_cross_nokin_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/xjtu_leakfree_20260917/exp_xjtu_cross_nokin_leakfree",
+    "driver": "train_xjtu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "family": "BM3_single_kin",
+    "orig_config": "experiments/exp_xjtu/config_cross_kin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_cross/exp_xjtu_cross_kin_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/xjtu_leakfree_20260917/exp_xjtu_cross_kin_leakfree",
+    "driver": "train_xjtu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "family": "BM3_dual_nokin",
+    "orig_config": "experiments/exp_xjtu/config_cross_dual_nokin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_cross/exp_xjtu_cross_dual_nokin_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/xjtu_leakfree_20260917/exp_xjtu_cross_dual_nokin_leakfree",
+    "driver": "train_xjtu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "family": "BM3_dual_kin",
+    "orig_config": "experiments/exp_xjtu/config_cross_dual_kin.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_cross/exp_xjtu_cross_dual_kin_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/xjtu_leakfree_20260917/exp_xjtu_cross_dual_kin_leakfree",
+    "driver": "train_xjtu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "family": "BM3_single_nokin_n8",
+    "orig_config": "experiments/exp_xjtu/config_cross_nokin_newseed.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_cross/exp_xjtu_cross_nokin_newseed_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/xjtu_leakfree_20260917/exp_xjtu_cross_nokin_newseed_leakfree",
+    "driver": "train_xjtu_leakfree.py",
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "family": "BM3_dual_nokin_n8",
+    "orig_config": "experiments/exp_xjtu/config_cross_dual_nokin_newseed.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_cross/exp_xjtu_cross_dual_nokin_newseed_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/xjtu_leakfree_20260917/exp_xjtu_cross_dual_nokin_newseed_leakfree",
+    "driver": "train_xjtu_leakfree.py",
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "family": "BM2_single",
+    "orig_config": "experiments/exp_e1_dual_baselines/xjtu_cross_single_bm2/config_cross_single_bm2.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_cross/exp_e1b_xjtu_cross_single_bm2_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/xjtu_leakfree_20260917/exp_e1b_xjtu_cross_single_bm2_leakfree",
+    "driver": "train_xjtu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "family": "BM2_dual",
+    "orig_config": "experiments/exp_e1_dual_baselines/xjtu_cross_dual_bm2/config_cross_dual_bm2.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_cross/exp_e1_xjtu_cross_dual_bm2_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/xjtu_leakfree_20260917/exp_e1_xjtu_cross_dual_bm2_leakfree",
+    "driver": "train_xjtu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "family": "BM2_single_n8",
+    "orig_config": "experiments/exp_e1_dual_baselines/xjtu_cross_single_bm2/config_cross_single_bm2_newseed.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_cross/exp_e1b_xjtu_cross_single_bm2_newseed_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/xjtu_leakfree_20260917/exp_e1b_xjtu_cross_single_bm2_newseed_leakfree",
+    "driver": "train_xjtu_leakfree.py",
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "family": "BM2_dual_n8",
+    "orig_config": "experiments/exp_e1_dual_baselines/xjtu_cross_dual_bm2/config_cross_dual_bm2_newseed.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_cross/exp_e1_xjtu_cross_dual_bm2_newseed_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/xjtu_leakfree_20260917/exp_e1_xjtu_cross_dual_bm2_newseed_leakfree",
+    "driver": "train_xjtu_leakfree.py",
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "family": "1DCNN_single",
+    "orig_config": "experiments/exp_mext_e13_1dcnn_xjtu_cross/config.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_cross/exp_mext_e13_1dcnn_xjtu_cross_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/xjtu_leakfree_20260917/exp_mext_e13_1dcnn_xjtu_cross_leakfree",
+    "driver": "train_xjtu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "family": "1DCNN_dual",
+    "orig_config": "experiments/exp_e1_dual_baselines/xjtu_cross_dual_cnn/config_cross_dual_cnn.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_cross/exp_e1b_xjtu_cross_dual_cnn_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/xjtu_leakfree_20260917/exp_e1b_xjtu_cross_dual_cnn_leakfree",
+    "driver": "train_xjtu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "family": "1DCNN_single_n8",
+    "orig_config": "experiments/exp_mext_e13_1dcnn_xjtu_cross/config_newseed.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_cross/exp_mext_e13_1dcnn_xjtu_cross_newseed_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/xjtu_leakfree_20260917/exp_mext_e13_1dcnn_xjtu_cross_newseed_leakfree",
+    "driver": "train_xjtu_leakfree.py",
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "family": "1DCNN_dual_n8",
+    "orig_config": "experiments/exp_e1_dual_baselines/xjtu_cross_dual_cnn/config_cross_dual_cnn_newseed.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_cross/exp_e1b_xjtu_cross_dual_cnn_newseed_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/xjtu_leakfree_20260917/exp_e1b_xjtu_cross_dual_cnn_newseed_leakfree",
+    "driver": "train_xjtu_leakfree.py",
+    "seeds": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "family": "BM3BN",
+    "orig_config": "experiments/exp_mext_e23_bm3bn_xjtu_cross/config.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_cross/exp_mext_e23_bm3bn_xjtu_cross_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/xjtu_leakfree_20260917/exp_mext_e23_bm3bn_xjtu_cross_leakfree",
+    "driver": "train_xjtu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "family": "CNN_LN",
+    "orig_config": "experiments/exp_p2_cnn1d_ln/xjtu_cross/config.yaml",
+    "leakfree_config": "experiments/exp_bm3_cwru_leakfree/configs_batch5_cross/exp_p2_cnn1d_ln_xjtu_cross_leakfree.yaml",
+    "results_dir": "<REPO_ROOT>/results/xjtu_leakfree_20260917/exp_p2_cnn1d_ln_xjtu_cross_leakfree",
+    "driver": "train_xjtu_leakfree.py",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+]

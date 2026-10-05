@@ -1,0 +1,27 @@
+{
+  "mode": "cross",
+  "protocol": "leakfree_v1 (P10(a) fixed final epoch)",
+  "config": "exp_xjtu_cross_dual_nokin_newseed",
+  "lambda_kin": 0.0,
+  "train_condition": "37.5Hz11kN",
+  "test_condition": "40Hz10kN",
+  "seeds": [
+    5,
+    6,
+    7
+  ],
+  "macro_f1s": [
+    0.9476569361371585,
+    0.9896218952697359,
+    0.7477208925346986
+  ],
+  "macro_recalls": [
+    0.9326261467889908,
+    0.9862385321100917,
+    0.7229077646516694
+  ],
+  "mean_macro_f1": 0.8949999079805311,
+  "std_macro_f1": 0.12926173347812578,
+  "mean_macro_recall": 0.8805908145169172,
+  "std_macro_recall": 0.13916368105960422
+}

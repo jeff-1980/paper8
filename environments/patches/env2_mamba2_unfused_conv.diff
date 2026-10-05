@@ -1,0 +1,20 @@
+--- a/baselines/mamba2.py
++++ b/baselines/mamba2.py
+@@ -17,6 +17,8 @@
+ """
+ import torch
+ import torch.nn as nn
++import mamba_ssm.modules.mamba2 as _mm
++_mm.causal_conv1d_fn = None   # env workaround: fused causal-conv1d rejects unaligned strides; falls back to nn.Conv1d + SiLU (same math)
+ from mamba_ssm.modules.mamba2 import Mamba2
+ 
+ 
+@@ -30,7 +32,7 @@
+         self.conv_embed = nn.Conv1d(n_sensors, d_model, kernel_size=7,
+                                     stride=conv_stride, padding=3)
+         self.mamba_layers = nn.ModuleList([
+-            Mamba2(d_model=d_model, d_state=d_state, headdim=headdim, dtype=dtype)
++            Mamba2(d_model=d_model, d_state=d_state, headdim=headdim, dtype=dtype, use_mem_eff_path=False)
+             for _ in range(n_layers)
+         ])
+         self.layer_norms = nn.ModuleList([

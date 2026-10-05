@@ -1,0 +1,11 @@
+[0, 1, 2, 3, 4, 5, 6, 7] [0, 1, 2, 3, 4, 5, 6, 7]
+True
+BM2 H 44.59±2.42  V 88.51±0.46
+V-H +43.92 [+41.85,+45.33] p=0.0078 8/0
+['Bearing3_1', 'Bearing3_3', 'Bearing3_4', 'Bearing3_5']
+H [1.      0.16125 0.      1.     ]
+V [1.      0.      1.      0.99125]
+per-seed H [45.3 43.7 43.1 44.9 43.2 43.3 50.2 43.1] V [88.8 88.5 88.8 88.3 88.7 88.8 87.5 88.7]
+orig H 43.31±0.89  orig dual 70.63±9.68
+H repro minus orig per seed [ 0.4  0.1  1.   1.   0.8 -0.1  7.   0.1] mean abs 1.31
+V - orig dual (cross-environment, NOT paired-tested): 17.87; V>dual in 8/8 seeds

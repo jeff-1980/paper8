@@ -1,0 +1,12 @@
+bearing,cls,condition,n_files,onset_H,trigger_H,fallback_H,windows_H,onset_V,trigger_V,fallback_V,windows_V,onset_joint,windows_joint,onset_last15,windows_last15,jaccard_H_V,jaccard_H_last15
+Bearing1_1,OR,35Hz12kN,123,18,kurtosis,False,1680,76,RMS,False,752,18,1680,104,304,0.448,0.181
+Bearing1_2,OR,35Hz12kN,161,43,kurtosis,False,1888,49,RMS,False,1792,43,1888,136,400,0.949,0.212
+Bearing1_3,OR,35Hz12kN,158,105,RMS,False,848,100,RMS,False,928,100,928,134,384,0.914,0.453
+Bearing2_1,IR,37.5Hz11kN,491,452,RMS,False,624,453,RMS,False,608,452,624,417,1184,0.974,0.527
+Bearing2_2,OR,37.5Hz11kN,161,48,kurtosis,False,1808,55,RMS,False,1696,48,1808,136,400,0.938,0.221
+Bearing2_4,OR,37.5Hz11kN,42,27,RMS,False,240,27,RMS,False,240,27,240,35,112,1.0,0.467
+Bearing2_5,OR,37.5Hz11kN,339,178,RMS,False,2576,183,RMS,False,2496,178,2576,288,816,0.969,0.317
+Bearing3_1,OR,40Hz10kN,2538,2412,RMS,False,2016,2441,RMS,False,1552,2412,2016,2157,6096,0.77,0.331
+Bearing3_3,IR,40Hz10kN,371,341,both,False,480,338,kurtosis,False,528,338,528,315,896,0.909,0.536
+Bearing3_4,IR,40Hz10kN,1515,1436,RMS,False,1264,1435,RMS,False,1280,1435,1280,1287,3648,0.988,0.346
+Bearing3_5,OR,40Hz10kN,114,21,RMS,False,1488,27,RMS,False,1392,21,1488,96,288,0.935,0.194

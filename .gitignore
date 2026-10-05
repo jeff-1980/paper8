@@ -1,0 +1,19 @@
+# data and run outputs are never committed
+data/
+runs/
+out/
+out_q/
+out_loco/
+out_s/
+**/checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.npy
+*.mat
+*.log
+__pycache__/
+*.pyc
+venv/
+.venv/

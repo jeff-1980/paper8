@@ -1,0 +1,33 @@
+name: exp_xjtu_cross_dual_kin
+mode: cross
+data_root: data/XJTU-SY_Bearing_Datasets
+train_condition: 37.5Hz11kN
+test_condition: 40Hz10kN
+window_size: 2048
+n_sensors: 2
+d_model: 64
+d_state: 128
+n_layers: 4
+n_classes: 2
+conv_stride: 2
+batch_size: 64
+num_workers: 4
+epochs: 50
+lr: 0.0003
+weight_decay: 0.0001
+grad_clip: 1.0
+scheduler: cosine
+lambda_kin: 0.01
+kin_variant: cover
+bearing_kwargs:
+  n_balls: 8
+  d: 7.92
+  D: 34.55
+fs_eff: 12800.0
+seeds:
+- 0
+- 1
+- 2
+- 3
+- 4
+results_dir: runs/env1/xjtu_cross/exp_xjtu_cross_dual_kin_leakfree

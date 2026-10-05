@@ -1,0 +1,14 @@
+{
+  "fold_tag": "fold2_Bearing3_4",
+  "seed": 5,
+  "selection_mode": "fixed_epoch",
+  "final_epoch": 50,
+  "macro_recall": 0.2950949367088608,
+  "macro_f1": 0.3711442786069652,
+  "per_class_recall": [
+    0.0,
+    0.5901898734177216
+  ],
+  "elapsed_s": 751.6009879112244,
+  "checkpoint_path": "<ENV2_WORKDIR>/lobo8/out_s/lobo_bm3_V/checkpoints/fold2_Bearing3_4_seed5.pt"
+}

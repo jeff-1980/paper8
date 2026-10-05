@@ -1,0 +1,41 @@
+{
+  "config": "exp06_pu_kin_leakfree.yaml",
+  "protocol": "leakfree_pu_v1 (P12: source-domain-val selection, test evaluated once)",
+  "lambda_kin": 0.01,
+  "noise_snr_db": null,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "test_acc_best_val_per_seed": [
+    0.9489009091955346,
+    0.9457935320520198,
+    0.9600644493037174,
+    0.9553458395672689,
+    0.9642076188284038
+  ],
+  "test_acc_last_epoch_per_seed": [
+    0.949591437449649,
+    0.9459086200943722,
+    0.9585683047531361,
+    0.9553458395672689,
+    0.9640925307860513
+  ],
+  "mean_test_acc_best_val": 0.9548624697893888,
+  "std_test_acc_best_val": 0.0076225304881242665,
+  "mean_test_acc_last_epoch": 0.9547013465300955,
+  "std_test_acc_last_epoch": 0.007193509016587732,
+  "best_epochs_per_seed": [
+    36,
+    48,
+    36,
+    41,
+    49
+  ],
+  "n_runs_best_epoch_in_first10": 0,
+  "max_local_jitter_std_around_best": 0.0013904540821167704,
+  "stability_flag_P12f": "OK"
+}

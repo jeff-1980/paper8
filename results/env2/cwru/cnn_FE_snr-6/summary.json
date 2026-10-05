@@ -1,0 +1,41 @@
+{
+  "config": "cnn_FE_snr-6.yaml",
+  "backbone": "cnn1d",
+  "lambda_kin": 0.0,
+  "noise_snr_db": -6.0,
+  "noise_type": "awgn",
+  "label_mode": "4class",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "test_accs_at_best_val": [
+    0.9166666666666666,
+    0.9030303030303031,
+    0.9287878787878788,
+    0.9196969696969697,
+    0.9196969696969697
+  ],
+  "mean_test_acc": 0.9175757575757576,
+  "std_test_acc": 0.009315409787235994,
+  "best_val_accs": [
+    0.8951219512195122,
+    0.9109756097560976,
+    0.9170731707317074,
+    0.9182926829268293,
+    0.9024390243902439
+  ],
+  "protocol": "leakfree_v2 (train/val/test time-axis split, guard-gapped, per-file; per-epoch checkpoints + source snapshot, see checkpoints/ and source_snapshot/)",
+  "disjointness_pass": true,
+  "disjointness_check_file": "results/cnn_FE_snr-6/disjointness_check.json",
+  "source_snapshot_dir": "results/cnn_FE_snr-6/source_snapshot",
+  "source_snapshot_files": [
+    "scripts/cwru/train_leakfree.py",
+    "bearmamba3/data_cwru_leakfree.py",
+    "bearmamba3/data_cwru.py",
+    "<ENV2_WORKDIR>/code/cfg/cwru_fe/cnn_FE_snr-6.yaml"
+  ]
+}
