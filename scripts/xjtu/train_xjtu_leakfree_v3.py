@@ -109,6 +109,18 @@ def load_config(path: Path) -> dict:
 
 def build_model(cfg: dict, device: torch.device) -> nn.Module:
     backbone = cfg.get("backbone", "mamba3")
+    if backbone in ("mamba3_tgated", "cnn1d_tgated"):   # token-level gate (round 3, post hoc)
+        from baselines.gated_fusion import make_token_gated
+        m = build_model(dict(cfg, backbone=backbone.replace("_tgated", ""), n_sensors=1), torch.device("cpu"))
+        k = 8 if backbone == "cnn1d_tgated" else 7
+        return make_token_gated(m, cfg["d_model"], k, cfg["conv_stride"], 3, n_sensors=cfg.get("n_sensors", 2)).to(device)
+    if backbone in ("mamba3_gated", "cnn1d_gated"):   # sample-adaptive gated early fusion (round 3)
+        from baselines.gated_fusion import make_gated
+        base = dict(cfg, backbone=backbone.replace("_gated", ""), n_sensors=1)
+        m = build_model(base, torch.device("cpu"))
+        k = 8 if backbone == "cnn1d_gated" else 7
+        m = make_gated(m, cfg["d_model"], k, cfg["conv_stride"], 3, n_sensors=cfg.get("n_sensors", 2))
+        return m.to(device)
     if backbone == "cnn1d":
         from baselines.cnn1d import BearCNN1D
         return BearCNN1D(
@@ -267,7 +279,7 @@ def train_one_run(
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=n_epochs)
 
     backbone = cfg.get("backbone", "mamba3")
-    do_kin = (lambda_kin > 0) and (backbone not in ("cnn1d", "cnn1d_ln", "cnn1d_attnfusion", "transformer1d", "mamba2"))
+    do_kin = (lambda_kin > 0) and (backbone not in ("cnn1d", "cnn1d_ln", "cnn1d_attnfusion", "transformer1d", "mamba2", "mamba3_gated", "cnn1d_gated", "mamba3_tgated", "cnn1d_tgated"))
 
     # I1 snapshot setup (for L_kin runs)
     snap_batch  = None

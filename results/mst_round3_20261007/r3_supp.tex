@@ -1,0 +1,187 @@
+\section{Additional experiments of this revision: per-seed results}
+\label{sec:round3}
+The experiments of this section were specified in a written protocol committed
+to the repository before any of them was run (\texttt{prereg\_mst\_round3.md}),
+with one amendment written after the first gated-fusion result and before the
+token-gate runs (main text, section~3.5). All were run in environment~2. The
+correlated-noise model draws, for every window, $z_0,z_1\sim\mathcal N(0,1)$
+independently (the same draw as the independent AWGN), sets
+$z_1'=\rho z_0+\sqrt{1-\rho^2}\,z_1$, and scales each channel to its nominal
+SNR; $\rho=0$ reproduces the independent AWGN exactly and single-channel inputs
+are unaffected (both unit-tested). Over 100 windows the empirical noise
+correlation was $0.002$, $0.501$ and $0.900$ for $\rho=0$, $0.5$ and $0.9$, with
+per-channel SNR within $0.02$~dB of the nominal value. For the degraded-phase
+rules, the window count of every condition-2 and condition-3 bearing was checked
+against the onset audit before training.
+
+\begin{table}[htbp]
+\caption{\label{tab:r3_e1}Mamba-2, condition~2$\to$3, macro-F1 (\%) per seed, environment~2 (H and V: arms of supplementary section~S6; H+V: trained for this revision, configuration identical except \texttt{n\_sensors}).}
+\footnotesize\begin{indented}\item[]
+\begin{tabular}{@{}lcccccccc}
+\br
+Arm & seed 0 & seed 1 & seed 2 & seed 3 & seed 4 & seed 5 & seed 6 & seed 7 \\
+\mr
+H & $45.3$ & $43.7$ & $43.1$ & $44.9$ & $43.2$ & $43.3$ & $50.2$ & $43.1$ \\
+V & $88.8$ & $88.5$ & $88.8$ & $88.3$ & $88.7$ & $88.8$ & $87.5$ & $88.7$ \\
+H+V & $69.6$ & $80.9$ & $87.5$ & $55.8$ & $81.7$ & $86.2$ & $78.7$ & $80.4$ \\
+\br
+\end{tabular}
+\end{indented}
+\end{table}
+
+\begin{table}[htbp]
+\caption{\label{tab:r3_e2xc}Degraded-phase sensitivity, Mamba-3, condition~2$\to$3, macro-F1 (\%) per seed (environment~2). ``H rule'': the original arms.}
+\footnotesize\begin{indented}\item[]
+\begin{tabular}{@{}lccc}
+\br
+Onset rule, input & seed 0 & seed 1 & seed 2 \\
+\mr
+H rule, H & $54.7$ & $76.9$ & $61.8$ \\
+H rule, V & $81.7$ & $84.4$ & $81.8$ \\
+H rule, H+V & $90.3$ & $98.2$ & $90.6$ \\
+\mr
+V rule, H & $49.6$ & $73.7$ & $60.6$ \\
+V rule, V & $90.4$ & $86.4$ & $85.7$ \\
+V rule, H+V & $92.2$ & $98.9$ & $93.4$ \\
+\mr
+last 15\%, H & $49.5$ & $55.1$ & $46.2$ \\
+last 15\%, V & $38.2$ & $37.5$ & $38.8$ \\
+last 15\%, H+V & $43.7$ & $40.9$ & $48.9$ \\
+\br
+\end{tabular}
+\end{indented}
+\end{table}
+
+\begin{table}[htbp]
+\caption{\label{tab:r3_e2lobo}Degraded-phase sensitivity, Mamba-3, condition~3 LOBO, OR recall (\%) on test bearings 3\_1 / 3\_5 per seed.}
+\footnotesize\begin{indented}\item[]
+\begin{tabular}{@{}lccc}
+\br
+Onset rule, input & seed 0 & seed 1 & seed 2 \\
+\mr
+H rule, H & $96.2$ / $40.4$ & $100.0$ / $49.7$ & $100.0$ / $49.3$ \\
+H rule, V & $62.8$ / $85.3$ & $88.7$ / $80.8$ & $67.5$ / $80.4$ \\
+H rule, H+V & $38.7$ / $10.1$ & $35.6$ / $44.0$ & $41.7$ / $12.2$ \\
+\mr
+V rule, H & $92.4$ / $48.6$ & $100.0$ / $56.1$ & $100.0$ / $52.5$ \\
+V rule, V & $71.8$ / $88.6$ & $88.9$ / $86.9$ & $61.7$ / $84.0$ \\
+V rule, H+V & $33.9$ / $16.8$ & $28.9$ / $47.9$ & $57.9$ / $2.9$ \\
+\mr
+last 15\%, H & $7.2$ / $0.0$ & $15.6$ / $9.0$ & $10.4$ / $18.8$ \\
+last 15\%, V & $2.2$ / $100.0$ & $2.3$ / $100.0$ & $2.3$ / $100.0$ \\
+last 15\%, H+V & $1.4$ / $8.0$ & $1.1$ / $13.2$ & $0.3$ / $2.4$ \\
+\br
+\end{tabular}
+\end{indented}
+\end{table}
+
+\begin{table}[htbp]
+\caption{\label{tab:r3_e2pb}Degraded-phase sensitivity, Mamba-3, condition~2$\to$3: accuracy (\%) per test bearing, mean over seeds 0--2. Test windows per bearing (3\_1, 3\_3, 3\_4, 3\_5): H rule: 2016, 480, 1264, 1488; V rule: 1552, 528, 1280, 1392; last 15\%: 6096, 896, 3648, 288.}
+\footnotesize\begin{indented}\item[]
+\begin{tabular}{@{}lcccc}
+\br
+Onset rule, input & 3\_1 (OR) & 3\_3 (IR) & 3\_4 (IR) & 3\_5 (OR) \\
+\mr
+H rule, H & $100$ & $49$ & $22$ & $100$ \\
+H rule, V & $100$ & $4$ & $100$ & $78$ \\
+H rule, H+V & $100$ & $95$ & $78$ & $100$ \\
+\mr
+V rule, H & $100$ & $46$ & $19$ & $100$ \\
+V rule, V & $100$ & $26$ & $100$ & $89$ \\
+V rule, H+V & $100$ & $94$ & $85$ & $100$ \\
+\mr
+last 15\%, H & $91$ & $52$ & $9$ & $100$ \\
+last 15\%, V & $4$ & $100$ & $100$ & $100$ \\
+last 15\%, H+V & $12$ & $100$ & $98$ & $91$ \\
+\br
+\end{tabular}
+\end{indented}
+\end{table}
+
+\begin{table}[htbp]
+\caption{\label{tab:r3_seg}Degraded-phase start (file index) under the three rules, and the share (\%) of the last-15\% segment that lies before both signal-defined onsets.}
+\footnotesize\begin{indented}\item[]
+\begin{tabular}{@{}llccccc}
+\br
+Bearing & Class & Files & H onset & V onset & Last-15\% start & Pre-onset share \\
+\mr
+Bearing1\_1 & OR & $123$ & $18$ & $76$ & $104$ & $0$ \\
+Bearing1\_2 & OR & $161$ & $43$ & $49$ & $136$ & $0$ \\
+Bearing1\_3 & OR & $158$ & $105$ & $100$ & $134$ & $0$ \\
+Bearing2\_1 & IR & $491$ & $452$ & $453$ & $417$ & $47$ \\
+Bearing2\_2 & OR & $161$ & $48$ & $55$ & $136$ & $0$ \\
+Bearing2\_4 & OR & $42$ & $27$ & $27$ & $35$ & $0$ \\
+Bearing2\_5 & OR & $339$ & $178$ & $183$ & $288$ & $0$ \\
+Bearing3\_1 & OR & $2538$ & $2412$ & $2441$ & $2157$ & $67$ \\
+Bearing3\_3 & IR & $371$ & $341$ & $338$ & $315$ & $41$ \\
+Bearing3\_4 & IR & $1515$ & $1436$ & $1435$ & $1287$ & $65$ \\
+Bearing3\_5 & OR & $114$ & $21$ & $27$ & $96$ & $0$ \\
+\br
+\end{tabular}
+\end{indented}
+\end{table}
+
+\begin{table}[htbp]
+\caption{\label{tab:r3_e3}Gated fusion, condition~2$\to$3: macro-F1 (\%) per seed, and the standard deviation of the channel-2 (V) gate weight over the test windows (window-mean for the token gate) and the mean within-window standard deviation of the token gate. Adaptivity rule fixed in advance: window SD $>0.01$ in every seed.}
+\footnotesize\begin{indented}\item[]
+\begin{tabular}{@{}lccccc}
+\br
+Arm & seed 0 & seed 1 & seed 2 & seed 3 & seed 4 \\
+\mr
+1D-CNN window gate & $43.8$ & $44.3$ & $86.8$ & $44.5$ & $42.4$ \\
+\quad gate SD over windows & $0.0075$ & $0.0101$ & $0.0315$ & $0.0028$ & $0.0075$ \\
+1D-CNN token gate & $41.7$ & $46.2$ & $50.3$ & $43.1$ & $58.5$ \\
+\quad gate SD over windows & $0.0017$ & $0.0016$ & $0.0018$ & $0.0025$ & $0.0010$ \\
+\quad mean token-level SD & $0.034$ & $0.034$ & $0.043$ & $0.038$ & $0.053$ \\
+Mamba-3 window gate & $79.7$ & $94.1$ & $95.9$ & $94.8$ & $85.1$ \\
+\quad gate SD over windows & $0.0016$ & $0.0038$ & $0.0040$ & $0.0023$ & $0.0067$ \\
+Mamba-3 token gate & $86.4$ & $96.8$ & $95.1$ & $96.7$ & $93.3$ \\
+\quad gate SD over windows & $0.0036$ & $0.0026$ & $0.0019$ & $0.0034$ & $0.0036$ \\
+\quad mean token-level SD & $0.047$ & $0.065$ & $0.063$ & $0.073$ & $0.077$ \\
+\br
+\end{tabular}
+\end{indented}
+\end{table}
+
+\begin{table}[htbp]
+\caption{\label{tab:r3_e3lobo}Gated fusion, Mamba-3, condition~3 LOBO: OR recall (\%) on test bearings 3\_1 / 3\_5 per seed and gate SD over test windows.}
+\footnotesize\begin{indented}\item[]
+\begin{tabular}{@{}lccc}
+\br
+Arm & seed 0 & seed 1 & seed 2 \\
+\mr
+window gate & $98.3$ / $31.0$ & $93.7$ / $7.5$ & $88.5$ / $83.3$ \\
+\quad gate SD (3\_1 / 3\_5) & $0.0016$ / $0.0020$ & $0.0032$ / $0.0008$ & $0.0028$ / $0.0007$ \\
+token gate & $92.5$ / $15.6$ & $86.7$ / $7.1$ & $88.1$ / $78.8$ \\
+\quad gate SD (3\_1 / 3\_5) & $0.0031$ / $0.0015$ & $0.0019$ / $0.0013$ & $0.0023$ / $0.0032$ \\
+\br
+\end{tabular}
+\end{indented}
+\end{table}
+
+\begin{table}[htbp]
+\caption{\label{tab:r3_cwru}CWRU, Mamba-3, environment~2: test accuracy (\%) at the validation-selected epoch per seed. FE-only: arms of supplementary section~S6; all other arms trained for this revision. $\rho$: correlation of the injected noise between the two channels (no $\rho$: independent noise).}
+\footnotesize\begin{indented}\item[]
+\begin{tabular}{@{}lccccc}
+\br
+Arm & seed 0 & seed 1 & seed 2 & seed 3 & seed 4 \\
+\mr
+$-4$~dB, FE & $91.67$ & $93.18$ & $93.79$ & $92.27$ & $91.82$ \\
+$-4$~dB, DE & $96.21$ & $98.03$ & $98.48$ & $97.27$ & $95.76$ \\
+$-4$~dB, DE+FE & $97.88$ & $97.42$ & $98.33$ & $97.58$ & $97.12$ \\
+\mr
+$-6$~dB, FE & $85.15$ & $84.09$ & $85.00$ & $82.88$ & $85.00$ \\
+$-6$~dB, DE & $90.00$ & $91.82$ & $93.48$ & $93.03$ & $93.79$ \\
+$-6$~dB, DE+FE & $94.85$ & $95.61$ & $94.24$ & $93.33$ & $93.48$ \\
+$-6$~dB, DE+FE, $\rho=0.5$ & $96.67$ & $96.82$ & $96.21$ & $93.94$ & $95.91$ \\
+$-6$~dB, DE+FE, $\rho=0.9$ & $99.24$ & $99.70$ & $99.24$ & $97.88$ & $99.09$ \\
+\mr
+$-8$~dB, FE & $77.42$ & $73.64$ & $73.94$ & $76.82$ & $78.64$ \\
+$-8$~dB, DE & $84.24$ & $84.70$ & $83.94$ & $85.15$ & $85.76$ \\
+$-8$~dB, DE+FE & $87.42$ & $88.64$ & $88.79$ & $86.97$ & $88.33$ \\
+$-8$~dB, DE+FE, $\rho=0.5$ & $90.30$ & $90.45$ & $90.45$ & $90.91$ & $90.76$ \\
+$-8$~dB, DE+FE, $\rho=0.9$ & $99.09$ & $97.73$ & $97.58$ & $98.18$ & $96.67$ \\
+\br
+\end{tabular}
+\end{indented}
+\end{table}

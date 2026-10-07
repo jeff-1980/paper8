@@ -1,11 +1,17 @@
 # TABLE_MAP — from every main-text number to its files
 
-> **Final MST numbering (manuscript mst-v1).** Section headings below use the working labels of the
-> aggregator. In the submitted manuscript: Table 1 = literature comparison (`tab:litcomp`, not computed),
-> Table 2 = influence quantities (`tab:influence`, not computed), **Table 3 = `tab:xc`** (below "Table 1"),
-> **Table 4 = `tab:loco`** ("Table 2"), **Table 5 = `tab:lobo`** ("Table 3"), **Table 6 = `tab:cov`**
-> ("Table 4"), **Table 7 = `tab:cwru`** ("Table 5"), Table 8 = claim boundaries (`tab:claims`).
-> Figures 1-3 keep their numbers. Use the LaTeX labels to match unambiguously.
+> **Manuscript numbering, fourth draft (release mst-v2).** Section headings below use the working labels
+> of `aggregate/aggregate_main.py`; match by LaTeX label. Main text: Table 1 = `tab:litcomp` (not computed),
+> Table 2 = `tab:influence` (not computed), **Table 3 = `tab:xc`** (heading "Table 1" below),
+> **Table 4 = `tab:gated`** (round 3, new), **Table 5 = `tab:loco`** ("Table 2"), **Table 6 = `tab:lobo`**
+> ("Table 3"), **Table 7 = `tab:cov`** ("Table 4"), **Table 8 = `tab:onset`** (round 3, new),
+> **Table 9 = `tab:cwru`** ("Table 5"; Mamba-3 rows now from round 3), **Table 10 = `tab:corr`** (round 3, new),
+> Table 11 = `tab:claims` (not computed). Figures 1–3 keep their numbers; Figure 2 Mamba-2 rows now come from
+> round 3. Supplementary tables S29–S36 (section S9) are the per-seed round-3 tables.
+> Round-3 values are printed by `results/mst_round3_20261007/an_r3.py` (output `an_r3_results.md`); the
+> LaTeX rows of Tables 4, 8, 9 (Mamba-3) and 10 and of the Mamba-2 row of Table 3 are written by
+> `gen_r3_tex.py` (`r3_tex.json`), and S29–S36 by `gen_r3_supp.py` (`r3_supp.tex`). See the section
+> "Round 3" at the end of this file.
 > Late fusion: both variants (weight from the source hold-out applied to the hold-out sub-models, or to the
 > full-data models) are printed for both designs, as reported in the manuscript.
 
@@ -47,7 +53,8 @@ Output block: `TABLE 1 (tab:xc)`.
 | B: Mamba-3 H | 1 | 0–4, 5–7 | `env1/xjtu_cross/exp_xjtu_cross_nokin_leakfree.yaml`, `..._nokin_newseed_leakfree.yaml` | `env1/xjtu_cross/exp_xjtu_cross_nokin_leakfree/`, `..._nokin_newseed_leakfree/` |
 | B: Mamba-3 H+V | 1 | 0–4, 5–7 | `env1/xjtu_cross/exp_xjtu_cross_dual_nokin_leakfree.yaml`, `..._dual_nokin_newseed_leakfree.yaml` | `env1/xjtu_cross/exp_xjtu_cross_dual_nokin_leakfree/`, `..._newseed_leakfree/` |
 | footnote a (1D-CNN bridge) | 2 | 0–4 | `env2/xjtu_cross/xc_cnn_{H,HV}.yaml` | `env2/xjtu_cross/xc_cnn_{H,HV}/` vs the environment-1 dirs above |
-| footnote b (Mamba-2, 17.9 pp) | 1 vs 2 | 0–7 | as rows B Mamba-2 H+V and A Mamba-2 V | — (cross-environment, descriptive) |
+| A: Mamba-2 H+V (round 3) | 2 | 0–7 | `mst_round3_20261007/cfg_r3/e1_bm2_HV.yaml` | `mst_round3_20261007/e1_bm2_HV/` |
+| ~~footnote b (Mamba-2, 17.9 pp, cross-environment)~~ | — | — | superseded in the fourth draft by row A Mamba-2 H+V (same environment, paired) | — |
 
 Note a — the 1D-CNN V arm was trained after the H and H+V arms with the same script
 (`train_xjtu_leakfree.py` with `sensor_channel: 1`); its log shows it ran in the environment-2 software
@@ -93,9 +100,11 @@ Pre-specified protocol: `protocols/prereg_independent_validation.md`.
 ## Figure 2 (`fig:forest`)
 
 Output block: `FIGURE 2 (fig:forest)`. Rows are the dual − single contrasts of Table 1 (condition 2 → 3:
-1D-CNN and Mamba-2 dual − H from panel B, environment 1; 1D-CNN dual − V and Mamba-3 rows from panel A),
+1D-CNN dual − H from panel B, environment 1; 1D-CNN dual − V and Mamba-3 rows from panel A; both Mamba-2 rows
+from round 3, `e1_bm2_HV` vs `env2/xjtu_cross/r2_bm2_{H,V}`, environment 2),
 Table 2 (held-out conditions 2 and 3; dual − H and dual − V) and Table 3 (LOBO OR-fold mean recall,
-environment 2). The Mamba-2 dual − V point is the cross-environment footnote-b value (no interval).
+environment 2). Plotted values and sources: manuscript supplementary section S7 and
+`paper_mst/fig2_forest_data.csv` (fourth draft). The earlier cross-environment Mamba-2 point is no longer plotted.
 
 ## Section 4.3 — LOBO main comparison (environment 1)
 
@@ -147,14 +156,17 @@ Output block: `TABLE 5 (tab:cwru)`.
 
 | row | env | configs | result dirs |
 |---|---|---|---|
-| Mamba-3 DE-only | 1 | `env1/cwru/exp02_snr-{4,6,8}_nokin.yaml` | `env1/cwru/exp02_snr-{4,6,8}_nokin/` |
-| Mamba-3 DE+FE | 1 | `env1/cwru/exp_b2_dual_nokin_snrm{4,6,8}.yaml` | `env1/cwru/exp_b2_dual_nokin_snrm{4,6,8}/` |
+| Mamba-3 DE-only (fourth draft, Table 9) | 2 | `mst_round3_20261007/cfg_r3/e4_bm3_DE_snr{-4,-6,-8}.yaml` | `mst_round3_20261007/e4_bm3_DE_snr{-4,-6,-8}/` |
+| Mamba-3 DE+FE (fourth draft, Table 9) | 2 | `mst_round3_20261007/cfg_r3/e4_bm3_DEFE_snr{-4,-6,-8}.yaml` | `mst_round3_20261007/e4_bm3_DEFE_snr{-4,-6,-8}/` |
+| Mamba-3 DE-only, environment 1 (first measurement, quoted in text and S6) | 1 | `env1/cwru/exp02_snr-{4,6,8}_nokin.yaml` | `env1/cwru/exp02_snr-{4,6,8}_nokin/` |
+| Mamba-3 DE+FE, environment 1 (first measurement, quoted in text and S6) | 1 | `env1/cwru/exp_b2_dual_nokin_snrm{4,6,8}.yaml` | `env1/cwru/exp_b2_dual_nokin_snrm{4,6,8}/` |
 | Mamba-3 FE-only | 2 | `env2/cwru/bm3_FE_snr-{4,6,8}.yaml` | `env2/cwru/bm3_FE_snr-{4,6,8}/` |
 | 1D-CNN FE-only, DE-only, DE+FE | 2 | `env2/cwru/cnn_{FE,DE,DEFE}_snr-{4,6,8}.yaml` | `env2/cwru/cnn_{FE,DE,DEFE}_snr-{4,6,8}/` |
 | environment bridge (Mamba-3 DE-only −8 dB, −0.06 pp) | 2 | `env2/cwru/bm3_DE_snr-8.yaml` | `env2/cwru/bm3_DE_snr-8/` (report `env2/cwru/reports/summary_cwru_fe_full.md`) |
 
-Section 4.4 text, same block: FE-only below DE-only by 3.4–10.3 pp in 30/30 seed pairs; Mamba-3 gains
-+1.2, +1.5, +2.8 with intervals; 1D-CNN gains +0.1, +0.7, +4.3.
+Section 4.4 text, same block: 1D-CNN gains +0.1, +0.7, +4.3; environment-1 Mamba-3 gains +1.2, +1.5, +2.8
+(first measurement). Environment-2 Mamba-3 gains (+0.52, +1.88, +3.27) and FE − DE are printed by
+`mst_round3_20261007/an_r3.py` (block E4).
 
 ## Section 4.4 — eight-seed pool, pink noise, coherence
 
@@ -178,3 +190,30 @@ Pre-specified protocol for the CWRU seed extension and the dual-sensor baselines
   simulation; their stored outputs are read and printed, and the producing scripts are in
   `provenance/`.
 * Figure 1 is a schematic (no data).
+
+
+## Round 3 (pre-registered, environment 2) — `results/mst_round3_20261007/`
+
+Protocol: `protocols/prereg_mst_round3.md` (committed before the first run; Amendment 1 appended after the
+window-gate condition 2 → 3 runs and before any token-gate run). Run order and wall time: `wall.txt`
+(the first CWRU pass failed on an import path and was rerun in full; only the rerun is used). Bridge
+check before the runs: `smoke_bm2_H_s0/` reproduces `env2/xjtu_cross/r2_bm2_H/seed_0.json` exactly.
+Reproduce: `cd results/mst_round3_20261007 && python an_r3.py && python gen_r3_tex.py && python gen_r3_supp.py`.
+
+| manuscript item | round-3 dirs (under `mst_round3_20261007/`) | comparators |
+|---|---|---|
+| Table 3 panel A, Mamba-2 H+V and contrasts | `e1_bm2_HV/` | `env2/xjtu_cross/r2_bm2_{H,V}/` |
+| Table 4 panel A (gated fusion, condition 2 → 3, seeds 0–4) | `e3_{cnn,bm3}_gated/`, `e3t_{cnn,bm3}_tgated/` (+ `gate_stats.json`) | `env2/xjtu_cross/xc_{cnn,bm3}_{H,V,HV}/` |
+| Table 4 panel B (gated fusion, LOBO OR folds, seeds 0–2) | `e3_lobo_bm3_gated/`, `e3t_lobo_bm3_tgated/` | `env2/xjtu_lobo/lobo_bm3_{H,V,HV}/` |
+| Table 8 (onset rule V / last 15 %, seeds 0–2) | `e2_{V,last15}_{xc,lobo}_bm3_{H,V,HV}/` | H rule: `env2/xjtu_cross/xc_bm3_*`, `env2/xjtu_lobo/lobo_bm3_*` (seeds 0–2); segment counts `audit/onset_audit.csv` |
+| Table 9 Mamba-3 DE-only and DE+FE (seeds 0–4) | `e4_bm3_{DE,DEFE}_snr{-4,-6,-8}/` | FE-only: `env2/cwru/bm3_FE_snr{-4,-6,-8}/` |
+| Table 10 (correlated noise, seeds 0–4) | `e5_bm3_DEFE_snr{-6,-8}_rho{0.5,0.9}/`; ρ = 0 is `e4_bm3_DEFE_snr{-6,-8}/` | DE-only `e4_bm3_DE_snr{-6,-8}/` |
+| Figure 2 Mamba-2 rows | `e1_bm2_HV/` | `env2/xjtu_cross/r2_bm2_{H,V}/` |
+| Supplementary S29–S36 | all of the above | — |
+
+Code used: `bearmamba3/data_xjtu.py` (`XJTU_ONSET_RULE` = `H` (default) / `V` / `last15`) with
+`environments/patches/env2_data_xjtu_channel.diff` applied; `bearmamba3/data_cwru_leakfree.py`
+(noise type `awgn_corr<ρ>`; `awgn` unchanged); `baselines/gated_fusion.py`;
+`scripts/xjtu/train_xjtu_leakfree_v3.py` (backbones `*_gated`, `*_tgated`); `scripts/lobo/train_lobo_leakfree_v3.py`
+(option `only_folds`); CWRU: the environment-1 trainer. Mamba-2 arm: also apply
+`environments/patches/env2_mamba2_unfused_conv.diff`.

@@ -103,6 +103,11 @@ def make_cross_condition_split(
     return valid_bearings(train_cond), valid_bearings(test_cond)
 
 
+_ONSET_RULE = os.environ.get('XJTU_ONSET_RULE', 'H')   # 'H' (original), 'V' (same rule on vertical channel), 'last15' (fixed last 15% of files)
+assert _ONSET_RULE in ('H', 'V', 'last15'), _ONSET_RULE
+_ONSET_COL = 1 if _ONSET_RULE == 'V' else 0
+
+
 def compute_fault_onset(
     data_root: str,
     bearing_name: str,
@@ -131,11 +136,13 @@ def compute_fault_onset(
     )
     if not csv_files:
         raise FileNotFoundError(f"No CSV files found in {folder}")
+    if _ONSET_RULE == 'last15':
+        return int(len(csv_files) * 0.85), np.array([])
 
     kurtosises = []
     stds = []
     for f in csv_files:
-        data = np.loadtxt(f, delimiter=',', skiprows=1, usecols=0)  # horizontal
+        data = np.loadtxt(f, delimiter=',', skiprows=1, usecols=_ONSET_COL)  # horizontal by default (XJTU_ONSET_RULE=V: vertical)
         mu = data.mean()
         sigma = float(data.std())
         stds.append(sigma)

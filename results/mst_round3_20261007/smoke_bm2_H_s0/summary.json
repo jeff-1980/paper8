@@ -1,0 +1,21 @@
+{
+  "mode": "cross",
+  "protocol": "leakfree_v1 (P10(a) fixed final epoch)",
+  "config": "smoke_bm2_H_s0",
+  "lambda_kin": 0.0,
+  "train_condition": "37.5Hz11kN",
+  "test_condition": "40Hz10kN",
+  "seeds": [
+    0
+  ],
+  "macro_f1s": [
+    0.453033100558281
+  ],
+  "macro_recalls": [
+    0.5255160550458715
+  ],
+  "mean_macro_f1": 0.453033100558281,
+  "std_macro_f1": 0.0,
+  "mean_macro_recall": 0.5255160550458715,
+  "std_macro_recall": 0.0
+}

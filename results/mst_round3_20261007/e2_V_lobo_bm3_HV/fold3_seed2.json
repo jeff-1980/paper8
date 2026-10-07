@@ -1,0 +1,14 @@
+{
+  "fold_tag": "fold3_Bearing3_5",
+  "seed": 2,
+  "selection_mode": "fixed_epoch",
+  "final_epoch": 50,
+  "macro_recall": 0.014367816091954023,
+  "macro_f1": 0.027932960893854747,
+  "per_class_recall": [
+    0.028735632183908046,
+    0.0
+  ],
+  "elapsed_s": 132.97187781333923,
+  "checkpoint_path": null
+}

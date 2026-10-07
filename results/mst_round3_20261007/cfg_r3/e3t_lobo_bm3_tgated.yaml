@@ -1,0 +1,32 @@
+backbone: mamba3_tgated
+batch_size: 64
+conv_stride: 2
+d_model: 64
+d_state: 128
+data_root: <DATA_ROOT>/XJTU-SY_Bearing_Datasets
+epochs: 50
+fs_eff: 12800.0
+grad_clip: 1.0
+kin_variant: cover
+lambda_kin: 0.0
+lr: 0.0003
+mode: lobo
+n_classes: 2
+n_layers: 4
+n_sensors: 2
+name: e3t_lobo_bm3_tgated
+num_workers: 0
+only_folds:
+- 0
+- 3
+results_dir: <ENV2_WORKDIR>/out_r3/e3t_lobo_bm3_tgated
+save_checkpoint: true
+scheduler: cosine
+seeds:
+- 0
+- 1
+- 2
+selection_mode: fixed_epoch
+sensor_channel: 0
+weight_decay: 0.0001
+window_size: 2048

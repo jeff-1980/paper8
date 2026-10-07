@@ -1,0 +1,29 @@
+batch_size: 64
+channels:
+- DE
+conv_stride: 2
+d_model: 64
+d_state: 128
+data_dir: "<REPO_ROOT>/data/cwru_12k_de"
+epochs: 50
+grad_clip: 1.0
+kin_variant: cover
+lambda_kin: 0.0
+lr: 0.0003
+n_classes: 4
+n_layers: 4
+name: e4_bm3_DE_snr-4
+noise_snr_db: -4.0
+num_workers: 0
+results_dir: <ENV2_WORKDIR>/out_r3/e4_bm3_DE_snr-4
+scheduler: cosine
+seeds:
+- 0
+- 1
+- 2
+- 3
+- 4
+stride: 1024
+val_ratio: 0.2
+weight_decay: 0.0001
+win_len: 2048

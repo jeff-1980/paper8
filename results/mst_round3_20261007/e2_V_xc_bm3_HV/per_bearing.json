@@ -1,0 +1,106 @@
+{
+ "test_bearings": [
+  "Bearing3_1",
+  "Bearing3_3",
+  "Bearing3_4",
+  "Bearing3_5"
+ ],
+ "seeds": {
+  "0": {
+   "per_bearing": {
+    "Bearing3_1": {
+     "label": "OR",
+     "n": 1552,
+     "acc": 1.0
+    },
+    "Bearing3_3": {
+     "label": "IR",
+     "n": 528,
+     "acc": 0.9412878787878788
+    },
+    "Bearing3_4": {
+     "label": "IR",
+     "n": 1280,
+     "acc": 0.7609375
+    },
+    "Bearing3_5": {
+     "label": "OR",
+     "n": 1392,
+     "acc": 1.0
+    }
+   },
+   "recall_recomputed": [
+    1.0,
+    0.8136061946902655
+   ],
+   "recall_recorded": [
+    1.0,
+    0.8141592920353983
+   ]
+  },
+  "1": {
+   "per_bearing": {
+    "Bearing3_1": {
+     "label": "OR",
+     "n": 1552,
+     "acc": 1.0
+    },
+    "Bearing3_3": {
+     "label": "IR",
+     "n": 528,
+     "acc": 0.9734848484848485
+    },
+    "Bearing3_4": {
+     "label": "IR",
+     "n": 1280,
+     "acc": 0.97421875
+    },
+    "Bearing3_5": {
+     "label": "OR",
+     "n": 1392,
+     "acc": 1.0
+    }
+   },
+   "recall_recomputed": [
+    1.0,
+    0.974004424778761
+   ],
+   "recall_recorded": [
+    1.0,
+    0.974004424778761
+   ]
+  },
+  "2": {
+   "per_bearing": {
+    "Bearing3_1": {
+     "label": "OR",
+     "n": 1552,
+     "acc": 1.0
+    },
+    "Bearing3_3": {
+     "label": "IR",
+     "n": 528,
+     "acc": 0.9185606060606061
+    },
+    "Bearing3_4": {
+     "label": "IR",
+     "n": 1280,
+     "acc": 0.81015625
+    },
+    "Bearing3_5": {
+     "label": "OR",
+     "n": 1392,
+     "acc": 1.0
+    }
+   },
+   "recall_recomputed": [
+    1.0,
+    0.8418141592920354
+   ],
+   "recall_recorded": [
+    1.0,
+    0.8418141592920354
+   ]
+  }
+ }
+}

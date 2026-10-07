@@ -1,0 +1,41 @@
+{
+  "config": "e4_bm3_DEFE_snr-4.yaml",
+  "backbone": "mamba3",
+  "lambda_kin": 0.0,
+  "noise_snr_db": -4.0,
+  "noise_type": "awgn",
+  "label_mode": "4class",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "test_accs_at_best_val": [
+    0.9787878787878788,
+    0.9742424242424242,
+    0.9833333333333333,
+    0.9757575757575757,
+    0.9712121212121212
+  ],
+  "mean_test_acc": 0.9766666666666666,
+  "std_test_acc": 0.004620591115750564,
+  "best_val_accs": [
+    0.9658536585365853,
+    0.9804878048780488,
+    0.9792682926829268,
+    0.9804878048780488,
+    0.9768292682926829
+  ],
+  "protocol": "leakfree_v2 (train/val/test time-axis split, guard-gapped, per-file; per-epoch checkpoints + source snapshot, see checkpoints/ and source_snapshot/)",
+  "disjointness_pass": true,
+  "disjointness_check_file": "<ENV2_WORKDIR>/out_r3/e4_bm3_DEFE_snr-4/disjointness_check.json",
+  "source_snapshot_dir": "<ENV2_WORKDIR>/out_r3/e4_bm3_DEFE_snr-4/source_snapshot",
+  "source_snapshot_files": [
+    "<ENV2_WORKDIR>/scripts/cwru/train_leakfree.py",
+    "<ENV2_WORKDIR>/bearmamba3/data_cwru_leakfree.py",
+    "<ENV2_WORKDIR>/bearmamba3/data_cwru.py",
+    "<ENV2_WORKDIR>/cfg_r3/e4_bm3_DEFE_snr-4.yaml"
+  ]
+}

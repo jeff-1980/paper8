@@ -1,7 +1,7 @@
 # paper8 — code and results for "When does a second vibration sensor help?"
 
-This repository is the frozen code-and-results release (version **mst-v1**) accompanying the
-manuscript
+This repository is the frozen code-and-results release (version **mst-v2**, fourth manuscript draft;
+see `CHANGELOG.md`) accompanying the manuscript
 
 > Y. Wang and Y. Tang, *When does a second vibration sensor help? A controlled case study of
 > sensor configuration for deep-learning bearing fault diagnosis*, submitted to
@@ -10,7 +10,10 @@ manuscript
 It contains the leakage-free training code, every configuration file, the split definitions, the
 pre-specified protocols, the per-seed and per-bearing result files behind every number in the main
 text, the degraded-phase (onset) audit, and one aggregation script that recomputes all main-text
-tables and figure values from those files. `TABLE_MAP.md` maps every main-text table, figure and
+tables and figure values from those files. The pre-registered round-3 experiments of the fourth draft
+(Mamba-2 dual arm in environment 2, degraded-phase sensitivity, gated fusion, CWRU arms in environment 2,
+correlated inter-channel noise) are in `results/mst_round3_20261007/` with their own analysis and
+table-generating scripts, and their protocol is `protocols/prereg_mst_round3.md`. `TABLE_MAP.md` maps every main-text table, figure and
 quoted number to its environment, seeds, configuration files, result directories and the
 aggregation command.
 
@@ -40,6 +43,7 @@ diff <(python aggregate/aggregate_main.py) aggregate/expected_output.txt
 | `scripts/` | environment-2 trainers (`xjtu/`, `lobo/`) and evaluation / late-fusion / analysis helpers (`extra/`) |
 | `configs/env1/`, `configs/env2/` | every configuration used, grouped by design (`cwru`, `xjtu_cross`, `xjtu_lobo`, `xjtu_loco`, `xjtu_or_coverage`, `xjtu_ir_coverage_p14`, `pu`) |
 | `results/env1/`, `results/env2/` | per-seed JSON (`seed_*.json`, `fold*_seed*.json`), `per_bearing.json`, `summary*.json`, source snapshots and run reports; no checkpoints |
+| `results/mst_round3_20261007/` | round-3 experiments (fourth draft): `cfg_r3/` configurations, per-seed and per-bearing JSON, `gate_stats.json`, run queue and runner (`run_r3.sh`, `run_one.sh`, `queue_r3.txt`, `wall.txt`), analysis `an_r3.py` (→ `an_r3_results.md`) and table generators `gen_r3_tex.py` (→ `r3_tex.json`), `gen_r3_supp.py` (→ `r3_supp.tex`) |
 | `aggregate/` | `aggregate_main.py`, its output `expected_output.txt` and `aggregate_values.json` |
 | `audit/` | read-only degraded-phase onset audit (`onset_audit.py`, `onset_audit.csv`) |
 | `splits/` | split manifests (CWRU per recording; XJTU-SY per design) and the script that writes them |
@@ -172,6 +176,20 @@ percentile resamples of the seed-paired differences, `numpy.random.default_rng(1
 exact Wilcoxon signed-rank test by full enumeration (ties handled with mid-ranks). Interval end points
 can differ from the printed manuscript values by Monte-Carlo error of the bootstrap (about 0.1 pp,
 at most 0.2 pp for the widest intervals).
+
+Round 3 (Tables 4, 8, 10; the Mamba-3 rows of Table 9; the Mamba-2 H+V row of Table 3; supplementary
+S29–S36):
+
+```bash
+cd results/mst_round3_20261007
+python an_r3.py && python gen_r3_tex.py && python gen_r3_supp.py   # needs numpy, scipy
+git diff --stat .                                                 # no change expected
+```
+
+Round-3 bootstraps use the same scheme as above. To retrain a round-3 arm: environment 2, apply both
+environment-2 patches for Mamba-2 (only the data patch otherwise), set `XJTU_ONSET_RULE=V` or `last15` for
+the onset arms (default `H`), and run `run_one.sh <config name>` from a checkout whose layout matches
+`<ENV2_WORKDIR>` (see `run_r3.sh`).
 
 `audit/onset_audit.py` (raw XJTU-SY CSVs) and `splits/make_split_manifests.py` (CWRU .mat files)
 need the data; their outputs are included.

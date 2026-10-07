@@ -234,6 +234,14 @@ class CWRULeakfreeDataset(Dataset):
                 w = w.copy()
                 for c in range(w.shape[0]):
                     w[c] = add_noise_at_snr(w[c], self.noise_snr_db, rng, noise_type="pink")
+            elif self.noise_type.startswith("awgn_corr"):
+                rho = float(self.noise_type[len("awgn_corr"):])
+                sig_pwr = np.mean(w ** 2, axis=1, keepdims=True).clip(min=1e-12)
+                noise_std = np.sqrt(sig_pwr / (10 ** (self.noise_snr_db / 10.0)))
+                z = rng.standard_normal(w.shape).astype(np.float32)   # same draw as 'awgn'
+                if z.shape[0] == 2:
+                    z[1] = rho * z[0] + np.sqrt(1.0 - rho ** 2) * z[1]   # unit variance, corr(z0, z1) = rho
+                w = w + z * noise_std
             else:
                 raise ValueError(f"unknown noise_type={self.noise_type!r}")
         if self.normalize:
