@@ -1,17 +1,22 @@
 # TABLE_MAP — from every main-text number to its files
 
-> **Manuscript numbering, fourth draft (release mst-v2).** Section headings below use the working labels
+> **Manuscript numbering, fifth draft (release mst-v3).** Section headings below use the working labels
 > of `aggregate/aggregate_main.py`; match by LaTeX label. Main text: Table 1 = `tab:litcomp` (not computed),
 > Table 2 = `tab:influence` (not computed), **Table 3 = `tab:xc`** (heading "Table 1" below),
-> **Table 4 = `tab:gated`** (round 3, new), **Table 5 = `tab:loco`** ("Table 2"), **Table 6 = `tab:lobo`**
-> ("Table 3"), **Table 7 = `tab:cov`** ("Table 4"), **Table 8 = `tab:onset`** (round 3, new),
-> **Table 9 = `tab:cwru`** ("Table 5"; Mamba-3 rows now from round 3), **Table 10 = `tab:corr`** (round 3, new),
-> Table 11 = `tab:claims` (not computed). Figures 1–3 keep their numbers; Figure 2 Mamba-2 rows now come from
-> round 3. Supplementary tables S29–S36 (section S9) are the per-seed round-3 tables.
-> Round-3 values are printed by `results/mst_round3_20261007/an_r3.py` (output `an_r3_results.md`); the
-> LaTeX rows of Tables 4, 8, 9 (Mamba-3) and 10 and of the Mamba-2 row of Table 3 are written by
-> `gen_r3_tex.py` (`r3_tex.json`), and S29–S36 by `gen_r3_supp.py` (`r3_supp.tex`). See the section
-> "Round 3" at the end of this file.
+> **Table 4 = `tab:gated`** (round 3), **Table 5 = `tab:loco`** ("Table 2"), **Table 6 = `tab:lobo`**
+> ("Table 3"), **Table 7 = `tab:cov`** ("Table 4"), **Table 8 = `tab:onset`** (round 3),
+> **Table 9 = `tab:cwru`** and **Table 10 = `tab:corr`** (round 4, corrected noise implementation; see the
+> section "Round 4" at the end), Table 11 = `tab:claims` (not computed). Figures 1–3 keep their numbers.
+> Supplementary: S24–S30 (section S8) are the per-seed round-3 XJTU-SY tables, S31 (section S9) the per-seed
+> round-4 CWRU table.
+>
+> **Superseded noise protocol.** Every CWRU and Paderborn result in this repository that involves injected
+> noise and is *not* under `results/mst_round4_noisefix_20261007/` was obtained with the earlier noise
+> implementation (`noise_key: v1`: noise seeded by the index within a split, reused across splits). These
+> results, and the blocks of `aggregate_main.py` and of this file that refer to them (marked
+> "SUPERSEDED" below), are kept for provenance and are not used to support the current manuscript.
+> Noise-free results (all XJTU-SY results) are unaffected.
+>
 > Late fusion: both variants (weight from the source hold-out applied to the hold-out sub-models, or to the
 > full-data models) are printed for both designs, as reported in the manuscript.
 
@@ -150,7 +155,7 @@ Output block: `TABLE 4 (tab:cov) and FIGURE 3 (fig:cov)`. Mamba-3, seeds 0–2, 
 seed for every cell. The first (pre-specified, one test bearing, seeds 0–1) sweep is
 `env2/xjtu_or_coverage/bm3_COV{1,2,4,7}_{H,HV}` (supplement). Report: `env2/xjtu_or_coverage/reports/an_q2_results.md`.
 
-## Table 5 (`tab:cwru`) — CWRU, AWGN, seeds 0–4
+## SUPERSEDED — former Table 5 (`tab:cwru`) — CWRU, AWGN, seeds 0–4 (noise_key v1; current Table 9: see "Round 4")
 
 Output block: `TABLE 5 (tab:cwru)`.
 
@@ -168,7 +173,7 @@ Section 4.4 text, same block: 1D-CNN gains +0.1, +0.7, +4.3; environment-1 Mamba
 (first measurement). Environment-2 Mamba-3 gains (+0.52, +1.88, +3.27) and FE − DE are printed by
 `mst_round3_20261007/an_r3.py` (block E4).
 
-## Section 4.4 — eight-seed pool, pink noise, coherence
+## SUPERSEDED — former section 4.4 — eight-seed pool, pink noise, coherence (noise_key v1; not used)
 
 | quoted value | output block | env, seeds | result dirs |
 |---|---|---|---|
@@ -206,10 +211,10 @@ Reproduce: `cd results/mst_round3_20261007 && python an_r3.py && python gen_r3_t
 | Table 4 panel A (gated fusion, condition 2 → 3, seeds 0–4) | `e3_{cnn,bm3}_gated/`, `e3t_{cnn,bm3}_tgated/` (+ `gate_stats.json`) | `env2/xjtu_cross/xc_{cnn,bm3}_{H,V,HV}/` |
 | Table 4 panel B (gated fusion, LOBO OR folds, seeds 0–2) | `e3_lobo_bm3_gated/`, `e3t_lobo_bm3_tgated/` | `env2/xjtu_lobo/lobo_bm3_{H,V,HV}/` |
 | Table 8 (onset rule V / last 15 %, seeds 0–2) | `e2_{V,last15}_{xc,lobo}_bm3_{H,V,HV}/` | H rule: `env2/xjtu_cross/xc_bm3_*`, `env2/xjtu_lobo/lobo_bm3_*` (seeds 0–2); segment counts `audit/onset_audit.csv` |
-| Table 9 Mamba-3 DE-only and DE+FE (seeds 0–4) | `e4_bm3_{DE,DEFE}_snr{-4,-6,-8}/` | FE-only: `env2/cwru/bm3_FE_snr{-4,-6,-8}/` |
-| Table 10 (correlated noise, seeds 0–4) | `e5_bm3_DEFE_snr{-6,-8}_rho{0.5,0.9}/`; ρ = 0 is `e4_bm3_DEFE_snr{-6,-8}/` | DE-only `e4_bm3_DE_snr{-6,-8}/` |
+| SUPERSEDED (noise_key v1) — fourth-draft Table 9 Mamba-3 DE-only and DE+FE (seeds 0–4) | `e4_bm3_{DE,DEFE}_snr{-4,-6,-8}/` | FE-only: `env2/cwru/bm3_FE_snr{-4,-6,-8}/` |
+| SUPERSEDED (noise_key v1) — fourth-draft Table 10 (correlated noise, seeds 0–4) | `e5_bm3_DEFE_snr{-6,-8}_rho{0.5,0.9}/`; ρ = 0 is `e4_bm3_DEFE_snr{-6,-8}/` | DE-only `e4_bm3_DE_snr{-6,-8}/` |
 | Figure 2 Mamba-2 rows | `e1_bm2_HV/` | `env2/xjtu_cross/r2_bm2_{H,V}/` |
-| Supplementary S29–S36 | all of the above | — |
+| Fourth-draft supplementary S29–S36 (now S24–S30; the CWRU table is archived) | all of the above | — |
 
 Code used: `bearmamba3/data_xjtu.py` (`XJTU_ONSET_RULE` = `H` (default) / `V` / `last15`) with
 `environments/patches/env2_data_xjtu_channel.diff` applied; `bearmamba3/data_cwru_leakfree.py`
@@ -217,3 +222,22 @@ Code used: `bearmamba3/data_xjtu.py` (`XJTU_ONSET_RULE` = `H` (default) / `V` / 
 `scripts/xjtu/train_xjtu_leakfree_v3.py` (backbones `*_gated`, `*_tgated`); `scripts/lobo/train_lobo_leakfree_v3.py`
 (option `only_folds`); CWRU: the environment-1 trainer. Mamba-2 arm: also apply
 `environments/patches/env2_mamba2_unfused_conv.diff`.
+
+## Round 4 (CWRU noise-key correction, environment 2) — `results/mst_round4_noisefix_20261007/`
+
+Protocol `protocols/prereg_mst_round4_noisefix.md` (committed before the runs). Corrected generator
+`noise_key: v2` in `bearmamba3/data_cwru_leakfree.py`: seeded by (split, recording, window start sample,
+realisation), one row per physical channel, ρ applied to the FE row; train/val/test noise independent, test
+noise identical across seeds and configurations. Unit tests: `r4/unit_tests_noisefix.py` (run from the
+repository root). 13 configurations × seeds 0–4, Mamba-3, all exit 0 (`wall.txt`); only the
+validation-selected checkpoint was kept (not released). Printed by `an_r4.py` (`an_r4_results.md`,
+`an_r4_results.json`); the LaTeX rows of Tables 9 and 10 and of table S31 are written by `gen_r4_tex.py`
+(`r4_tex.json`). Both scripts run in place and reproduce the stored outputs byte for byte.
+
+| manuscript item | result folders | configs |
+|---|---|---|
+| Table 9 (FE-only, DE-only, DE+FE, −4/−6/−8 dB) and the FE−DE text | `r4_{FE,DE,DEFE_rho0}_snr{-4,-6,-8}/` | `configs/round4/` (repo-relative; copies used for the runs in `cfg_r4/`) |
+| Table 10 (ρ = 0, 0.5, 0.9 at −6/−8 dB; ΔG) | `r4_DEFE_rho{0,0.5,0.9}_snr{-6,-8}/`; DE-only `r4_DE_snr{-6,-8}/` | as above |
+| Supplementary table S31 | all 13 folders | — |
+
+Re-run: `bash reproduce/run_round.sh round4 [config ...]` from the repository root (see `reproduce/README.md`).

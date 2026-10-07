@@ -1,0 +1,13 @@
+r4_DE_snr-8
+r4_FE_snr-8
+r4_DEFE_rho0_snr-8
+r4_DEFE_rho0.5_snr-8
+r4_DEFE_rho0.9_snr-8
+r4_DE_snr-6
+r4_FE_snr-6
+r4_DEFE_rho0_snr-6
+r4_DEFE_rho0.5_snr-6
+r4_DEFE_rho0.9_snr-6
+r4_DE_snr-4
+r4_FE_snr-4
+r4_DEFE_rho0_snr-4

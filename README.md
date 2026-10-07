@@ -1,6 +1,6 @@
 # paper8 — code and results for "When does a second vibration sensor help?"
 
-This repository is the frozen code-and-results release (version **mst-v2**, fourth manuscript draft;
+This repository is the frozen code-and-results release (version **mst-v3**, fifth manuscript draft;
 see `CHANGELOG.md`) accompanying the manuscript
 
 > Y. Wang and Y. Tang, *When does a second vibration sensor help? A controlled case study of
@@ -16,6 +16,17 @@ correlated inter-channel noise) are in `results/mst_round3_20261007/` with their
 table-generating scripts, and their protocol is `protocols/prereg_mst_round3.md`. `TABLE_MAP.md` maps every main-text table, figure and
 quoted number to its environment, seeds, configuration files, result directories and the
 aggregation command.
+
+**Noise-implementation correction (mst-v3).** Earlier CWRU and Paderborn loaders seeded the injected
+noise by a window's index within its split, so training, validation and test windows with the same index
+received the same standard-normal waveform, and the seed re-paired test windows with noise. The corrected
+generator (`noise_key: v2`, `bearmamba3/data_cwru_leakfree.py`) isolates the splits and binds the noise to
+the recording and window position. The Mamba-3 CWRU results of the manuscript were rerun with it
+(`results/mst_round4_noisefix_20261007/`, protocol `protocols/prereg_mst_round4_noisefix.md`). Every other
+noise-injected CWRU or Paderborn result in this repository belongs to the superseded noise protocol and is
+not used to support the current manuscript (`TABLE_MAP.md`, "Superseded noise protocol");
+`bearmamba3/data_cwru.py` and `bearmamba3/data_pu.py` still contain the earlier generator. Re-running the
+revision experiments: `reproduce/README.md`.
 
 **Superseded earlier repository.** The earlier repository
 [jeff-1980/BM3-MU](https://github.com/jeff-1980/BM3-MU) contains superseded protocols

@@ -1,0 +1,26 @@
+[
+  {
+    "original_path": "<ENV2_WORKDIR>/scripts/cwru/train_leakfree.py",
+    "snapshot_path": "<ENV2_WORKDIR>/out_r4/r4_FE_snr-4/source_snapshot/train_leakfree.py",
+    "md5": "33b61fdc27bd1e4f703ead9ba1e6c27a",
+    "mtime_utc": 1791366976.7465646
+  },
+  {
+    "original_path": "<ENV2_WORKDIR>/bearmamba3/data_cwru_leakfree.py",
+    "snapshot_path": "<ENV2_WORKDIR>/out_r4/r4_FE_snr-4/source_snapshot/data_cwru_leakfree.py",
+    "md5": "f1fe2344ad156d7e1efcd844bd2583c4",
+    "mtime_utc": 1791366976.7461777
+  },
+  {
+    "original_path": "<ENV2_WORKDIR>/bearmamba3/data_cwru.py",
+    "snapshot_path": "<ENV2_WORKDIR>/out_r4/r4_FE_snr-4/source_snapshot/data_cwru.py",
+    "md5": "133dae6893b4a858757b918591dfc112",
+    "mtime_utc": 1790693436.0
+  },
+  {
+    "original_path": "<ENV2_WORKDIR>/cfg_r4/r4_FE_snr-4.yaml",
+    "snapshot_path": "<ENV2_WORKDIR>/out_r4/r4_FE_snr-4/source_snapshot/r4_FE_snr-4.yaml",
+    "md5": "1e93640bfb773984d8f8cf4cc18a8e66",
+    "mtime_utc": 1791367082.9522362
+  }
+]

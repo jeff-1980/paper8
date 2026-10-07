@@ -1,0 +1,20 @@
+{
+ "1_v1_bit_identical_to_old": true,
+ "2a_v1_cross_split_|corr|_awgn": 1.0,
+ "2b_v2_cross_split_|corr|_awgn": 0.0197,
+ "2c_v2_cross_split_|corr|_rho0.9": 0.0197,
+ "2d_v2_same_window_id_train_vs_test_|corr|": 0.0194,
+ "3_v2_seed_invariant_test_noise": true,
+ "3b_v1_seed_changes_test_noise_mean|corr|": 0.04,
+ "4a_DEonly_equals_dual_DE_row": true,
+ "4b_FEonly_equals_dual_FE_row_rho0": true,
+ "4c_DE_row_shared_across_rho": true,
+ "4d_awgn_equals_awgn_corr0.0": true,
+ "5a_empirical_rho_0.9": 0.9,
+ "5b_empirical_rho_0": -0.002,
+ "5c_mean_SNR_per_channel_dB": [
+  -7.991,
+  -7.985
+ ],
+ "6_deterministic_getitem": true
+}

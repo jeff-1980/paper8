@@ -1,5 +1,31 @@
 # Changelog
 
+## mst-v3 (2026-10-07) — fifth manuscript draft
+
+Fixed
+* CWRU synthetic noise reused across training, validation and test splits (noise seeded by the index within
+  a split) and re-paired with test windows by the training seed. New `noise_key: v2` in
+  `bearmamba3/data_cwru_leakfree.py`; `noise_key: v1` (default) reproduces the old generator bit for bit.
+  `experiments/exp01_cwru_baseline/train_leakfree.py` passes split, channels and noise key.
+
+Added
+* `results/mst_round4_noisefix_20261007/`: 13 corrected Mamba-3 CWRU configurations (65 runs), per-seed
+  JSON, source snapshots, unit tests, analysis and table-generating scripts (reproduce stored outputs byte
+  for byte), runner and queue.
+* `protocols/prereg_mst_round4_noisefix.md` (committed before the runs).
+* `configs/round3/`, `configs/round4/` with repository-relative paths and `reproduce/run_round.sh`,
+  `reproduce/README.md` (the round-3 runner of mst-v2 referred to directories that do not exist in the
+  repository and to placeholder paths).
+* `results/mst_round3_20261007/SUPERSEDED_CWRU.md`.
+
+Changed
+* `TABLE_MAP.md`: fifth-draft numbering; Tables 9 and 10 from round 4; superseded noise-protocol blocks marked.
+* `README.md`.
+
+Superseded (kept, not used by the manuscript): every noise-injected CWRU and Paderborn result outside
+`results/mst_round4_noisefix_20261007/`, including the round-3 CWRU arms, the environment-1 eight-seed pool,
+pink noise, the gain–coherence analysis, CWRU learner comparisons and the Paderborn noise grid.
+
 ## mst-v2 (2026-10-07) — fourth manuscript draft
 
 Added

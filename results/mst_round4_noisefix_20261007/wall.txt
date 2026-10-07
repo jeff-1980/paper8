@@ -1,0 +1,14 @@
+r4_DE_snr-8 exit=0 wall_s=1419 10-07_18:23
+r4_FE_snr-8 exit=0 wall_s=1050 10-07_18:41
+r4_DEFE_rho0_snr-8 exit=0 wall_s=1015 10-07_18:59
+r4_DEFE_rho0.5_snr-8 exit=0 wall_s=1041 10-07_19:18
+r4_DEFE_rho0.9_snr-8 exit=0 wall_s=1038 10-07_19:36
+r4_DE_snr-6 exit=0 wall_s=1001 10-07_19:54
+r4_FE_snr-6 exit=0 wall_s=1042 10-07_20:12
+r4_DEFE_rho0_snr-6 exit=0 wall_s=1038 10-07_20:30
+r4_DEFE_rho0.5_snr-6 exit=0 wall_s=1064 10-07_20:49
+r4_DEFE_rho0.9_snr-6 exit=0 wall_s=1033 10-07_21:07
+r4_DE_snr-4 exit=0 wall_s=1004 10-07_21:25
+r4_FE_snr-4 exit=0 wall_s=1007 10-07_21:43
+r4_DEFE_rho0_snr-4 exit=0 wall_s=1005 10-07_22:01
+ALLDONE 10-07_22:01
