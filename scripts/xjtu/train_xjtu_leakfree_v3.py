@@ -30,6 +30,7 @@ Usage:
   source venv/bin/activate
   python experiments/exp_bm3_cwru_leakfree/train_xjtu_leakfree.py --config <config> [--smoke]
 """
+import os
 import argparse
 import hashlib
 import json
@@ -96,6 +97,10 @@ def set_seed(seed: int):
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
+    if os.environ.get("BM_DETERMINISTIC") == "1":   # round 6: opt-in deterministic kernels (default off = earlier behaviour)
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+        torch.use_deterministic_algorithms(True, warn_only=True)
 
 
 def load_config(path: Path) -> dict:
@@ -507,6 +512,10 @@ def run_cross(cfg: dict, device: torch.device, smoke: bool, cfg_path: Path = Non
     # Class distribution in training set
     n_sensors = cfg.get("n_sensors", 1)
     train_ds_full = XJTUDataset(data_root, train_bearings, n_sensors=n_sensors, channel=cfg.get('sensor_channel', 0))
+    if cfg.get('train_counts'):   # round 6: per-bearing resampling of the training set (fixed seed)
+        from bearmamba3.data_xjtu import resample_per_bearing
+        train_ds_full = resample_per_bearing(train_ds_full, cfg['train_counts'], seed=cfg.get('resample_seed', 12345))
+        print(f"Resampled training set: {dict(zip(*np.unique(train_ds_full._bearing, return_counts=True)))}")
     labels_arr = np.array(train_ds_full._labels)
     counts = np.bincount(labels_arr, minlength=2)
     print(f"Train class counts: OR={counts[0]}, IR={counts[1]}, ratio={counts[0]/max(counts[1],1):.1f}:1")

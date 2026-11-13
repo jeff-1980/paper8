@@ -1,0 +1,74 @@
+{
+ "seed0": {
+  "rule": "H",
+  "own": {
+   "per_bearing": {
+    "Bearing3_1": {
+     "label": "OR",
+     "n": 2016,
+     "acc": 0.1626984126984127
+    }
+   },
+   "macro_f1": 0.13993174061433447,
+   "per_class_recall": [
+    0.1626984126984127,
+    NaN
+   ],
+   "bearing_equal_balanced_acc": 0.1626984126984127
+  },
+  "common": {
+   "per_bearing": {
+    "Bearing3_1": {
+     "label": "OR",
+     "n": 1552,
+     "acc": 0.211340206185567
+    }
+   },
+   "macro_f1": 0.17446808510638298,
+   "per_class_recall": [
+    0.211340206185567,
+    NaN
+   ],
+   "bearing_equal_balanced_acc": 0.211340206185567
+  },
+  "n_common": 1552,
+  "n_own": 2016,
+  "recorded_macro_f1": 0.13993174061433447
+ },
+ "seed1": {
+  "rule": "H",
+  "own": {
+   "per_bearing": {
+    "Bearing3_1": {
+     "label": "OR",
+     "n": 2016,
+     "acc": 0.42658730158730157
+    }
+   },
+   "macro_f1": 0.29902642559109877,
+   "per_class_recall": [
+    0.42658730158730157,
+    NaN
+   ],
+   "bearing_equal_balanced_acc": 0.42658730158730157
+  },
+  "common": {
+   "per_bearing": {
+    "Bearing3_1": {
+     "label": "OR",
+     "n": 1552,
+     "acc": 0.41237113402061853
+    }
+   },
+   "macro_f1": 0.291970802919708,
+   "per_class_recall": [
+    0.41237113402061853,
+    NaN
+   ],
+   "bearing_equal_balanced_acc": 0.41237113402061853
+  },
+  "n_common": 1552,
+  "n_own": 2016,
+  "recorded_macro_f1": 0.2990264255910987
+ }
+}

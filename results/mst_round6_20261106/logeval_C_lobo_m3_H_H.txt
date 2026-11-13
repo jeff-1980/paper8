@@ -1,0 +1,10 @@
+C_lobo_m3_H_H fold0_seed0 H own F1 0.4905 (rec [0.9627976190476191, 0.0]) common F1 0.4876 
+C_lobo_m3_H_H fold0_seed1 H own F1 0.5000 (rec [1.0, 0.0]) common F1 0.5000 
+C_lobo_m3_H_H fold0_seed2 H own F1 0.5000 (rec [1.0, 0.0]) common F1 0.5000 
+C_lobo_m3_H_H fold0_seed3 H own F1 0.4999 (rec [0.9995039682539683, 0.0]) common F1 0.4998 
+C_lobo_m3_H_H fold0_seed4 H own F1 0.5000 (rec [1.0, 0.0]) common F1 0.5000 
+C_lobo_m3_H_H fold3_seed0 H own F1 0.2870 (rec [0.4025537634408602, 0.0]) common F1 0.0336 
+C_lobo_m3_H_H fold3_seed1 H own F1 0.3324 (rec [0.49798387096774194, 0.0]) common F1 0.1220 
+C_lobo_m3_H_H fold3_seed2 H own F1 0.3294 (rec [0.49126344086021506, 0.0]) common F1 0.0972 
+C_lobo_m3_H_H fold3_seed3 H own F1 0.2856 (rec [0.39986559139784944, 0.0]) common F1 0.0368 
+C_lobo_m3_H_H fold3_seed4 H own F1 0.3946 (rec [0.6518817204301075, 0.0]) common F1 0.1864 

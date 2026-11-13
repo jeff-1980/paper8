@@ -1,0 +1,117 @@
+Device: cuda  mode=cross  backbone=cnn1d  lambda_kin=0.0  fs_eff=12800.0  seeds=[0, 1, 2, 3, 4, 5, 6, 7]  epochs=50
+[leakfree-xjtu] source snapshot: 3 files -> <REPO_ROOT>/out_r6/B_cnn_seg_H/source_snapshot
+Cross-condition: 37.5Hz11kN → 40Hz10kN
+Train: ['Bearing2_1', 'Bearing2_2', 'Bearing2_4', 'Bearing2_5']
+Test:  ['Bearing3_1', 'Bearing3_3', 'Bearing3_4', 'Bearing3_5']
+Resampled training set: {np.str_('Bearing2_1'): np.int64(624), np.str_('Bearing2_2'): np.int64(1808), np.str_('Bearing2_4'): np.int64(240), np.str_('Bearing2_5'): np.int64(2576)}
+Train class counts: OR=4624, IR=624, ratio=7.4:1
+
+============================================================
+Seed 0
+  cross_seed0 seed=0 ep=  1/50  l_ce=0.0861  l_kin=0.0000  [1s]
+  cross_seed0 seed=0 ep=  2/50  l_ce=0.0081  l_kin=0.0000  [2s]
+  cross_seed0 seed=0 ep=  3/50  l_ce=0.0036  l_kin=0.0000  [3s]
+  cross_seed0 seed=0 ep= 10/50  l_ce=0.0004  l_kin=0.0000  [11s]
+  cross_seed0 seed=0 ep= 20/50  l_ce=0.0001  l_kin=0.0000  [21s]
+  cross_seed0 seed=0 ep= 30/50  l_ce=0.0001  l_kin=0.0000  [31s]
+  cross_seed0 seed=0 ep= 40/50  l_ce=0.0001  l_kin=0.0000  [41s]
+  cross_seed0 seed=0 ep= 50/50  l_ce=0.0001  l_kin=0.0000  [51s]
+  cross_seed0 seed=0 FINAL (fixed-epoch, test evaluated once)  recall=[0.986,0.125]  macro_recall=0.5558  macro_f1=0.4875
+  → saved <REPO_ROOT>/out_r6/B_cnn_seg_H/seed_0.json
+
+============================================================
+Seed 1
+  cross_seed1 seed=1 ep=  1/50  l_ce=0.0755  l_kin=0.0000  [1s]
+  cross_seed1 seed=1 ep=  2/50  l_ce=0.0064  l_kin=0.0000  [2s]
+  cross_seed1 seed=1 ep=  3/50  l_ce=0.0030  l_kin=0.0000  [3s]
+  cross_seed1 seed=1 ep= 10/50  l_ce=0.0004  l_kin=0.0000  [10s]
+  cross_seed1 seed=1 ep= 20/50  l_ce=0.0001  l_kin=0.0000  [20s]
+  cross_seed1 seed=1 ep= 30/50  l_ce=0.0001  l_kin=0.0000  [31s]
+  cross_seed1 seed=1 ep= 40/50  l_ce=0.0001  l_kin=0.0000  [41s]
+  cross_seed1 seed=1 ep= 50/50  l_ce=0.0001  l_kin=0.0000  [51s]
+  cross_seed1 seed=1 FINAL (fixed-epoch, test evaluated once)  recall=[0.999,0.107]  macro_recall=0.5526  macro_f1=0.4752
+  → saved <REPO_ROOT>/out_r6/B_cnn_seg_H/seed_1.json
+
+============================================================
+Seed 2
+  cross_seed2 seed=2 ep=  1/50  l_ce=0.1121  l_kin=0.0000  [1s]
+  cross_seed2 seed=2 ep=  2/50  l_ce=0.0117  l_kin=0.0000  [2s]
+  cross_seed2 seed=2 ep=  3/50  l_ce=0.0049  l_kin=0.0000  [3s]
+  cross_seed2 seed=2 ep= 10/50  l_ce=0.0006  l_kin=0.0000  [11s]
+  cross_seed2 seed=2 ep= 20/50  l_ce=0.0002  l_kin=0.0000  [22s]
+  cross_seed2 seed=2 ep= 30/50  l_ce=0.0001  l_kin=0.0000  [32s]
+  cross_seed2 seed=2 ep= 40/50  l_ce=0.0001  l_kin=0.0000  [42s]
+  cross_seed2 seed=2 ep= 50/50  l_ce=0.0001  l_kin=0.0000  [52s]
+  cross_seed2 seed=2 FINAL (fixed-epoch, test evaluated once)  recall=[0.886,0.169]  macro_recall=0.5275  macro_f1=0.4846
+  → saved <REPO_ROOT>/out_r6/B_cnn_seg_H/seed_2.json
+
+============================================================
+Seed 3
+  cross_seed3 seed=3 ep=  1/50  l_ce=0.0976  l_kin=0.0000  [1s]
+  cross_seed3 seed=3 ep=  2/50  l_ce=0.0093  l_kin=0.0000  [2s]
+  cross_seed3 seed=3 ep=  3/50  l_ce=0.0043  l_kin=0.0000  [3s]
+  cross_seed3 seed=3 ep= 10/50  l_ce=0.0006  l_kin=0.0000  [10s]
+  cross_seed3 seed=3 ep= 20/50  l_ce=0.0002  l_kin=0.0000  [21s]
+  cross_seed3 seed=3 ep= 30/50  l_ce=0.0001  l_kin=0.0000  [32s]
+  cross_seed3 seed=3 ep= 40/50  l_ce=0.0001  l_kin=0.0000  [43s]
+  cross_seed3 seed=3 ep= 50/50  l_ce=0.0001  l_kin=0.0000  [53s]
+  cross_seed3 seed=3 FINAL (fixed-epoch, test evaluated once)  recall=[1.000,0.088]  macro_recall=0.5442  macro_f1=0.4588
+  → saved <REPO_ROOT>/out_r6/B_cnn_seg_H/seed_3.json
+
+============================================================
+Seed 4
+  cross_seed4 seed=4 ep=  1/50  l_ce=0.0967  l_kin=0.0000  [1s]
+  cross_seed4 seed=4 ep=  2/50  l_ce=0.0096  l_kin=0.0000  [2s]
+  cross_seed4 seed=4 ep=  3/50  l_ce=0.0041  l_kin=0.0000  [3s]
+  cross_seed4 seed=4 ep= 10/50  l_ce=0.0005  l_kin=0.0000  [10s]
+  cross_seed4 seed=4 ep= 20/50  l_ce=0.0002  l_kin=0.0000  [20s]
+  cross_seed4 seed=4 ep= 30/50  l_ce=0.0001  l_kin=0.0000  [30s]
+  cross_seed4 seed=4 ep= 40/50  l_ce=0.0001  l_kin=0.0000  [40s]
+  cross_seed4 seed=4 ep= 50/50  l_ce=0.0001  l_kin=0.0000  [50s]
+  cross_seed4 seed=4 FINAL (fixed-epoch, test evaluated once)  recall=[0.956,0.132]  macro_recall=0.5439  macro_f1=0.4818
+  → saved <REPO_ROOT>/out_r6/B_cnn_seg_H/seed_4.json
+
+============================================================
+Seed 5
+  cross_seed5 seed=5 ep=  1/50  l_ce=0.1068  l_kin=0.0000  [1s]
+  cross_seed5 seed=5 ep=  2/50  l_ce=0.0111  l_kin=0.0000  [2s]
+  cross_seed5 seed=5 ep=  3/50  l_ce=0.0049  l_kin=0.0000  [3s]
+  cross_seed5 seed=5 ep= 10/50  l_ce=0.0007  l_kin=0.0000  [10s]
+  cross_seed5 seed=5 ep= 20/50  l_ce=0.0002  l_kin=0.0000  [20s]
+  cross_seed5 seed=5 ep= 30/50  l_ce=0.0001  l_kin=0.0000  [30s]
+  cross_seed5 seed=5 ep= 40/50  l_ce=0.0001  l_kin=0.0000  [41s]
+  cross_seed5 seed=5 ep= 50/50  l_ce=0.0001  l_kin=0.0000  [51s]
+  cross_seed5 seed=5 FINAL (fixed-epoch, test evaluated once)  recall=[0.983,0.134]  macro_recall=0.5584  macro_f1=0.4940
+  → saved <REPO_ROOT>/out_r6/B_cnn_seg_H/seed_5.json
+
+============================================================
+Seed 6
+  cross_seed6 seed=6 ep=  1/50  l_ce=0.0885  l_kin=0.0000  [1s]
+  cross_seed6 seed=6 ep=  2/50  l_ce=0.0082  l_kin=0.0000  [2s]
+  cross_seed6 seed=6 ep=  3/50  l_ce=0.0041  l_kin=0.0000  [3s]
+  cross_seed6 seed=6 ep= 10/50  l_ce=0.0006  l_kin=0.0000  [11s]
+  cross_seed6 seed=6 ep= 20/50  l_ce=0.0002  l_kin=0.0000  [21s]
+  cross_seed6 seed=6 ep= 30/50  l_ce=0.0001  l_kin=0.0000  [31s]
+  cross_seed6 seed=6 ep= 40/50  l_ce=0.0001  l_kin=0.0000  [41s]
+  cross_seed6 seed=6 ep= 50/50  l_ce=0.0001  l_kin=0.0000  [51s]
+  cross_seed6 seed=6 FINAL (fixed-epoch, test evaluated once)  recall=[0.985,0.178]  macro_recall=0.5816  macro_f1=0.5319
+  → saved <REPO_ROOT>/out_r6/B_cnn_seg_H/seed_6.json
+
+============================================================
+Seed 7
+  cross_seed7 seed=7 ep=  1/50  l_ce=0.0828  l_kin=0.0000  [1s]
+  cross_seed7 seed=7 ep=  2/50  l_ce=0.0085  l_kin=0.0000  [2s]
+  cross_seed7 seed=7 ep=  3/50  l_ce=0.0029  l_kin=0.0000  [3s]
+  cross_seed7 seed=7 ep= 10/50  l_ce=0.0005  l_kin=0.0000  [10s]
+  cross_seed7 seed=7 ep= 20/50  l_ce=0.0002  l_kin=0.0000  [21s]
+  cross_seed7 seed=7 ep= 30/50  l_ce=0.0001  l_kin=0.0000  [31s]
+  cross_seed7 seed=7 ep= 40/50  l_ce=0.0001  l_kin=0.0000  [41s]
+  cross_seed7 seed=7 ep= 50/50  l_ce=0.0001  l_kin=0.0000  [51s]
+  cross_seed7 seed=7 FINAL (fixed-epoch, test evaluated once)  recall=[1.000,0.173]  macro_recall=0.5864  macro_f1=0.5336
+  → saved <REPO_ROOT>/out_r6/B_cnn_seg_H/seed_7.json
+
+============================================================
+CROSS-CONDITION RESULTS: macro_F1 = 49.34±2.64%
+                         macro_recall = 55.63±1.96%
+Per-seed F1:  ['48.75', '47.52', '48.46', '45.88', '48.18', '49.40', '53.19', '53.36']
+Summary saved to <REPO_ROOT>/out_r6/B_cnn_seg_H/summary.json

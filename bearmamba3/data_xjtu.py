@@ -273,6 +273,8 @@ class XJTUDataset(Dataset):
         self._windows: List[np.ndarray] = []
         self._labels:  List[int] = []
         self._rpms:    List[float] = []
+        self._bearing: List[str] = []   # round 6: bearing name per window
+        self._file:    List[int] = []   # round 6: index of the source file within the bearing's run
 
         usecols = 0 if n_sensors == 1 else [0, 1]
 
@@ -293,7 +295,7 @@ class XJTUDataset(Dataset):
             )
             fault_csvs = all_csvs[onset_idx:]
 
-            for csv_path in fault_csvs:
+            for fi, csv_path in enumerate(fault_csvs, start=onset_idx):
                 raw = np.loadtxt(csv_path, delimiter=',', skiprows=1,
                                  usecols=usecols, dtype=np.float32)
                 if n_sensors == 1:
@@ -304,6 +306,7 @@ class XJTUDataset(Dataset):
                         self._windows.append(raw[pos: pos + window_size])
                         self._labels.append(label)
                         self._rpms.append(rpm)
+                        self._bearing.append(bname); self._file.append(fi)
                         pos += self.stride
                 else:
                     # raw shape: (N, 2) → transpose to (2, N)
@@ -314,6 +317,7 @@ class XJTUDataset(Dataset):
                         self._windows.append(data2[:, pos: pos + window_size].copy())
                         self._labels.append(label)
                         self._rpms.append(rpm)
+                        self._bearing.append(bname); self._file.append(fi)
                         pos += self.stride
 
     def __len__(self) -> int:
@@ -348,3 +352,28 @@ class XJTUDataset(Dataset):
         label  = torch.tensor(self._labels[idx], dtype=torch.long)
         rpm    = torch.tensor(self._rpms[idx], dtype=torch.float32)
         return signal, label, rpm
+
+
+def resample_per_bearing(ds: "XJTUDataset", counts: dict, seed: int = 12345) -> "XJTUDataset":
+    """Round 6: return a copy of `ds` with exactly counts[b] windows of bearing b (training set only).
+    Windows are drawn without replacement if the bearing has at least counts[b] windows; otherwise all
+    of them are kept and the remainder is drawn with replacement. The draw depends only on `seed`
+    (fixed across training seeds), so every training seed sees the same subset."""
+    import copy as _copy
+    rng = np.random.default_rng(seed)
+    idx_all = []
+    names = np.array(ds._bearing)
+    for b in sorted(counts):
+        idx = np.where(names == b)[0]
+        assert len(idx) > 0, f"{b} has no windows"
+        n = int(counts[b])
+        if n <= len(idx):
+            sel = rng.choice(idx, size=n, replace=False)
+        else:
+            sel = np.concatenate([idx, rng.choice(idx, size=n - len(idx), replace=True)])
+        idx_all.append(np.sort(sel))
+    idx_all = np.concatenate(idx_all)
+    out = _copy.copy(ds)
+    for k in ('_windows', '_labels', '_rpms', '_bearing', '_file'):
+        v = getattr(ds, k); setattr(out, k, [v[i] for i in idx_all])
+    return out

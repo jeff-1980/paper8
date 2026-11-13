@@ -1,0 +1,5 @@
+B_m3_seg_HV seed0 last15 own F1 0.4282 (rec 0.4282362820901375) common F1 0.6954 
+B_m3_seg_HV seed1 last15 own F1 0.3966 (rec 0.3965798612091427) common F1 0.6232 
+B_m3_seg_HV seed2 last15 own F1 0.4908 (rec 0.4907917604771498) common F1 0.8086 
+B_m3_seg_HV seed3 last15 own F1 0.4533 (rec 0.4533154048307352) common F1 0.7537 
+B_m3_seg_HV seed4 last15 own F1 0.4609 (rec 0.46091125892128665) common F1 0.7742 

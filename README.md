@@ -37,6 +37,21 @@ corresponding superseded entry points are kept only under `historical/` (see
 
 **Licence:** to be decided by the authors.
 
+## Round 6 (mst-v4, rewritten manuscript)
+
+The rewritten manuscript after MST-140500 reports round-6 values in tables 3, 4, 7, 8, 9, 12 and 13.
+`TABLE_MAP.md` maps every table to its result files and generating script; the round-6 tables and figures are
+rebuilt from the released files without data or GPU:
+
+```bash
+python analysis/an_r6.py && python analysis/p7_detail.py && python analysis/gen_r6_tex.py && python analysis/make_r6_figs.py
+```
+
+Training a round-6 configuration needs the data, environment 2 (`environments/ENV2_ROUND6.md`) and
+`BM_DETERMINISTIC=1 CUBLAS_WORKSPACE_CONFIG=:4096:8`; configurations are in
+`results/mst_round6_20261106/cfg_r6/` (replace `<REPO_ROOT>`, `<DATA_ROOT>`) and the runner is
+`results/mst_round6_20261106/run_r6.sh`.
+
 ## Quick check (no data, no GPU)
 
 ```bash

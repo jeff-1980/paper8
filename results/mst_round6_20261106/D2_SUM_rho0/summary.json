@@ -1,0 +1,41 @@
+{
+  "config": "D2_SUM_rho0.yaml",
+  "backbone": "mamba3",
+  "lambda_kin": 0.0,
+  "noise_snr_db": -8.0,
+  "noise_type": "awgn",
+  "label_mode": "4class",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "test_accs_at_best_val": [
+    0.7863636363636364,
+    0.7712121212121212,
+    0.7924242424242425,
+    0.8,
+    0.7848484848484848
+  ],
+  "mean_test_acc": 0.786969696969697,
+  "std_test_acc": 0.010638478594873928,
+  "best_val_accs": [
+    0.7585365853658537,
+    0.748780487804878,
+    0.7695121951219512,
+    0.7878048780487805,
+    0.7634146341463415
+  ],
+  "protocol": "leakfree_v2 (train/val/test time-axis split, guard-gapped, per-file; per-epoch checkpoints + source snapshot, see checkpoints/ and source_snapshot/)",
+  "disjointness_pass": true,
+  "disjointness_check_file": "<REPO_ROOT>/out_r6/D2_SUM_rho0/disjointness_check.json",
+  "source_snapshot_dir": "<REPO_ROOT>/out_r6/D2_SUM_rho0/source_snapshot",
+  "source_snapshot_files": [
+    "<REPO_ROOT>/experiments/exp01_cwru_baseline/train_leakfree.py",
+    "<REPO_ROOT>/bearmamba3/data_cwru_leakfree.py",
+    "<REPO_ROOT>/bearmamba3/data_cwru.py",
+    "<REPO_ROOT>/cfg_r6/D2_SUM_rho0.yaml"
+  ]
+}

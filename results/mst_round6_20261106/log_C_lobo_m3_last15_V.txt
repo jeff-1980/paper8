@@ -1,0 +1,146 @@
+[E3 leak-free] Device: cuda  selection_mode=fixed_epoch  n_sensors=1  lambda_kin=0.0  fs_eff=12800.0  seeds=[0, 1, 2, 3, 4]  epochs=50  save_checkpoint=True
+
+============================================================
+[E3 leak-free] Fold 0: train=['Bearing3_3', 'Bearing3_4', 'Bearing3_5'] / test=Bearing3_1(OR)
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=0 ep=  1/50  l_ce=0.0511  l_kin=0.0000  [33s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=0 ep=  2/50  l_ce=0.0019  l_kin=0.0000  [38s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=0 ep=  3/50  l_ce=0.0011  l_kin=0.0000  [42s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=0 ep= 10/50  l_ce=0.0002  l_kin=0.0000  [72s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=0 ep= 20/50  l_ce=0.0001  l_kin=0.0000  [115s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=0 ep= 30/50  l_ce=0.0000  l_kin=0.0000  [158s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=0 ep= 40/50  l_ce=0.0000  l_kin=0.0000  [201s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=0 ep= 50/50  l_ce=0.0000  l_kin=0.0000  [244s]
+  [P1 fixed_epoch] fold0_Bearing3_1 seed=0 final_epoch=50  recall=[0.022,0.000]  macro_recall=0.0111  macro_f1=0.0217  (first & only test-loader touch)
+  -> saved <REPO_ROOT>/out_r6/C_lobo_m3_last15_V/fold0_seed0.json
+
+============================================================
+[E3 leak-free] Fold 3: train=['Bearing3_1', 'Bearing3_3', 'Bearing3_4'] / test=Bearing3_5(OR)
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=0 ep=  1/50  l_ce=0.0602  l_kin=0.0000  [10s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=0 ep=  2/50  l_ce=0.0026  l_kin=0.0000  [19s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=0 ep=  3/50  l_ce=0.0035  l_kin=0.0000  [29s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=0 ep= 10/50  l_ce=0.0001  l_kin=0.0000  [96s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=0 ep= 20/50  l_ce=0.0000  l_kin=0.0000  [191s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=0 ep= 30/50  l_ce=0.0000  l_kin=0.0000  [286s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=0 ep= 40/50  l_ce=0.0000  l_kin=0.0000  [381s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=0 ep= 50/50  l_ce=0.0000  l_kin=0.0000  [476s]
+  [P1 fixed_epoch] fold3_Bearing3_5 seed=0 final_epoch=50  recall=[1.000,0.000]  macro_recall=0.5000  macro_f1=0.5000  (first & only test-loader touch)
+  -> saved <REPO_ROOT>/out_r6/C_lobo_m3_last15_V/fold3_seed0.json
+
+[E3] Seed 0: OR_recall=[0.02214566929133858, 1.0]  IR_recall=[]  macro=0.5111
+
+============================================================
+[E3 leak-free] Fold 0: train=['Bearing3_3', 'Bearing3_4', 'Bearing3_5'] / test=Bearing3_1(OR)
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=1 ep=  1/50  l_ce=0.0389  l_kin=0.0000  [4s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=1 ep=  2/50  l_ce=0.0020  l_kin=0.0000  [9s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=1 ep=  3/50  l_ce=0.0011  l_kin=0.0000  [14s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=1 ep= 10/50  l_ce=0.0001  l_kin=0.0000  [43s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=1 ep= 20/50  l_ce=0.0000  l_kin=0.0000  [86s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=1 ep= 30/50  l_ce=0.0000  l_kin=0.0000  [130s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=1 ep= 40/50  l_ce=0.0000  l_kin=0.0000  [172s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=1 ep= 50/50  l_ce=0.0000  l_kin=0.0000  [215s]
+  [P1 fixed_epoch] fold0_Bearing3_1 seed=1 final_epoch=50  recall=[0.023,0.000]  macro_recall=0.0117  macro_f1=0.0229  (first & only test-loader touch)
+  -> saved <REPO_ROOT>/out_r6/C_lobo_m3_last15_V/fold0_seed1.json
+
+============================================================
+[E3 leak-free] Fold 3: train=['Bearing3_1', 'Bearing3_3', 'Bearing3_4'] / test=Bearing3_5(OR)
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=1 ep=  1/50  l_ce=0.0541  l_kin=0.0000  [9s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=1 ep=  2/50  l_ce=0.0033  l_kin=0.0000  [19s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=1 ep=  3/50  l_ce=0.0015  l_kin=0.0000  [29s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=1 ep= 10/50  l_ce=0.0009  l_kin=0.0000  [95s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=1 ep= 20/50  l_ce=0.0000  l_kin=0.0000  [190s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=1 ep= 30/50  l_ce=0.0000  l_kin=0.0000  [285s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=1 ep= 40/50  l_ce=0.0000  l_kin=0.0000  [380s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=1 ep= 50/50  l_ce=0.0000  l_kin=0.0000  [475s]
+  [P1 fixed_epoch] fold3_Bearing3_5 seed=1 final_epoch=50  recall=[1.000,0.000]  macro_recall=0.5000  macro_f1=0.5000  (first & only test-loader touch)
+  -> saved <REPO_ROOT>/out_r6/C_lobo_m3_last15_V/fold3_seed1.json
+
+[E3] Seed 1: OR_recall=[0.02345800524934383, 1.0]  IR_recall=[]  macro=0.5117
+
+============================================================
+[E3 leak-free] Fold 0: train=['Bearing3_3', 'Bearing3_4', 'Bearing3_5'] / test=Bearing3_1(OR)
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=2 ep=  1/50  l_ce=0.0375  l_kin=0.0000  [4s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=2 ep=  2/50  l_ce=0.0016  l_kin=0.0000  [9s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=2 ep=  3/50  l_ce=0.0009  l_kin=0.0000  [14s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=2 ep= 10/50  l_ce=0.0001  l_kin=0.0000  [43s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=2 ep= 20/50  l_ce=0.0001  l_kin=0.0000  [86s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=2 ep= 30/50  l_ce=0.0000  l_kin=0.0000  [129s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=2 ep= 40/50  l_ce=0.0000  l_kin=0.0000  [172s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=2 ep= 50/50  l_ce=0.0000  l_kin=0.0000  [214s]
+  [P1 fixed_epoch] fold0_Bearing3_1 seed=2 final_epoch=50  recall=[0.023,0.000]  macro_recall=0.0116  macro_f1=0.0226  (first & only test-loader touch)
+  -> saved <REPO_ROOT>/out_r6/C_lobo_m3_last15_V/fold0_seed2.json
+
+============================================================
+[E3 leak-free] Fold 3: train=['Bearing3_1', 'Bearing3_3', 'Bearing3_4'] / test=Bearing3_5(OR)
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=2 ep=  1/50  l_ce=0.0586  l_kin=0.0000  [10s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=2 ep=  2/50  l_ce=0.0027  l_kin=0.0000  [19s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=2 ep=  3/50  l_ce=0.0017  l_kin=0.0000  [28s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=2 ep= 10/50  l_ce=0.0001  l_kin=0.0000  [95s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=2 ep= 20/50  l_ce=0.0000  l_kin=0.0000  [190s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=2 ep= 30/50  l_ce=0.0000  l_kin=0.0000  [285s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=2 ep= 40/50  l_ce=0.0000  l_kin=0.0000  [380s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=2 ep= 50/50  l_ce=0.0000  l_kin=0.0000  [476s]
+  [P1 fixed_epoch] fold3_Bearing3_5 seed=2 final_epoch=50  recall=[1.000,0.000]  macro_recall=0.5000  macro_f1=0.5000  (first & only test-loader touch)
+  -> saved <REPO_ROOT>/out_r6/C_lobo_m3_last15_V/fold3_seed2.json
+
+[E3] Seed 2: OR_recall=[0.02312992125984252, 1.0]  IR_recall=[]  macro=0.5116
+
+============================================================
+[E3 leak-free] Fold 0: train=['Bearing3_3', 'Bearing3_4', 'Bearing3_5'] / test=Bearing3_1(OR)
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=3 ep=  1/50  l_ce=0.0505  l_kin=0.0000  [4s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=3 ep=  2/50  l_ce=0.0018  l_kin=0.0000  [9s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=3 ep=  3/50  l_ce=0.0011  l_kin=0.0000  [13s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=3 ep= 10/50  l_ce=0.0002  l_kin=0.0000  [43s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=3 ep= 20/50  l_ce=0.0001  l_kin=0.0000  [86s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=3 ep= 30/50  l_ce=0.0000  l_kin=0.0000  [129s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=3 ep= 40/50  l_ce=0.0000  l_kin=0.0000  [172s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=3 ep= 50/50  l_ce=0.0000  l_kin=0.0000  [215s]
+  [P1 fixed_epoch] fold0_Bearing3_1 seed=3 final_epoch=50  recall=[0.020,0.000]  macro_recall=0.0099  macro_f1=0.0195  (first & only test-loader touch)
+  -> saved <REPO_ROOT>/out_r6/C_lobo_m3_last15_V/fold0_seed3.json
+
+============================================================
+[E3 leak-free] Fold 3: train=['Bearing3_1', 'Bearing3_3', 'Bearing3_4'] / test=Bearing3_5(OR)
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=3 ep=  1/50  l_ce=0.0614  l_kin=0.0000  [9s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=3 ep=  2/50  l_ce=0.0034  l_kin=0.0000  [19s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=3 ep=  3/50  l_ce=0.0024  l_kin=0.0000  [28s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=3 ep= 10/50  l_ce=0.0001  l_kin=0.0000  [95s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=3 ep= 20/50  l_ce=0.0000  l_kin=0.0000  [190s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=3 ep= 30/50  l_ce=0.0000  l_kin=0.0000  [286s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=3 ep= 40/50  l_ce=0.0000  l_kin=0.0000  [381s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=3 ep= 50/50  l_ce=0.0000  l_kin=0.0000  [477s]
+  [P1 fixed_epoch] fold3_Bearing3_5 seed=3 final_epoch=50  recall=[1.000,0.000]  macro_recall=0.5000  macro_f1=0.5000  (first & only test-loader touch)
+  -> saved <REPO_ROOT>/out_r6/C_lobo_m3_last15_V/fold3_seed3.json
+
+[E3] Seed 3: OR_recall=[0.019849081364829397, 1.0]  IR_recall=[]  macro=0.5099
+
+============================================================
+[E3 leak-free] Fold 0: train=['Bearing3_3', 'Bearing3_4', 'Bearing3_5'] / test=Bearing3_1(OR)
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=4 ep=  1/50  l_ce=0.0405  l_kin=0.0000  [4s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=4 ep=  2/50  l_ce=0.0017  l_kin=0.0000  [9s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=4 ep=  3/50  l_ce=0.0010  l_kin=0.0000  [13s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=4 ep= 10/50  l_ce=0.0002  l_kin=0.0000  [43s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=4 ep= 20/50  l_ce=0.0001  l_kin=0.0000  [86s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=4 ep= 30/50  l_ce=0.0000  l_kin=0.0000  [129s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=4 ep= 40/50  l_ce=0.0000  l_kin=0.0000  [171s]
+  [P2 test-fold-invisible] fold0_Bearing3_1 seed=4 ep= 50/50  l_ce=0.0000  l_kin=0.0000  [214s]
+  [P1 fixed_epoch] fold0_Bearing3_1 seed=4 final_epoch=50  recall=[0.009,0.000]  macro_recall=0.0043  macro_f1=0.0085  (first & only test-loader touch)
+  -> saved <REPO_ROOT>/out_r6/C_lobo_m3_last15_V/fold0_seed4.json
+
+============================================================
+[E3 leak-free] Fold 3: train=['Bearing3_1', 'Bearing3_3', 'Bearing3_4'] / test=Bearing3_5(OR)
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=4 ep=  1/50  l_ce=0.0364  l_kin=0.0000  [10s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=4 ep=  2/50  l_ce=0.0041  l_kin=0.0000  [19s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=4 ep=  3/50  l_ce=0.0006  l_kin=0.0000  [29s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=4 ep= 10/50  l_ce=0.0001  l_kin=0.0000  [95s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=4 ep= 20/50  l_ce=0.0000  l_kin=0.0000  [190s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=4 ep= 30/50  l_ce=0.0000  l_kin=0.0000  [285s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=4 ep= 40/50  l_ce=0.0000  l_kin=0.0000  [380s]
+  [P2 test-fold-invisible] fold3_Bearing3_5 seed=4 ep= 50/50  l_ce=0.0000  l_kin=0.0000  [475s]
+  [P1 fixed_epoch] fold3_Bearing3_5 seed=4 final_epoch=50  recall=[0.997,0.000]  macro_recall=0.4983  macro_f1=0.4991  (first & only test-loader touch)
+  -> saved <REPO_ROOT>/out_r6/C_lobo_m3_last15_V/fold3_seed4.json
+
+[E3] Seed 4: OR_recall=[0.00853018372703412, 0.9965277777777778]  IR_recall=[]  macro=0.5025
+
+============================================================
+[E3 leak-free] LOBO RESULTS: macro_recall = 50.94+/-0.39%
+Per-seed: ['51.11', '51.17', '51.16', '50.99', '50.25']
+Summary saved to <REPO_ROOT>/out_r6/C_lobo_m3_last15_V/summary.json

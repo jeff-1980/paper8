@@ -1,0 +1,8 @@
+A_cnn_H_HV seed0 H own F1 0.4323 (rec 0.43229852055094564) common F1 0.3721 
+A_cnn_H_HV seed1 H own F1 0.4961 (rec 0.4960674135396398) common F1 0.4379 
+A_cnn_H_HV seed2 H own F1 0.4216 (rec 0.4216471300450368) common F1 0.3611 
+A_cnn_H_HV seed3 H own F1 0.4035 (rec 0.4034532659829527) common F1 0.3424 
+A_cnn_H_HV seed4 H own F1 0.5039 (rec 0.5038821283051473) common F1 0.4460 
+A_cnn_H_HV seed5 H own F1 0.4071 (rec 0.4071372720039921) common F1 0.3462 
+A_cnn_H_HV seed6 H own F1 0.4839 (rec 0.48387068203746403) common F1 0.4253 
+A_cnn_H_HV seed7 H own F1 0.4924 (rec 0.49238313549765655) common F1 0.4341 

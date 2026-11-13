@@ -1,0 +1,5 @@
+A_m2_last15_V seed0 last15 own F1 0.7726 (rec 0.7725924688092167) common F1 0.8151 
+A_m2_last15_V seed1 last15 own F1 0.6885 (rec 0.6885009360765332) common F1 0.8165 
+A_m2_last15_V seed2 last15 own F1 0.5001 (rec 0.5000882356361072) common F1 0.6797 
+A_m2_last15_V seed3 last15 own F1 0.4467 (rec 0.4467381573965431) common F1 0.6426 
+A_m2_last15_V seed4 last15 own F1 0.5047 (rec 0.5047372544711352) common F1 0.7277 

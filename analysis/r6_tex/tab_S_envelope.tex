@@ -1,0 +1,36 @@
+\begin{table}[htbp]
+\caption{\label{tab:S_envelope}Envelope-spectrum fault indicator: a
+complementary signal-based check of the degraded-phase rules, computed from the
+same H and V recordings, not ground truth for physical fault onset. Indicator:
+squared envelope of the 1--10~kHz band-passed signal (4th-order Butterworth,
+zero phase); sum of the spectrum peaks within $\pm2\%$ of 1--3$\times$ the
+characteristic fault frequency (BPFO for OR, BPFI for IR bearings) divided by
+the median spectrum level in 10--500~Hz. Indicator onset: first file whose
+5-file rolling mean exceeds the baseline mean $+3$ SD, the baseline being the
+first $\min(20,\lfloor n/5\rfloor)$ files; no other threshold was tried. Columns:
+file indices of the three detection rules and of the indicator onset on the H /
+V channel, and the percentage of each rule's faulty segment that lies before
+the H-channel onset / before the V-channel onset / before both onsets. An early
+onset on one channel (for example V of Bearing3\_1 at file 121) may be a false
+alarm; the table does not decide which. ``---'': the indicator did not cross the
+threshold in any file of that bearing (cause not established).}
+\footnotesize
+\adjustbox{max width=\linewidth}{%
+\begin{tabular}{@{}llcccccccc}
+\br
+Bearing & Class & Files & H rule & V rule & last 15\% & Indicator (H / V) & \% before (H / V / both), H rule & same, V rule & same, last 15\% \\
+\mr
+Bearing1\_1 & OR & 123 & 18 & 76 & 104 & 69 / 74 & 49 / 53 / 49 & 0 / 0 / 0 & 0 / 0 / 0 \\
+Bearing1\_2 & OR & 161 & 43 & 49 & 136 & 38 / 31 & 0 / 0 / 0 & 0 / 0 / 0 & 0 / 0 / 0 \\
+Bearing1\_3 & OR & 158 & 105 & 100 & 134 & 68 / 68 & 0 / 0 / 0 & 0 / 0 / 0 & 0 / 0 / 0 \\
+Bearing2\_1 & IR & 491 & 452 & 453 & 417 & 459 / 450 & 18 / 0 / 0 & 16 / 0 / 0 & 57 / 45 / 45 \\
+Bearing2\_2 & OR & 161 & 48 & 55 & 136 & 43 / 43 & 0 / 0 / 0 & 0 / 0 / 0 & 0 / 0 / 0 \\
+Bearing2\_4 & OR & 42 & 27 & 27 & 35 & 12 / 27 & 0 / 0 / 0 & 0 / 0 / 0 & 0 / 0 / 0 \\
+Bearing2\_5 & OR & 339 & 178 & 183 & 288 & 188 / 119 & 6 / 0 / 0 & 3 / 0 / 0 & 0 / 0 / 0 \\
+Bearing3\_1 & OR & 2538 & 2412 & 2441 & 2157 & 2376 / 121 & 0 / 0 / 0 & 0 / 0 / 0 & 57 / 0 / 0 \\
+Bearing3\_3 & IR & 371 & 341 & 338 & 315 & 196 / 336 & 0 / 0 / 0 & 0 / 0 / 0 & 0 / 38 / 0 \\
+Bearing3\_4 & IR & 1515 & 1436 & 1435 & 1287 & 1417 / 1064 & 0 / 0 / 0 & 0 / 0 / 0 & 57 / 0 / 0 \\
+Bearing3\_5 & OR & 114 & 21 & 27 & 96 & --- / --- & --- / --- / --- & --- / --- / --- & --- / --- / --- \\
+\br
+\end{tabular}}
+\end{table}

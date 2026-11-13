@@ -1,0 +1,32 @@
+\begin{table}[t]
+\caption{\label{tab:xc}XJTU-SY condition~2$\to$3, degraded phase defined on the
+horizontal channel (H rule); all arms trained in round~6 (one software
+environment, deterministic kernels; seeds 0--7, Mamba-2 seeds 0--4). Panel~A:
+macro-F1 (\%), mean $\pm$ SD, and seed-paired differences (pp) with bootstrap
+95\% interval and positive/negative seed counts. Panel~B: bearing-equal balanced
+accuracy (\%), the mean over the two classes of the mean accuracy of that class's
+two test bearings. The V $-$ H differences of panel~B are the primary contrasts
+P1--P3 (table~\ref{tab:primary}). Per-bearing accuracies: supplementary
+table~\ref{tab:S_r6_bearing}.}
+\footnotesize\centering
+\adjustbox{max width=\linewidth}{%
+\begin{tabular}{@{}lcccccc}
+\br
+\multicolumn{7}{@{}l}{A. Macro-F1} \\
+\mr
+Learner (seeds) & H & V & H+V & V $-$ H & H+V $-$ H & H+V $-$ V \\
+\mr
+1D-CNN (8) & $40.2\pm0.2$ & $88.8\pm0.0$ & $45.5\pm4.3$ & \stk{$+48.6$ (8/0)}{[$+48.5$, $+48.7$]} & \stk{$+5.3$ (8/0)}{[$+2.5$, $+8.0$]} & \stk{$-43.3$ (0/8)}{[$-46.1$, $-40.5$]} \\
+Mamba-3 (8) & $59.6\pm11.9$ & $83.2\pm4.6$ & $91.4\pm5.8$ & \stk{$+23.5$ (8/0)}{[$+15.6$, $+31.2$]} & \stk{$+31.7$ (8/0)}{[$+23.3$, $+39.0$]} & \stk{$+8.2$ (7/1)}{[$+4.0$, $+12.8$]} \\
+Mamba-2 (5) & $44.0\pm1.0$ & $88.6\pm0.2$ & $75.1\pm12.6$ & \stk{$+44.6$ (5/0)}{[$+43.7$, $+45.5$]} & \stk{$+31.1$ (5/0)}{[$+20.3$, $+40.6$]} & \stk{$-13.5$ (0/5)}{[$-23.6$, $-4.9$]} \\
+\mr
+\multicolumn{7}{@{}l}{B. Bearing-equal balanced accuracy} \\
+\mr
+Learner & H & V & H+V & V $-$ H & H+V $-$ H & H+V $-$ V \\
+\mr
+1D-CNN & $50.2$ & $75.0$ & $51.9$ & \stk{$+24.8$ (8/0)}{[$+24.8$, $+24.9$]} & \stk{$+1.8$ (8/0)}{[$+0.8$, $+2.7$]} & \stk{$-23.1$ (0/8)}{[$-24.1$, $-22.1$]} \\
+Mamba-3 & $63.4$ & $73.9$ & $91.6$ & \stk{$+10.5$ (6/2)}{[$+2.9$, $+18.4$]} & \stk{$+28.2$ (8/0)}{[$+22.0$, $+33.5$]} & \stk{$+17.7$ (8/0)}{[$+11.6$, $+23.2$]} \\
+Mamba-2 & $53.5$ & $74.8$ & $77.6$ & \stk{$+21.4$ (5/0)}{[$+20.6$, $+22.2$]} & \stk{$+24.2$ (5/0)}{[$+16.7$, $+31.1$]} & \stk{$+2.8$ (3/2)}{[$-4.1$, $+9.0$]} \\
+\br
+\end{tabular}}
+\end{table}

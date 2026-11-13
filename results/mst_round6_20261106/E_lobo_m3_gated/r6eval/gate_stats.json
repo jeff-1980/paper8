@@ -1,0 +1,53 @@
+{
+ "fold0_seed0": {
+  "mean": 0.42090705037117004,
+  "sd": 0.001580054173246026,
+  "token_sd_mean": null
+ },
+ "fold0_seed1": {
+  "mean": 0.45442959666252136,
+  "sd": 0.0031586438417434692,
+  "token_sd_mean": null
+ },
+ "fold0_seed2": {
+  "mean": 0.483774334192276,
+  "sd": 0.002795375883579254,
+  "token_sd_mean": null
+ },
+ "fold0_seed3": {
+  "mean": 0.4835711419582367,
+  "sd": 0.0030851131305098534,
+  "token_sd_mean": null
+ },
+ "fold0_seed4": {
+  "mean": 0.37998729944229126,
+  "sd": 0.0018419289262965322,
+  "token_sd_mean": null
+ },
+ "fold3_seed0": {
+  "mean": 0.3174717426300049,
+  "sd": 0.0019603597465902567,
+  "token_sd_mean": null
+ },
+ "fold3_seed1": {
+  "mean": 0.46164461970329285,
+  "sd": 0.0008095271186903119,
+  "token_sd_mean": null
+ },
+ "fold3_seed2": {
+  "mean": 0.5309047698974609,
+  "sd": 0.0007077736081555486,
+  "token_sd_mean": null
+ },
+ "fold3_seed3": {
+  "mean": 0.48115792870521545,
+  "sd": 0.0008601858280599117,
+  "token_sd_mean": null
+ },
+ "fold3_seed4": {
+  "mean": 0.36763763427734375,
+  "sd": 0.0012968826340511441,
+  "token_sd_mean": null
+ },
+ "adaptive_rule_met": false
+}

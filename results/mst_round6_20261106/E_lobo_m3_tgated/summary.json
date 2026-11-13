@@ -1,0 +1,29 @@
+{
+  "mode": "lobo_leakfree",
+  "selection_mode": "fixed_epoch",
+  "config": "E_lobo_m3_tgated",
+  "lambda_kin": 0.0,
+  "n_sensors": 2,
+  "lobo_bearings": [
+    "Bearing3_1",
+    "Bearing3_3",
+    "Bearing3_4",
+    "Bearing3_5"
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "per_seed_macro_recall": [
+    0.5372663850486431,
+    0.46633384536610345,
+    0.8355494751664106,
+    0.4947036610343062,
+    0.48046274961597546
+  ],
+  "mean_macro_recall": 0.5628632232462877,
+  "std_macro_recall": 0.1547307943504826
+}

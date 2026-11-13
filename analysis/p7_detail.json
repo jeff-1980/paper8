@@ -1,0 +1,355 @@
+{
+ "observed": 0.29011379953489097,
+ "pooled_check": 0.2901137995348909,
+ "prespecified_bootstrap_ci": [
+  0.07219079224610193,
+  0.49561026536966796
+ ],
+ "permutation_unstratified_p": 0.026198690065496726,
+ "holm": 0.15719214039298035,
+ "stratified_exact_permutation_p_two_sided": 0.03825,
+ "stratified_exact_permutation_p_one_sided": 0.019125,
+ "n_assignments": 8000,
+ "stratified_bootstrap_ci": [
+  0.08480970573660464,
+  0.47968033021959966
+ ],
+ "per_test_bearing": {
+  "Bearing1_1": {
+   "k1": -0.3106150793650793,
+   "k3": -0.18869047619047621,
+   "diff": 0.1219246031746031
+  },
+  "Bearing2_2": {
+   "k1": -0.2977507374631268,
+   "k3": -0.03825589970501475,
+   "diff": 0.25949483775811205
+  },
+  "Bearing3_1": {
+   "k1": -0.4889219576719577,
+   "k3": 0.0,
+   "diff": 0.4889219576719577
+  }
+ },
+ "unit_windows": [
+  {
+   "test": "Bearing1_1",
+   "k": 1,
+   "subset": 0,
+   "or_bearings": [
+    "Bearing1_2"
+   ],
+   "unique_or_windows": 1200,
+   "replaced": []
+  },
+  {
+   "test": "Bearing1_1",
+   "k": 1,
+   "subset": 1,
+   "or_bearings": [
+    "Bearing2_5"
+   ],
+   "unique_or_windows": 1200,
+   "replaced": []
+  },
+  {
+   "test": "Bearing1_1",
+   "k": 1,
+   "subset": 2,
+   "or_bearings": [
+    "Bearing1_3"
+   ],
+   "unique_or_windows": 848,
+   "replaced": [
+    "Bearing1_3"
+   ]
+  },
+  {
+   "test": "Bearing1_1",
+   "k": 2,
+   "subset": 0,
+   "or_bearings": [
+    "Bearing1_3",
+    "Bearing2_4"
+   ],
+   "unique_or_windows": 840,
+   "replaced": [
+    "Bearing2_4"
+   ]
+  },
+  {
+   "test": "Bearing1_1",
+   "k": 2,
+   "subset": 1,
+   "or_bearings": [
+    "Bearing1_3",
+    "Bearing2_5"
+   ],
+   "unique_or_windows": 1200,
+   "replaced": []
+  },
+  {
+   "test": "Bearing1_1",
+   "k": 2,
+   "subset": 2,
+   "or_bearings": [
+    "Bearing1_2",
+    "Bearing2_2"
+   ],
+   "unique_or_windows": 1200,
+   "replaced": []
+  },
+  {
+   "test": "Bearing1_1",
+   "k": 3,
+   "subset": 0,
+   "or_bearings": [
+    "Bearing2_2",
+    "Bearing2_4",
+    "Bearing3_5"
+   ],
+   "unique_or_windows": 1040,
+   "replaced": [
+    "Bearing2_4"
+   ]
+  },
+  {
+   "test": "Bearing1_1",
+   "k": 3,
+   "subset": 1,
+   "or_bearings": [
+    "Bearing2_2",
+    "Bearing2_4",
+    "Bearing3_1"
+   ],
+   "unique_or_windows": 1040,
+   "replaced": [
+    "Bearing2_4"
+   ]
+  },
+  {
+   "test": "Bearing1_1",
+   "k": 3,
+   "subset": 2,
+   "or_bearings": [
+    "Bearing1_3",
+    "Bearing3_1",
+    "Bearing3_5"
+   ],
+   "unique_or_windows": 1200,
+   "replaced": []
+  },
+  {
+   "test": "Bearing2_2",
+   "k": 1,
+   "subset": 0,
+   "or_bearings": [
+    "Bearing3_1"
+   ],
+   "unique_or_windows": 1200,
+   "replaced": []
+  },
+  {
+   "test": "Bearing2_2",
+   "k": 1,
+   "subset": 1,
+   "or_bearings": [
+    "Bearing2_5"
+   ],
+   "unique_or_windows": 1200,
+   "replaced": []
+  },
+  {
+   "test": "Bearing2_2",
+   "k": 1,
+   "subset": 2,
+   "or_bearings": [
+    "Bearing1_1"
+   ],
+   "unique_or_windows": 1200,
+   "replaced": []
+  },
+  {
+   "test": "Bearing2_2",
+   "k": 2,
+   "subset": 0,
+   "or_bearings": [
+    "Bearing2_5",
+    "Bearing3_5"
+   ],
+   "unique_or_windows": 1200,
+   "replaced": []
+  },
+  {
+   "test": "Bearing2_2",
+   "k": 2,
+   "subset": 1,
+   "or_bearings": [
+    "Bearing1_1",
+    "Bearing2_5"
+   ],
+   "unique_or_windows": 1200,
+   "replaced": []
+  },
+  {
+   "test": "Bearing2_2",
+   "k": 2,
+   "subset": 2,
+   "or_bearings": [
+    "Bearing2_4",
+    "Bearing2_5"
+   ],
+   "unique_or_windows": 840,
+   "replaced": [
+    "Bearing2_4"
+   ]
+  },
+  {
+   "test": "Bearing2_2",
+   "k": 3,
+   "subset": 0,
+   "or_bearings": [
+    "Bearing1_3",
+    "Bearing2_4",
+    "Bearing3_1"
+   ],
+   "unique_or_windows": 1040,
+   "replaced": [
+    "Bearing2_4"
+   ]
+  },
+  {
+   "test": "Bearing2_2",
+   "k": 3,
+   "subset": 1,
+   "or_bearings": [
+    "Bearing2_4",
+    "Bearing3_1",
+    "Bearing3_5"
+   ],
+   "unique_or_windows": 1040,
+   "replaced": [
+    "Bearing2_4"
+   ]
+  },
+  {
+   "test": "Bearing2_2",
+   "k": 3,
+   "subset": 2,
+   "or_bearings": [
+    "Bearing1_2",
+    "Bearing2_4",
+    "Bearing3_1"
+   ],
+   "unique_or_windows": 1040,
+   "replaced": [
+    "Bearing2_4"
+   ]
+  },
+  {
+   "test": "Bearing3_1",
+   "k": 1,
+   "subset": 0,
+   "or_bearings": [
+    "Bearing3_5"
+   ],
+   "unique_or_windows": 1200,
+   "replaced": []
+  },
+  {
+   "test": "Bearing3_1",
+   "k": 1,
+   "subset": 1,
+   "or_bearings": [
+    "Bearing2_2"
+   ],
+   "unique_or_windows": 1200,
+   "replaced": []
+  },
+  {
+   "test": "Bearing3_1",
+   "k": 1,
+   "subset": 2,
+   "or_bearings": [
+    "Bearing2_4"
+   ],
+   "unique_or_windows": 240,
+   "replaced": [
+    "Bearing2_4"
+   ]
+  },
+  {
+   "test": "Bearing3_1",
+   "k": 2,
+   "subset": 0,
+   "or_bearings": [
+    "Bearing1_1",
+    "Bearing2_4"
+   ],
+   "unique_or_windows": 840,
+   "replaced": [
+    "Bearing2_4"
+   ]
+  },
+  {
+   "test": "Bearing3_1",
+   "k": 2,
+   "subset": 1,
+   "or_bearings": [
+    "Bearing1_1",
+    "Bearing3_5"
+   ],
+   "unique_or_windows": 1200,
+   "replaced": []
+  },
+  {
+   "test": "Bearing3_1",
+   "k": 2,
+   "subset": 2,
+   "or_bearings": [
+    "Bearing1_2",
+    "Bearing1_3"
+   ],
+   "unique_or_windows": 1200,
+   "replaced": []
+  },
+  {
+   "test": "Bearing3_1",
+   "k": 3,
+   "subset": 0,
+   "or_bearings": [
+    "Bearing1_1",
+    "Bearing1_2",
+    "Bearing2_5"
+   ],
+   "unique_or_windows": 1200,
+   "replaced": []
+  },
+  {
+   "test": "Bearing3_1",
+   "k": 3,
+   "subset": 1,
+   "or_bearings": [
+    "Bearing1_3",
+    "Bearing2_4",
+    "Bearing2_5"
+   ],
+   "unique_or_windows": 1040,
+   "replaced": [
+    "Bearing2_4"
+   ]
+  },
+  {
+   "test": "Bearing3_1",
+   "k": 3,
+   "subset": 2,
+   "or_bearings": [
+    "Bearing1_2",
+    "Bearing1_3",
+    "Bearing2_5"
+   ],
+   "unique_or_windows": 1200,
+   "replaced": []
+  }
+ ]
+}

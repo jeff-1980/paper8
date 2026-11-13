@@ -19,6 +19,7 @@ XJTU-SY Cond3 LOBO — 无泄漏选点协议（E3，见 prereg_lobo_leakfree.md�
   python experiments/exp_e3_lobo_leakfree/train_lobo_leakfree.py \
       --config experiments/exp_e3_lobo_leakfree/config_lobo_nokin_leakfree.yaml --smoke
 """
+import os
 import argparse
 import json
 import random
@@ -52,6 +53,10 @@ def set_seed(seed: int):
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
+    if os.environ.get("BM_DETERMINISTIC") == "1":   # round 6: opt-in deterministic kernels (default off = earlier behaviour)
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+        torch.use_deterministic_algorithms(True, warn_only=True)
 
 
 def load_config(path: Path) -> dict:

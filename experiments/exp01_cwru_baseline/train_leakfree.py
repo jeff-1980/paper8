@@ -23,6 +23,7 @@ Usage:
   source venv/bin/activate
   python experiments/exp01_cwru_baseline/train_leakfree.py --config config.yaml [--smoke]
 """
+import os
 import argparse
 import copy
 import hashlib
@@ -88,6 +89,10 @@ def set_seed(seed: int):
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
+    if os.environ.get("BM_DETERMINISTIC") == "1":   # round 6: opt-in deterministic kernels (default off = earlier behaviour)
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+        torch.use_deterministic_algorithms(True, warn_only=True)
 
 
 def load_config(path: Path) -> dict:
@@ -123,7 +128,8 @@ def build_loaders(cfg: dict, seed: int, smoke: bool, pools: dict):
     noise_snr = cfg.get("noise_snr_db", None)
     noise_type = cfg.get("noise_type", "awgn")
 
-    nk = dict(noise_key=cfg.get("noise_key", "v1"), channels=cfg["channels"])
+    nk = dict(noise_key=cfg.get("noise_key", "v1"), channels=cfg["channels"],
+              noise_realisation=cfg.get("noise_realisation", 0), combine=cfg.get("combine"))
     train_ds = CWRULeakfreeDataset(pools["train"], normalize=True, seed=seed,
                                     noise_snr_db=noise_snr, noise_type=noise_type, split="train", **nk)
     val_ds = CWRULeakfreeDataset(pools["val"], normalize=True, seed=seed,
@@ -215,7 +221,7 @@ def train_one_seed(cfg: dict, seed: int, device: torch.device, pools: dict,
     train_loader, val_loader, test_loader, n_train, n_val, n_test = build_loaders(
         cfg, seed, smoke, pools
     )
-    model = build_model(cfg, device)
+    model = build_model(dict(cfg, channels=["SUMDIFF"]) if cfg.get("combine") else cfg, device)
 
     optimizer = torch.optim.AdamW(
         model.parameters(), lr=cfg["lr"], weight_decay=cfg["weight_decay"]

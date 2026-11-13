@@ -1,0 +1,24 @@
+{
+  "mode": "cross",
+  "protocol": "leakfree_v1 (P10(a) fixed final epoch)",
+  "config": "F_3_1_k1_s0_H",
+  "lambda_kin": 0.0,
+  "train_condition": "37.5Hz11kN",
+  "test_condition": "40Hz10kN",
+  "seeds": [
+    0,
+    1
+  ],
+  "macro_f1s": [
+    0.48897338403041823,
+    0.4990059642147117
+  ],
+  "macro_recalls": [
+    0.47842261904761907,
+    0.498015873015873
+  ],
+  "mean_macro_f1": 0.493989674122565,
+  "std_macro_f1": 0.007094105481111704,
+  "mean_macro_recall": 0.48821924603174605,
+  "std_macro_recall": 0.013854522746462603
+}

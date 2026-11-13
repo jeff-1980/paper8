@@ -1,0 +1,17 @@
+{
+  "fold_tag": "cross_seed6",
+  "seed": 6,
+  "final_macro_recall": 0.7040929203539823,
+  "final_macro_f1": 0.7129765462938105,
+  "final_per_class_recall": [
+    1.0,
+    0.4081858407079646
+  ],
+  "n_epochs": 50,
+  "elapsed_s": 225.96035814285278,
+  "protocol": "leakfree_v1 (P10(a) fixed final epoch, no per-epoch test-based selection)",
+  "train_class_counts": [
+    4432,
+    608
+  ]
+}

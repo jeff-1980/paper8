@@ -1,0 +1,27 @@
+\begin{table}[t]
+\caption{\label{tab:primary}Primary contrasts fixed before the round-6 runs, with
+the predicted direction, the result (pp; bootstrap 95\% interval; seed or unit
+counts), the unadjusted two-sided $p$ (exact Wilcoxon over seeds; P7:
+permutation of the $k$ labels over the 18 (test bearing, subset) units,
+not stratified by test bearing; a stratified exact permutation gives $0.038$,
+supplementary section~\ref{sec:S_p7}) and the Holm-adjusted $p$ over the seven
+contrasts. No contrast reaches $\alpha=0.05$ after adjustment; with five seeds
+(P3, P5, P6) the smallest attainable unadjusted $p$ is $0.0625$. ``Direction as
+predicted'' refers to the interval (P5: the stated threshold), not to
+significance.}
+\footnotesize\centering
+\adjustbox{max width=\linewidth}{%
+\begin{tabular}{@{}lp{0.36\linewidth}p{0.13\linewidth}cccc}
+\br
+ & Contrast & Prediction & Result & $p$ & Holm $p$ & As predicted \\
+\mr
+P1 & Mamba-3 V $-$ H, bearing-equal balanced accuracy, H rule & V $>$ H & \stk{$+10.5$ (6/2)}{[$+2.9$, $+18.4$]} & $0.0781$ & $0.250$ & yes \\
+P2 & 1D-CNN V $-$ H, same & V $>$ H & \stk{$+24.8$ (8/0)}{[$+24.8$, $+24.9$]} & $0.0078$ & $0.055$ & yes \\
+P3 & Mamba-2 V $-$ H, same & V $>$ H & \stk{$+21.4$ (5/0)}{[$+20.6$, $+22.2$]} & $0.0625$ & $0.250$ & yes \\
+P4 & Mamba-3 V $-$ H, macro-F1, common test set, last-15\% rule & H-rule sign ($>0$) & \stk{$-7.2$ (2/6)}{[$-13.1$, $-1.4$]} & $0.0391$ & $0.195$ & no \\
+P5 & CWRU DE+FE trained $\rho=0.9$: tested $0.9$ $-$ tested $0$ & $>2$~pp, 5/5 seeds & \stk{$+61.1$ (5/0)}{[$+57.2$, $+63.5$]} & $0.0625$ & $0.250$ & yes \\
+P6 & CWRU DIFF $-$ DE only, $\rho=0.9$ & DIFF $>$ DE & \stk{$+15.3$ (5/0)}{[$+13.9$, $+16.8$]} & $0.0625$ & $0.250$ & yes \\
+P7 & Coverage: (H+V $-$ H) at $k=3$ minus at $k=1$ & $>0$ & \stk{$+29.0$ (9 + 9 units, 3 test bearings)}{[$+7.2$, $+49.6$]} & $0.0262$ & $0.157$ & yes \\
+\br
+\end{tabular}}
+\end{table}

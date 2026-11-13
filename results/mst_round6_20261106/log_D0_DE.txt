@@ -1,0 +1,70 @@
+[leakfree] Device: cuda  backbone=mamba3  lambda_kin=0.0  snr=-8.0dB  noise_type=awgn  seeds=[0, 1, 2, 3, 4]  epochs=50
+[leakfree] source snapshot: 4 files -> <REPO_ROOT>/out_r6/D0_DE/source_snapshot
+[leakfree] split sizes (raw windows, pre-shuffle): train=4104 val=820 test=660
+[leakfree] disjointness check: PASS (40 files, guard=2048)
+
+============================================================
+Seed 0
+  seed=0 epoch=  1/50  l_ce=1.0098  l_kin=0.0000  val_acc=0.5476  [33s]
+  seed=0 epoch=  2/50  l_ce=0.7860  l_kin=0.0000  val_acc=0.6341  [38s]
+  seed=0 epoch=  3/50  l_ce=0.7265  l_kin=0.0000  val_acc=0.6768  [42s]
+  seed=0 epoch= 10/50  l_ce=0.5522  l_kin=0.0000  val_acc=0.7939  [73s]
+  seed=0 epoch= 20/50  l_ce=0.4657  l_kin=0.0000  val_acc=0.7988  [116s]
+  seed=0 epoch= 30/50  l_ce=0.4207  l_kin=0.0000  val_acc=0.8244  [160s]
+  seed=0 epoch= 40/50  l_ce=0.3852  l_kin=0.0000  val_acc=0.8317  [203s]
+  seed=0 epoch= 50/50  l_ce=0.3817  l_kin=0.0000  val_acc=0.8366  [246s]
+  → saved <REPO_ROOT>/out_r6/D0_DE/seed_0.json
+
+============================================================
+Seed 1
+  seed=1 epoch=  1/50  l_ce=1.0181  l_kin=0.0000  val_acc=0.5488  [4s]
+  seed=1 epoch=  2/50  l_ce=0.7963  l_kin=0.0000  val_acc=0.5671  [9s]
+  seed=1 epoch=  3/50  l_ce=0.7499  l_kin=0.0000  val_acc=0.6317  [13s]
+  seed=1 epoch= 10/50  l_ce=0.5668  l_kin=0.0000  val_acc=0.7768  [43s]
+  seed=1 epoch= 20/50  l_ce=0.4275  l_kin=0.0000  val_acc=0.8305  [87s]
+  seed=1 epoch= 30/50  l_ce=0.3611  l_kin=0.0000  val_acc=0.8463  [131s]
+  seed=1 epoch= 40/50  l_ce=0.3381  l_kin=0.0000  val_acc=0.8573  [174s]
+  seed=1 epoch= 50/50  l_ce=0.3327  l_kin=0.0000  val_acc=0.8598  [218s]
+  → saved <REPO_ROOT>/out_r6/D0_DE/seed_1.json
+
+============================================================
+Seed 2
+  seed=2 epoch=  1/50  l_ce=1.0004  l_kin=0.0000  val_acc=0.5317  [4s]
+  seed=2 epoch=  2/50  l_ce=0.7787  l_kin=0.0000  val_acc=0.5854  [9s]
+  seed=2 epoch=  3/50  l_ce=0.7190  l_kin=0.0000  val_acc=0.6927  [13s]
+  seed=2 epoch= 10/50  l_ce=0.5091  l_kin=0.0000  val_acc=0.8122  [43s]
+  seed=2 epoch= 20/50  l_ce=0.3781  l_kin=0.0000  val_acc=0.8610  [87s]
+  seed=2 epoch= 30/50  l_ce=0.3067  l_kin=0.0000  val_acc=0.8537  [130s]
+  seed=2 epoch= 40/50  l_ce=0.2871  l_kin=0.0000  val_acc=0.8659  [174s]
+  seed=2 epoch= 50/50  l_ce=0.2838  l_kin=0.0000  val_acc=0.8671  [217s]
+  → saved <REPO_ROOT>/out_r6/D0_DE/seed_2.json
+
+============================================================
+Seed 3
+  seed=3 epoch=  1/50  l_ce=1.0125  l_kin=0.0000  val_acc=0.5451  [4s]
+  seed=3 epoch=  2/50  l_ce=0.7958  l_kin=0.0000  val_acc=0.6207  [9s]
+  seed=3 epoch=  3/50  l_ce=0.7629  l_kin=0.0000  val_acc=0.6500  [13s]
+  seed=3 epoch= 10/50  l_ce=0.5025  l_kin=0.0000  val_acc=0.7976  [43s]
+  seed=3 epoch= 20/50  l_ce=0.3701  l_kin=0.0000  val_acc=0.8402  [87s]
+  seed=3 epoch= 30/50  l_ce=0.3041  l_kin=0.0000  val_acc=0.8695  [130s]
+  seed=3 epoch= 40/50  l_ce=0.2722  l_kin=0.0000  val_acc=0.8537  [174s]
+  seed=3 epoch= 50/50  l_ce=0.2680  l_kin=0.0000  val_acc=0.8585  [218s]
+  → saved <REPO_ROOT>/out_r6/D0_DE/seed_3.json
+
+============================================================
+Seed 4
+  seed=4 epoch=  1/50  l_ce=1.0581  l_kin=0.0000  val_acc=0.5439  [4s]
+  seed=4 epoch=  2/50  l_ce=0.8020  l_kin=0.0000  val_acc=0.6024  [9s]
+  seed=4 epoch=  3/50  l_ce=0.7412  l_kin=0.0000  val_acc=0.6549  [13s]
+  seed=4 epoch= 10/50  l_ce=0.5089  l_kin=0.0000  val_acc=0.7573  [43s]
+  seed=4 epoch= 20/50  l_ce=0.4225  l_kin=0.0000  val_acc=0.8268  [86s]
+  seed=4 epoch= 30/50  l_ce=0.3511  l_kin=0.0000  val_acc=0.8451  [130s]
+  seed=4 epoch= 40/50  l_ce=0.3314  l_kin=0.0000  val_acc=0.8402  [174s]
+  seed=4 epoch= 50/50  l_ce=0.3275  l_kin=0.0000  val_acc=0.8451  [217s]
+  → saved <REPO_ROOT>/out_r6/D0_DE/seed_4.json
+
+============================================================
+RESULTS (test, leak-free): mean±std = 84.15±1.74%
+Per-seed test: ['81.97', '82.88', '86.36', '84.70', '84.85']
+(for reference) per-seed best_val: ['84.02', '86.22', '86.83', '86.95', '85.00']
+Summary saved to <REPO_ROOT>/out_r6/D0_DE/summary.json

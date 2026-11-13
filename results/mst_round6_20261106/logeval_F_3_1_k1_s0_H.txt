@@ -1,0 +1,2 @@
+F_3_1_k1_s0_H seed0 H own F1 0.4890 (rec 0.48897338403041823) common F1 0.4856 
+F_3_1_k1_s0_H seed1 H own F1 0.4990 (rec 0.4990059642147117) common F1 0.4987 

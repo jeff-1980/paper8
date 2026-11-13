@@ -1,0 +1,19 @@
+{
+ "1_existing_noise_bit_identical": true,
+ "2_DE_row_unchanged_by_delay": true,
+ "3_d0_equals_no_delay": true,
+ "4a_delay64_lag0_corr": -0.001,
+ "4b_delay64_lag64_corr": 0.9,
+ "5a_combine_shape": [
+  1,
+  2048
+ ],
+ "5b_noise_in_diff_vs_sum_power_ratio": 0.052,
+ "5c_realisation_changes_noise": true,
+ "6a_meta_lengths": true,
+ "6b_files_from_onset": true,
+ "7a_counts_exact": true,
+ "7b_deterministic": true,
+ "7c_no_replacement_when_enough": true,
+ "7d_with_replacement_when_short": true
+}

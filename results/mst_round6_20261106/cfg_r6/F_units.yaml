@@ -1,0 +1,162 @@
+- k: 1
+  or_bearings:
+  - Bearing1_2
+  subset: 0
+  test: Bearing1_1
+- k: 1
+  or_bearings:
+  - Bearing2_5
+  subset: 1
+  test: Bearing1_1
+- k: 1
+  or_bearings:
+  - Bearing1_3
+  subset: 2
+  test: Bearing1_1
+- k: 2
+  or_bearings:
+  - Bearing1_3
+  - Bearing2_4
+  subset: 0
+  test: Bearing1_1
+- k: 2
+  or_bearings:
+  - Bearing1_3
+  - Bearing2_5
+  subset: 1
+  test: Bearing1_1
+- k: 2
+  or_bearings:
+  - Bearing1_2
+  - Bearing2_2
+  subset: 2
+  test: Bearing1_1
+- k: 3
+  or_bearings:
+  - Bearing2_2
+  - Bearing2_4
+  - Bearing3_5
+  subset: 0
+  test: Bearing1_1
+- k: 3
+  or_bearings:
+  - Bearing2_2
+  - Bearing2_4
+  - Bearing3_1
+  subset: 1
+  test: Bearing1_1
+- k: 3
+  or_bearings:
+  - Bearing1_3
+  - Bearing3_1
+  - Bearing3_5
+  subset: 2
+  test: Bearing1_1
+- k: 1
+  or_bearings:
+  - Bearing3_1
+  subset: 0
+  test: Bearing2_2
+- k: 1
+  or_bearings:
+  - Bearing2_5
+  subset: 1
+  test: Bearing2_2
+- k: 1
+  or_bearings:
+  - Bearing1_1
+  subset: 2
+  test: Bearing2_2
+- k: 2
+  or_bearings:
+  - Bearing2_5
+  - Bearing3_5
+  subset: 0
+  test: Bearing2_2
+- k: 2
+  or_bearings:
+  - Bearing1_1
+  - Bearing2_5
+  subset: 1
+  test: Bearing2_2
+- k: 2
+  or_bearings:
+  - Bearing2_4
+  - Bearing2_5
+  subset: 2
+  test: Bearing2_2
+- k: 3
+  or_bearings:
+  - Bearing1_3
+  - Bearing2_4
+  - Bearing3_1
+  subset: 0
+  test: Bearing2_2
+- k: 3
+  or_bearings:
+  - Bearing2_4
+  - Bearing3_1
+  - Bearing3_5
+  subset: 1
+  test: Bearing2_2
+- k: 3
+  or_bearings:
+  - Bearing1_2
+  - Bearing2_4
+  - Bearing3_1
+  subset: 2
+  test: Bearing2_2
+- k: 1
+  or_bearings:
+  - Bearing3_5
+  subset: 0
+  test: Bearing3_1
+- k: 1
+  or_bearings:
+  - Bearing2_2
+  subset: 1
+  test: Bearing3_1
+- k: 1
+  or_bearings:
+  - Bearing2_4
+  subset: 2
+  test: Bearing3_1
+- k: 2
+  or_bearings:
+  - Bearing1_1
+  - Bearing2_4
+  subset: 0
+  test: Bearing3_1
+- k: 2
+  or_bearings:
+  - Bearing1_1
+  - Bearing3_5
+  subset: 1
+  test: Bearing3_1
+- k: 2
+  or_bearings:
+  - Bearing1_2
+  - Bearing1_3
+  subset: 2
+  test: Bearing3_1
+- k: 3
+  or_bearings:
+  - Bearing1_1
+  - Bearing1_2
+  - Bearing2_5
+  subset: 0
+  test: Bearing3_1
+- k: 3
+  or_bearings:
+  - Bearing1_3
+  - Bearing2_4
+  - Bearing2_5
+  subset: 1
+  test: Bearing3_1
+- k: 3
+  or_bearings:
+  - Bearing1_2
+  - Bearing1_3
+  - Bearing2_5
+  subset: 2
+  test: Bearing3_1

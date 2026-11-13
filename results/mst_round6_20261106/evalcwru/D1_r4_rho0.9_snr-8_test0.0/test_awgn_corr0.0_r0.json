@@ -1,0 +1,37 @@
+{
+ "trained_results_dir": "<REPO_ROOT>/results/mst_round4_noisefix_20261007/r4_DEFE_rho0.9_snr-8",
+ "test_noise": "awgn_corr0.0",
+ "test_realisation": 0,
+ "seeds": {
+  "0": {
+   "recorded": 0.9818181818181818,
+   "recomputed_same": 0.9818181818181818,
+   "test_other": 0.34393939393939393,
+   "epoch": 35
+  },
+  "1": {
+   "recorded": 0.9621212121212122,
+   "recomputed_same": 0.9621212121212122,
+   "test_other": 0.34393939393939393,
+   "epoch": 45
+  },
+  "2": {
+   "recorded": 0.9712121212121212,
+   "recomputed_same": 0.9712121212121212,
+   "test_other": 0.47878787878787876,
+   "epoch": 34
+  },
+  "3": {
+   "recorded": 0.9757575757575757,
+   "recomputed_same": 0.9757575757575757,
+   "test_other": 0.34393939393939393,
+   "epoch": 41
+  },
+  "4": {
+   "recorded": 0.9757575757575757,
+   "recomputed_same": 0.9757575757575757,
+   "test_other": 0.34393939393939393,
+   "epoch": 42
+  }
+ }
+}

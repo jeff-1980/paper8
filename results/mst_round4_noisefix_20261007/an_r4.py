@@ -2,6 +2,9 @@
 Statistics as fixed in prereg_mst_round4_noisefix.md."""
 import json, glob, os, numpy as np
 from scipy import stats
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '../../scripts/stats_exact'))
+from exact_wilcoxon import wilcoxon as exact_wilcoxon  # zero differences dropped, mid-ranks, full sign enumeration (2026-11-13)
 _D = os.path.dirname(os.path.abspath(__file__))
 O = (os.path.join(_D, 'out_r4') if os.path.isdir(os.path.join(_D, 'out_r4')) else _D) + '/'   # run dir or release folder
 SEEDS = [0, 1, 2, 3, 4]
@@ -14,7 +17,7 @@ def done(n): return os.path.exists(O + 'done_' + n)
 def paired(a, b, side):
     d = np.array([a[s] - b[s] for s in SEEDS]); rng = np.random.default_rng(12345)
     ci = np.percentile([rng.choice(d, len(d)).mean() for _ in range(20000)], [2.5, 97.5])
-    p = stats.wilcoxon(d, alternative=side, method='exact').pvalue if np.any(d != 0) else float('nan')
+    p = exact_wilcoxon(d, alternative=side, method='exact').pvalue if np.any(d != 0) else float('nan')
     return dict(mean=float(d.mean()), lo=float(ci[0]), hi=float(ci[1]), p=float(p), pos=int((d > 0).sum()), neg=int((d < 0).sum()), d=d.round(2).tolist())
 R = {'arms': {}, 'contrasts': {}}
 out = []

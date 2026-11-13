@@ -1,0 +1,17 @@
+setting,learner,dual_minus,mean_pp,ci_lo,ci_hi,source
+Condition 2$\to$3,1D-CNN,H,5.29,2.53,8.05,"round 6 block A, HV-H|macro_f1|own (an_r6_results.json)"
+Condition 2$\to$3,1D-CNN,V,-43.31,-46.12,-40.49,"round 6 block A, HV-V|macro_f1|own (an_r6_results.json)"
+Condition 2$\to$3,Mamba-2,H,31.07,20.27,40.63,"round 6 block A, HV-H|macro_f1|own (an_r6_results.json)"
+Condition 2$\to$3,Mamba-2,V,-13.54,-23.62,-4.86,"round 6 block A, HV-V|macro_f1|own (an_r6_results.json)"
+Condition 2$\to$3,Mamba-3,H,31.74,23.26,39.02,"round 6 block A, HV-H|macro_f1|own (an_r6_results.json)"
+Condition 2$\to$3,Mamba-3,V,8.19,3.97,12.79,"round 6 block A, HV-V|macro_f1|own (an_r6_results.json)"
+Held-out condition 2,Mamba-3,H,29.9,23.92,36.1,an_r1_results.md BM3 L2
+Held-out condition 2,Mamba-3,V,-17.56,-23.91,-10.76,an_r1_results.md BM3 L2
+Held-out condition 2,1D-CNN,H,22.21,14.34,30.64,an_r1_results.md CNN L2
+Held-out condition 2,1D-CNN,V,-22.27,-28.57,-15.41,an_r1_results.md CNN L2
+Held-out condition 3,Mamba-3,H,32.98,27.78,37.61,an_r1_results.md BM3 L3
+Held-out condition 3,Mamba-3,V,8.6,3.69,13.5,an_r1_results.md BM3 L3
+Held-out condition 3,1D-CNN,H,3.13,0.32,7.71,an_r1_results.md CNN L3
+Held-out condition 3,1D-CNN,V,-45.53,-48.31,-41.06,an_r1_results.md CNN L3
+"Held-out bearing (LOBO, OR folds)",Mamba-3,H,-41.51,-48.76,-35.66,summary_lobo_bm3_8seed.md
+"Held-out bearing (LOBO, OR folds)",Mamba-3,V,-41.86,-48.77,-34.31,summary_lobo_bm3_8seed.md

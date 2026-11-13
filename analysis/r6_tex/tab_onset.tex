@@ -1,0 +1,41 @@
+\begin{table}[t]
+\caption{\label{tab:onset}Sensitivity to the degraded-phase definition, round~6.
+Panel~A: XJTU-SY condition~2$\to$3, macro-F1 (\%) on each rule's own test set
+and seed-paired differences (pp) with positive/negative seed counts; last
+column: V $-$ H on the common test set (windows every rule labels faulty).
+Panel~B: condition~3 LOBO, Mamba-3, seeds 0--4, outer-race recall (\%) on test
+bearings 3\_1 / 3\_5 and differences of the OR-fold mean (pp) with bootstrap
+95\% interval. Intervals for panel~A: supplementary table~\ref{tab:S_r6_onset}.}
+\footnotesize\centering
+\adjustbox{max width=\linewidth}{%
+\begin{tabular}{@{}llcccccc}
+\br
+\multicolumn{8}{@{}l}{A. Condition 2$\to$3} \\
+\mr
+Learner (seeds) & Onset rule & H & V & H+V & V $-$ H & H+V $-$ V & V $-$ H (common) \\
+\mr
+Mamba-3 (8) & H channel (main) & $59.6$ & $83.2$ & $91.4$ & $+23.5$ (8/0) & $+8.2$ (7/1) & $+34.2$ (8/0) \\
+ & V channel & $59.5$ & $88.0$ & $93.8$ & $+28.4$ (8/0) & $+5.8$ (6/2) & $+36.1$ (8/0) \\
+ & last 15\% of life & $47.3$ & $37.9$ & $47.8$ & $-9.3$ (1/7) & $+9.9$ (8/0) & $-7.2$ (2/6) \\
+\mr
+1D-CNN (8) & H channel (main) & $40.2$ & $88.8$ & $45.5$ & $+48.6$ (8/0) & $-43.3$ (0/8) & $+52.1$ (8/0) \\
+ & V channel & $41.0$ & $87.3$ & $48.5$ & $+46.4$ (8/0) & $-38.8$ (0/8) & $+50.9$ (8/0) \\
+ & last 15\% of life & $48.9$ & $88.3$ & $92.5$ & $+39.3$ (8/0) & $+4.3$ (7/1) & $+41.0$ (8/0) \\
+\mr
+Mamba-2 (5) & H channel (main) & $44.0$ & $88.6$ & $75.1$ & $+44.6$ (5/0) & $-13.5$ (0/5) & $+48.2$ (5/0) \\
+ & V channel & $45.2$ & $87.2$ & $77.9$ & $+42.0$ (5/0) & $-9.3$ (1/4) & $+45.2$ (5/0) \\
+ & last 15\% of life & $28.3$ & $58.3$ & $45.5$ & $+29.9$ (5/0) & $-12.7$ (1/4) & $+20.0$ (5/0) \\
+\br
+\end{tabular}}
+\par\vspace{4pt}
+\adjustbox{max width=\linewidth}{%
+\begin{tabular}{@{}llllll}
+\multicolumn{6}{@{}l}{B. LOBO, OR folds, Mamba-3 (seeds 0--4)} \\
+\mr
+Onset rule & H & V & H+V & H+V $-$ H & H+V $-$ V \\
+\mr
+H channel (main) & $99.2$ / $48.9$ & $72.4$ / $76.0$ & $43.0$ / $17.0$ & \stk{$-44.0$ (0/5)}{[$-54.5$, $-34.8$]} & \stk{$-44.2$ (0/5)}{[$-48.5$, $-37.6$]} \\
+last 15\% of life & $12.8$ / $6.3$ & $1.9$ / $99.9$ & $0.8$ / $5.1$ & \stk{$-6.6$ (1/4)}{[$-11.0$, $-2.3$]} & \stk{$-48.0$ (0/5)}{[$-49.9$, $-45.6$]} \\
+\br
+\end{tabular}}
+\end{table}

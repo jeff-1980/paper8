@@ -215,7 +215,14 @@ class CWRULeakfreeDataset(Dataset):
         split: Optional[str] = None,
         channels: Optional[list] = None,
         noise_realisation: int = 0,
+        combine: Optional[str] = None,
     ):
+        # round 6 (noise_key=v2 only): noise_type 'awgn_corr<rho>_d<k>' delays the common component in the
+        #   FE row by k samples (z_FE'[t] = rho z_DE[t-k] + sqrt(1-rho^2) z_FE[t]; the k samples before the
+        #   window come from a separate stream, so the DE row is unchanged); combine='sum'/'diff' turns the
+        #   two noisy channels, each z-scored, into one input channel (x_DE + x_FE)/sqrt2 or (x_DE - x_FE)/sqrt2.
+        assert combine in (None, "sum", "diff"), combine
+        self.combine = combine
         # noise_key="v1": original behaviour, noise seeded by (local index, SNR) -- reused across
         #   splits and re-paired with windows whenever the seed changes the order (superseded).
         # noise_key="v2": noise seeded by (split, file id, absolute window start, realisation), drawn
@@ -246,14 +253,23 @@ class CWRULeakfreeDataset(Dataset):
     def _noise_v2(self, w, fid, start):
         rng = np.random.default_rng([self._SPLIT_CODE[self.split], int(fid), int(start), self.noise_realisation])
         z = rng.standard_normal((2, w.shape[1])).astype(np.float32)   # row 0: DE, row 1: FE
+        delay = 0
         if self.noise_type == "awgn":
             rho = 0.0
         elif self.noise_type.startswith("awgn_corr"):
-            rho = float(self.noise_type[len("awgn_corr"):])
+            spec = self.noise_type[len("awgn_corr"):]
+            if "_d" in spec:
+                spec, d = spec.split("_d"); delay = int(d)
+            rho = float(spec)
         else:
             raise ValueError(f"noise_key=v2 supports awgn / awgn_corr only, got {self.noise_type!r}")
         if rho != 0.0:
-            z[1] = rho * z[0] + np.float32(np.sqrt(1.0 - rho ** 2)) * z[1]
+            c0 = z[0]
+            if delay > 0:
+                pre = np.random.default_rng([self._SPLIT_CODE[self.split], int(fid), int(start), self.noise_realisation, 7]
+                                            ).standard_normal(delay).astype(np.float32)
+                c0 = np.concatenate([pre, z[0]])[: z.shape[1]]
+            z[1] = rho * c0 + np.float32(np.sqrt(1.0 - rho ** 2)) * z[1]
         z = z[[0 if c == "DE" else 1 for c in self.channels]]
         sig_pwr = np.mean(w ** 2, axis=1, keepdims=True).clip(min=1e-12)
         noise_std = np.sqrt(sig_pwr / (10 ** (self.noise_snr_db / 10.0)))
@@ -285,6 +301,11 @@ class CWRULeakfreeDataset(Dataset):
                 w = w + z * noise_std
             else:
                 raise ValueError(f"unknown noise_type={self.noise_type!r}")
+        if self.combine is not None:
+            assert w.shape[0] == 2, w.shape
+            v = (w - w.mean(axis=1, keepdims=True)) / (w.std(axis=1, keepdims=True) + 1e-8)
+            w = ((v[0:1] + v[1:2]) if self.combine == "sum" else (v[0:1] - v[1:2])) / np.float32(np.sqrt(2.0))
+            w = w.astype(np.float32)
         if self.normalize:
             mu, std = w.mean(axis=1, keepdims=True), w.std(axis=1, keepdims=True) + 1e-8
             w = (w - mu) / std

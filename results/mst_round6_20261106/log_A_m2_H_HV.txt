@@ -1,0 +1,77 @@
+Device: cuda  mode=cross  backbone=mamba2  lambda_kin=0.0  fs_eff=12800.0  seeds=[0, 1, 2, 3, 4]  epochs=50
+[leakfree-xjtu] source snapshot: 3 files -> <REPO_ROOT>/out_r6/A_m2_H_HV/source_snapshot
+Cross-condition: 37.5Hz11kN → 40Hz10kN
+Train: ['Bearing2_1', 'Bearing2_2', 'Bearing2_4', 'Bearing2_5']
+Test:  ['Bearing3_1', 'Bearing3_3', 'Bearing3_4', 'Bearing3_5']
+Train class counts: OR=4624, IR=624, ratio=7.4:1
+
+============================================================
+Seed 0
+  cross_seed0 seed=0 ep=  1/50  l_ce=0.2105  l_kin=0.0000  [21s]
+  cross_seed0 seed=0 ep=  2/50  l_ce=0.0073  l_kin=0.0000  [29s]
+  cross_seed0 seed=0 ep=  3/50  l_ce=0.0024  l_kin=0.0000  [37s]
+  cross_seed0 seed=0 ep= 10/50  l_ce=0.0004  l_kin=0.0000  [91s]
+  cross_seed0 seed=0 ep= 20/50  l_ce=0.0001  l_kin=0.0000  [169s]
+  cross_seed0 seed=0 ep= 30/50  l_ce=0.0001  l_kin=0.0000  [247s]
+  cross_seed0 seed=0 ep= 40/50  l_ce=0.0001  l_kin=0.0000  [325s]
+  cross_seed0 seed=0 ep= 50/50  l_ce=0.0001  l_kin=0.0000  [402s]
+  cross_seed0 seed=0 FINAL (fixed-epoch, test evaluated once)  recall=[1.000,0.360]  macro_recall=0.6798  macro_f1=0.6957
+  → saved <REPO_ROOT>/out_r6/A_m2_H_HV/seed_0.json
+
+============================================================
+Seed 1
+  cross_seed1 seed=1 ep=  1/50  l_ce=0.2103  l_kin=0.0000  [8s]
+  cross_seed1 seed=1 ep=  2/50  l_ce=0.0043  l_kin=0.0000  [15s]
+  cross_seed1 seed=1 ep=  3/50  l_ce=0.0021  l_kin=0.0000  [23s]
+  cross_seed1 seed=1 ep= 10/50  l_ce=0.0004  l_kin=0.0000  [78s]
+  cross_seed1 seed=1 ep= 20/50  l_ce=0.0002  l_kin=0.0000  [156s]
+  cross_seed1 seed=1 ep= 30/50  l_ce=0.0001  l_kin=0.0000  [233s]
+  cross_seed1 seed=1 ep= 40/50  l_ce=0.0001  l_kin=0.0000  [311s]
+  cross_seed1 seed=1 ep= 50/50  l_ce=0.0001  l_kin=0.0000  [389s]
+  cross_seed1 seed=1 FINAL (fixed-epoch, test evaluated once)  recall=[1.000,0.560]  macro_recall=0.7798  macro_f1=0.8094
+  → saved <REPO_ROOT>/out_r6/A_m2_H_HV/seed_1.json
+
+============================================================
+Seed 2
+  cross_seed2 seed=2 ep=  1/50  l_ce=0.1960  l_kin=0.0000  [8s]
+  cross_seed2 seed=2 ep=  2/50  l_ce=0.0035  l_kin=0.0000  [16s]
+  cross_seed2 seed=2 ep=  3/50  l_ce=0.0020  l_kin=0.0000  [23s]
+  cross_seed2 seed=2 ep= 10/50  l_ce=0.0004  l_kin=0.0000  [78s]
+  cross_seed2 seed=2 ep= 20/50  l_ce=0.0001  l_kin=0.0000  [156s]
+  cross_seed2 seed=2 ep= 30/50  l_ce=0.0001  l_kin=0.0000  [234s]
+  cross_seed2 seed=2 ep= 40/50  l_ce=0.0001  l_kin=0.0000  [312s]
+  cross_seed2 seed=2 ep= 50/50  l_ce=0.0001  l_kin=0.0000  [390s]
+  cross_seed2 seed=2 FINAL (fixed-epoch, test evaluated once)  recall=[1.000,0.696]  macro_recall=0.8478  macro_f1=0.8750
+  → saved <REPO_ROOT>/out_r6/A_m2_H_HV/seed_2.json
+
+============================================================
+Seed 3
+  cross_seed3 seed=3 ep=  1/50  l_ce=0.2164  l_kin=0.0000  [8s]
+  cross_seed3 seed=3 ep=  2/50  l_ce=0.0051  l_kin=0.0000  [15s]
+  cross_seed3 seed=3 ep=  3/50  l_ce=0.0018  l_kin=0.0000  [23s]
+  cross_seed3 seed=3 ep= 10/50  l_ce=0.0004  l_kin=0.0000  [78s]
+  cross_seed3 seed=3 ep= 20/50  l_ce=0.0001  l_kin=0.0000  [156s]
+  cross_seed3 seed=3 ep= 30/50  l_ce=0.0001  l_kin=0.0000  [234s]
+  cross_seed3 seed=3 ep= 40/50  l_ce=0.0001  l_kin=0.0000  [312s]
+  cross_seed3 seed=3 ep= 50/50  l_ce=0.0001  l_kin=0.0000  [390s]
+  cross_seed3 seed=3 FINAL (fixed-epoch, test evaluated once)  recall=[1.000,0.167]  macro_recall=0.5837  macro_f1=0.5576
+  → saved <REPO_ROOT>/out_r6/A_m2_H_HV/seed_3.json
+
+============================================================
+Seed 4
+  cross_seed4 seed=4 ep=  1/50  l_ce=0.1966  l_kin=0.0000  [8s]
+  cross_seed4 seed=4 ep=  2/50  l_ce=0.0036  l_kin=0.0000  [16s]
+  cross_seed4 seed=4 ep=  3/50  l_ce=0.0020  l_kin=0.0000  [23s]
+  cross_seed4 seed=4 ep= 10/50  l_ce=0.0004  l_kin=0.0000  [78s]
+  cross_seed4 seed=4 ep= 20/50  l_ce=0.0001  l_kin=0.0000  [156s]
+  cross_seed4 seed=4 ep= 30/50  l_ce=0.0001  l_kin=0.0000  [234s]
+  cross_seed4 seed=4 ep= 40/50  l_ce=0.0001  l_kin=0.0000  [312s]
+  cross_seed4 seed=4 ep= 50/50  l_ce=0.0001  l_kin=0.0000  [390s]
+  cross_seed4 seed=4 FINAL (fixed-epoch, test evaluated once)  recall=[1.000,0.573]  macro_recall=0.7864  macro_f1=0.8162
+  → saved <REPO_ROOT>/out_r6/A_m2_H_HV/seed_4.json
+
+============================================================
+CROSS-CONDITION RESULTS: macro_F1 = 75.08±12.60%
+                         macro_recall = 73.55±10.40%
+Per-seed F1:  ['69.57', '80.94', '87.50', '55.76', '81.62']
+Summary saved to <REPO_ROOT>/out_r6/A_m2_H_HV/summary.json

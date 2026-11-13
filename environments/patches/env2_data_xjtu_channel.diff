@@ -1,6 +1,6 @@
 --- a/bearmamba3/data_xjtu.py
 +++ b/bearmamba3/data_xjtu.py
-@@ -244,6 +244,7 @@
+@@ -251,6 +251,7 @@
          window_size: int = WINDOW_SIZE,
          kurtosis_threshold: float = 5.0,
          stride: Optional[int] = None,
@@ -8,9 +8,9 @@
      ) -> None:
          super().__init__()
          if n_sensors not in (1, 2):
-@@ -267,7 +268,7 @@
-         self._labels:  List[int] = []
-         self._rpms:    List[float] = []
+@@ -276,7 +277,7 @@
+         self._bearing: List[str] = []   # round 6: bearing name per window
+         self._file:    List[int] = []   # round 6: index of the source file within the bearing's run
  
 -        usecols = 0 if n_sensors == 1 else [0, 1]
 +        usecols = channel if n_sensors == 1 else [0, 1]   # channel: 0=horizontal, 1=vertical (single-sensor only)

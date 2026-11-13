@@ -1,6 +1,9 @@
 """Round-3 analysis (pre-registered contrasts, prereg_mst_round3.md). Reads result files only."""
 import json, glob, os, numpy as np
 from scipy import stats
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '../../scripts/stats_exact'))
+from exact_wilcoxon import wilcoxon as exact_wilcoxon  # zero differences dropped, mid-ranks, full sign enumeration (2026-11-13)
 import os
 ROOT=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 R=os.path.join(ROOT,'results','env2')+'/'; O=os.path.dirname(os.path.abspath(__file__))+'/'
@@ -18,7 +21,7 @@ def pb(d):
 def paired(a,b,seeds):
     d=np.array([a[s]-b[s] for s in seeds]); n=len(d)
     ci=np.percentile([rng.choice(d,n).mean() for _ in range(20000)],[2.5,97.5])
-    p=stats.wilcoxon(d,method='exact').pvalue if np.any(d!=0) and n>=5 else float('nan')
+    p=exact_wilcoxon(d,method='exact').pvalue if np.any(d!=0) and n>=5 else float('nan')
     return d.mean(),ci,p,(d>0).sum(),(d<0).sum(),d
 def fmt(r): m,ci,p,np_,nn,_=r; return f'{m:+.2f} [{ci[0]:+.2f}, {ci[1]:+.2f}] p={p:.4f} +{np_}/-{nn}'
 def ms(o,S): v=np.array([o[s] for s in S]); return f'{v.mean():.2f}±{v.std(ddof=1):.2f}'
@@ -88,7 +91,7 @@ for snr in [-4,-6,-8]:
     if all(os.path.exists(O+f'done_e4_bm3_{a}_snr{snr}') for a in ['DE','DEFE']):
         if snr==-4: P('## E4 CWRU Mamba-3, environment 2, seeds 0-4 (accuracy at validation-selected epoch)')
         DE,DF,FE=cw(O+f'e4_bm3_DE_snr{snr}'),cw(O+f'e4_bm3_DEFE_snr{snr}'),cw(R+f'cwru/bm3_FE_snr{snr}'); S=sorted(set(DE)&set(DF)&set(FE))
-        r=paired(DF,DE,S); p1=stats.wilcoxon(r[5],alternative='greater',method='exact').pvalue
+        r=paired(DF,DE,S); p1=exact_wilcoxon(r[5],alternative='greater',method='exact').pvalue
         P(f'  {snr} dB  FE {ms(FE,S)}  DE {ms(DE,S)}  DE+FE {ms(DF,S)} | DE+FE-DE {fmt(r)} one-sided p={p1:.4f} | FE-DE {fmt(paired(FE,DE,S))}')
 for snr in [-6,-8]:
     names=[f'e5_bm3_DEFE_snr{snr}_rho{r}' for r in (0.5,0.9)]

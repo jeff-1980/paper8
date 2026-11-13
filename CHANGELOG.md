@@ -1,5 +1,28 @@
 # Changelog
 
+## mst-v4 (2026-11-13) — manuscript rewritten after MST-140500 (reject, rewrite and resubmit)
+
+Added
+* `results/mst_round6_20261106/`: round 6 (123 training configurations + 6 evaluation-only jobs; per-seed JSON,
+  per-window evaluation outputs `r6eval/*.npz`, per-bearing summaries, gate statistics, configurations
+  `cfg_r6/`, queue and runner, envelope-spectrum check `envelope/`). Model checkpoints are not included.
+* `protocols/prereg_mst_round6.md` (committed before any round-6 run, with deviation 1 and its correction).
+* Round-6 code (all opt-in, defaults reproduce mst-v3): `BM_DETERMINISTIC` switch in the three trainers;
+  per-bearing training counts (`train_counts`, `resample_per_bearing`); fixed-gate evaluation for gated fusion;
+  CWRU delayed common noise (`awgn_corrR_dD`), sum/difference input (`combine`), noise realisation number;
+  evaluation scripts `scripts/extra/eval_r6_xjtu.py`, `eval_r6_cwru.py`.
+* `analysis/`: `an_r6.py` (pre-specified analysis), `p7_detail.py`, `gen_r6_tex.py`, `make_r6_figs.py`,
+  `gate_stats_r6.py`, `fig2_forest_data_r6.csv`, generated tables `r6_tex/` and results `an_r6_results.*`.
+* `environments/ENV2_ROUND6.md`, `environments/env2_round6_pip_freeze.txt`.
+
+Fixed
+* Exact Wilcoxon signed-rank p values: `scipy.stats.wilcoxon(method='exact')` is not exact with zero
+  differences or ties. New `scripts/stats_exact/exact_wilcoxon.py` (zeros dropped, mid-ranks after rounding to
+  1e-9, full sign enumeration) is used by `an_r3.py`, `an_r4.py` and `an_r6.py`. Rechecking all their tests and
+  `aggregate/aggregate_main.py` (which already enumerated exactly) changed one value: round 4, CWRU Mamba-3
+  DE+FE minus DE at -4 dB, one-sided p 0.1875 -> 0.25 (`an_r4_results.json` regenerated). Values in
+  `archive/` were not rechecked.
+
 ## mst-v3 (2026-10-07) — fifth manuscript draft
 
 Fixed

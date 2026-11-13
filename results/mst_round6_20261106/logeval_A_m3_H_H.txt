@@ -1,0 +1,8 @@
+A_m3_H_H seed0 H own F1 0.5414 (rec 0.5413976181576841) common F1 0.4850 
+A_m3_H_H seed1 H own F1 0.7644 (rec 0.7644487147206163) common F1 0.7226 
+A_m3_H_H seed2 H own F1 0.6193 (rec 0.619264152324751) common F1 0.5667 
+A_m3_H_H seed3 H own F1 0.6604 (rec 0.6604091668655749) common F1 0.6103 
+A_m3_H_H seed4 H own F1 0.5321 (rec 0.5321302372883002) common F1 0.4754 
+A_m3_H_H seed5 H own F1 0.4709 (rec 0.4708578063424348) common F1 0.4119 
+A_m3_H_H seed6 H own F1 0.7389 (rec 0.7389472608509107) common F1 0.6948 
+A_m3_H_H seed7 H own F1 0.4439 (rec 0.44390926345470566) common F1 0.3840 

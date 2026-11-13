@@ -1,0 +1,8 @@
+E_cnn_gated seed0 H own F1 0.4376 (rec 0.437552105435532) common F1 0.3775 fixed-gate F1 0.4004
+E_cnn_gated seed1 H own F1 0.4410 (rec 0.44102828474482514) common F1 0.3811 fixed-gate F1 0.4004
+E_cnn_gated seed2 H own F1 0.8768 (rec 0.8768210202371814) common F1 0.8493 fixed-gate F1 0.4004
+E_cnn_gated seed3 H own F1 0.4433 (rec 0.44333421303721143) common F1 0.3834 fixed-gate F1 0.4305
+E_cnn_gated seed4 H own F1 0.4252 (rec 0.4252192163744157) common F1 0.3648 fixed-gate F1 0.4090
+E_cnn_gated seed5 H own F1 0.8588 (rec 0.8588426868275663) common F1 0.8285 fixed-gate F1 0.4004
+E_cnn_gated seed6 H own F1 0.6410 (rec 0.6410378009917321) common F1 0.5897 fixed-gate F1 0.4041
+E_cnn_gated seed7 H own F1 0.8242 (rec 0.8242165563586803) common F1 0.7891 fixed-gate F1 0.4004

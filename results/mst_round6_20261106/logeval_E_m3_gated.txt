@@ -1,0 +1,8 @@
+E_m3_gated seed0 H own F1 0.7845 (rec 0.7845006483488396) common F1 0.7447 fixed-gate F1 0.7839
+E_m3_gated seed1 H own F1 0.9423 (rec 0.9423079971264441) common F1 0.9273 fixed-gate F1 0.9428
+E_m3_gated seed2 H own F1 0.9596 (rec 0.9595904361036267) common F1 0.9486 fixed-gate F1 0.9616
+E_m3_gated seed3 H own F1 0.9481 (rec 0.9481199713782097) common F1 0.9344 fixed-gate F1 0.9488
+E_m3_gated seed4 H own F1 0.8499 (rec 0.849908107611677) common F1 0.8183 fixed-gate F1 0.8518
+E_m3_gated seed5 H own F1 0.9404 (rec 0.9403671464179648) common F1 0.9270 fixed-gate F1 0.9347
+E_m3_gated seed6 H own F1 0.9630 (rec 0.9629931095619938) common F1 0.9529 fixed-gate F1 0.9630
+E_m3_gated seed7 H own F1 0.8729 (rec 0.8729035357178208) common F1 0.8447 fixed-gate F1 0.8518

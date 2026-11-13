@@ -1,0 +1,41 @@
+{
+  "config": "G_DEFE_rho0.9_rep.yaml",
+  "backbone": "mamba3",
+  "lambda_kin": 0.0,
+  "noise_snr_db": -8.0,
+  "noise_type": "awgn_corr0.9",
+  "label_mode": "4class",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "test_accs_at_best_val": [
+    0.9863636363636363,
+    0.9666666666666667,
+    0.9757575757575757,
+    0.9636363636363636,
+    0.9772727272727273
+  ],
+  "mean_test_acc": 0.973939393939394,
+  "std_test_acc": 0.009052951058357357,
+  "best_val_accs": [
+    0.9878048780487805,
+    0.9719512195121951,
+    0.9817073170731707,
+    0.9658536585365853,
+    0.9792682926829268
+  ],
+  "protocol": "leakfree_v2 (train/val/test time-axis split, guard-gapped, per-file; per-epoch checkpoints + source snapshot, see checkpoints/ and source_snapshot/)",
+  "disjointness_pass": true,
+  "disjointness_check_file": "<REPO_ROOT>/out_r6/G_DEFE_rho0.9_rep/disjointness_check.json",
+  "source_snapshot_dir": "<REPO_ROOT>/out_r6/G_DEFE_rho0.9_rep/source_snapshot",
+  "source_snapshot_files": [
+    "<REPO_ROOT>/experiments/exp01_cwru_baseline/train_leakfree.py",
+    "<REPO_ROOT>/bearmamba3/data_cwru_leakfree.py",
+    "<REPO_ROOT>/bearmamba3/data_cwru.py",
+    "<REPO_ROOT>/cfg_r6/G_DEFE_rho0.9_rep.yaml"
+  ]
+}

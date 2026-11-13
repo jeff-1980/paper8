@@ -1,0 +1,5 @@
+r4_DEFE_rho0_snr-6 0 rec 0.9318 same 0.9318 -> awgn_corr0.9 r0: 0.6636
+r4_DEFE_rho0_snr-6 1 rec 0.9561 same 0.9561 -> awgn_corr0.9 r0: 0.5485
+r4_DEFE_rho0_snr-6 2 rec 0.9364 same 0.9364 -> awgn_corr0.9 r0: 0.3545
+r4_DEFE_rho0_snr-6 3 rec 0.9455 same 0.9455 -> awgn_corr0.9 r0: 0.4030
+r4_DEFE_rho0_snr-6 4 rec 0.9167 same 0.9167 -> awgn_corr0.9 r0: 0.5182

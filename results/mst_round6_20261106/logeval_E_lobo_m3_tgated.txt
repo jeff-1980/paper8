@@ -1,0 +1,10 @@
+E_lobo_m3_tgated fold0_seed0 H own F1 0.4793 (rec [0.9206349206349206, 0.0]) common F1 0.4744 fixed-gate F1 0.4840
+E_lobo_m3_tgated fold0_seed1 H own F1 0.4630 (rec [0.8621031746031746, 0.0]) common F1 0.4585 fixed-gate F1 0.4805
+E_lobo_m3_tgated fold0_seed2 H own F1 0.4685 (rec [0.8814484126984127, 0.0]) common F1 0.4589 fixed-gate F1 0.4641
+E_lobo_m3_tgated fold0_seed3 H own F1 0.4755 (rec [0.9067460317460317, 0.0]) common F1 0.4678 fixed-gate F1 0.4749
+E_lobo_m3_tgated fold0_seed4 H own F1 0.4563 (rec [0.8392857142857143, 0.0]) common F1 0.4441 fixed-gate F1 0.4611
+E_lobo_m3_tgated fold3_seed0 H own F1 0.1334 (rec [0.1538978494623656, 0.0]) common F1 0.0432 fixed-gate F1 0.1354
+E_lobo_m3_tgated fold3_seed1 H own F1 0.0659 (rec [0.07056451612903226, 0.0]) common F1 0.0368 fixed-gate F1 0.2443
+E_lobo_m3_tgated fold3_seed2 H own F1 0.4412 (rec [0.7896505376344086, 0.0]) common F1 0.3975 fixed-gate F1 0.4219
+E_lobo_m3_tgated fold3_seed3 H own F1 0.0764 (rec [0.08266129032258064, 0.0]) common F1 0.0035 fixed-gate F1 0.0558
+E_lobo_m3_tgated fold3_seed4 H own F1 0.1084 (rec [0.12163978494623656, 0.0]) common F1 0.0069 fixed-gate F1 0.2941

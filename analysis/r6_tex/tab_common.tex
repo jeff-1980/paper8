@@ -1,0 +1,42 @@
+\begin{table}[t]
+\caption{\label{tab:common}CWRU, Mamba-3, $-8$~dB, corrected noise
+implementation, round~6, seeds 0--4: controls for the correlated-noise gain.
+Accuracy (\%), mean $\pm$ SD, and seed-paired differences from the DE-only
+system (pp) with bootstrap 95\% interval and positive/negative seed counts;
+SUM and DIFF are single-channel inputs formed from the two $z$-scored noisy
+channels. Panel~D: accuracy on the training $\rho$ minus accuracy on the other
+$\rho$ for the same checkpoints. With five seeds the smallest two-sided exact
+$p$ is $0.0625$.}
+\footnotesize\centering
+\adjustbox{max width=\linewidth}{%
+\begin{tabular}{@{}lccc}
+\br
+Input & $\rho$ & Accuracy & $-$ DE only \\
+\mr
+\multicolumn{4}{@{}l}{A. Input to the learner} \\
+\mr
+DE only & & $84.2\pm1.7$ & --- \\
+DE+FE (two channels) & $0$ & $88.2\pm0.9$ & \stk{$+4.0$ (5/0)}{[$+2.3$, $+5.8$]} \\
+ & $0.9$ & $97.4\pm0.9$ & \stk{$+13.2$ (5/0)}{[$+11.7$, $+15.1$]} \\
+SUM $=(x_\mathrm{DE}+x_\mathrm{FE})/\sqrt2$ & $0$ & $78.7\pm1.1$ & \stk{$-5.5$ (0/5)}{[$-6.5$, $-4.2$]} \\
+ & $0.9$ & $65.2\pm1.6$ & \stk{$-19.0$ (0/5)}{[$-20.0$, $-17.9$]} \\
+DIFF $=(x_\mathrm{DE}-x_\mathrm{FE})/\sqrt2$ & $0$ & $73.5\pm1.0$ & \stk{$-10.7$ (0/5)}{[$-11.9$, $-9.2$]} \\
+ & $0.9$ & $99.4\pm0.2$ & \stk{$+15.3$ (5/0)}{[$+13.9$, $+16.8$]} \\
+\mr
+\multicolumn{4}{@{}l}{B. Common component delayed in the fan-end channel ($\rho=0.9$)} \\
+\mr
+delay 4 samples & $0.9$ & $94.6\pm0.9$ & \stk{$+10.4$ (5/0)}{[$+8.5$, $+12.5$]} \\
+delay 64 samples & $0.9$ & $89.0\pm0.2$ & \stk{$+4.8$ (5/0)}{[$+3.5$, $+6.3$]} \\
+\mr
+\multicolumn{4}{@{}l}{C. Other noise realisations (gain DE+FE $-$ DE)} \\
+\mr
+realisation 1 & $0$ / $0.9$ & & \stk{$+3.7$ (5/0)}{[$+2.1$, $+5.6$]} / \stk{$+12.1$ (5/0)}{[$+10.8$, $+13.4$]} \\
+realisation 2 & $0$ / $0.9$ & & \stk{$+2.1$ (4/1)}{[$+0.8$, $+3.5$]} / \stk{$+11.3$ (5/0)}{[$+9.4$, $+13.4$]} \\
+\mr
+\multicolumn{4}{@{}l}{D. Trained at one $\rho$, tested at the other (DE+FE; accuracy drop, pp)} \\
+\mr
+trained $\rho=0.9$, tested $\rho=0$ & & & \stk{$+61.1$ (5/0)}{[$+57.2$, $+63.5$]} \\
+trained $\rho=0$, tested $\rho=0.9$ & & & \stk{$+47.4$ (5/0)}{[$+39.1$, $+53.9$]} \\
+\br
+\end{tabular}}
+\end{table}

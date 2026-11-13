@@ -32,6 +32,8 @@ class GatedFusionEmbed(nn.Module):
         hs = [b(x[:, c:c + 1].to(b.weight.dtype)) for c, b in enumerate(self.branches)]   # each (B, d, L)
         stats = [torch.cat([F.gelu(h).mean(-1), h.std(-1)], dim=1) for h in hs]
         g = torch.softmax(self.gate(torch.cat(stats, dim=1).float()), dim=-1)          # (B, C)
+        if getattr(self, 'fixed_gate', None) is not None:     # round 6 ablation: constant gate (C,)
+            g = self.fixed_gate.to(g.device, g.dtype).expand_as(g)
         self.last_gates = g.detach()
         h = sum(g[:, c, None, None].to(hs[c].dtype) * hs[c] for c in range(len(hs)))
         return h
@@ -64,6 +66,8 @@ class TokenGatedFusionEmbed(nn.Module):
         hs = [b(x[:, c:c + 1].to(b.weight.dtype)) for c, b in enumerate(self.branches)]   # (B, d, L)
         z = torch.cat([h.transpose(1, 2) for h in hs], dim=-1).float()                   # (B, L, C*d)
         g = torch.softmax(self.gate(z), dim=-1)                                            # (B, L, C)
+        if getattr(self, 'fixed_gate', None) is not None:     # round 6 ablation: constant gate (C,)
+            g = self.fixed_gate.to(g.device, g.dtype).expand_as(g)
         self.last_token_gates = g.detach(); self.last_gates = g.detach().mean(1)
         return sum(g[..., c].unsqueeze(1).to(hs[c].dtype) * hs[c] for c in range(len(hs)))
 

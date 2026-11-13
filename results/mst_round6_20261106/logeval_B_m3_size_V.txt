@@ -1,0 +1,5 @@
+B_m3_size_V seed0 last15 own F1 0.3838 (rec 0.3838361170230183) common F1 0.5939 
+B_m3_size_V seed1 last15 own F1 0.3769 (rec 0.3769065253665967) common F1 0.5770 
+B_m3_size_V seed2 last15 own F1 0.3875 (rec 0.38750235336032846) common F1 0.6007 
+B_m3_size_V seed3 last15 own F1 0.3772 (rec 0.3771588473198512) common F1 0.5771 
+B_m3_size_V seed4 last15 own F1 0.3751 (rec 0.37507177837910255) common F1 0.5713 

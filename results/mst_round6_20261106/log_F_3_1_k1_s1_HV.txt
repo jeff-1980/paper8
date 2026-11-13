@@ -1,0 +1,39 @@
+Device: cuda  mode=cross  backbone=mamba3  lambda_kin=0.0  fs_eff=12800.0  seeds=[0, 1]  epochs=50
+[leakfree-xjtu] source snapshot: 3 files -> <REPO_ROOT>/out_r6/F_3_1_k1_s1_HV/source_snapshot
+Cross-condition: 37.5Hz11kN → 40Hz10kN
+Train: ['Bearing2_1', 'Bearing2_2', 'Bearing3_3', 'Bearing3_4']
+Test:  ['Bearing3_1']
+Resampled training set: {np.str_('Bearing2_1'): np.int64(320), np.str_('Bearing2_2'): np.int64(1200), np.str_('Bearing3_3'): np.int64(320), np.str_('Bearing3_4'): np.int64(320)}
+Train class counts: OR=1200, IR=960, ratio=1.2:1
+
+============================================================
+Seed 0
+  cross_seed0 seed=0 ep=  1/50  l_ce=0.1839  l_kin=0.0000  [30s]
+  cross_seed0 seed=0 ep=  2/50  l_ce=0.0106  l_kin=0.0000  [33s]
+  cross_seed0 seed=0 ep=  3/50  l_ce=0.0036  l_kin=0.0000  [34s]
+  cross_seed0 seed=0 ep= 10/50  l_ce=0.0007  l_kin=0.0000  [48s]
+  cross_seed0 seed=0 ep= 20/50  l_ce=0.0002  l_kin=0.0000  [67s]
+  cross_seed0 seed=0 ep= 30/50  l_ce=0.0002  l_kin=0.0000  [86s]
+  cross_seed0 seed=0 ep= 40/50  l_ce=0.0001  l_kin=0.0000  [106s]
+  cross_seed0 seed=0 ep= 50/50  l_ce=0.0001  l_kin=0.0000  [124s]
+  cross_seed0 seed=0 FINAL (fixed-epoch, test evaluated once)  recall=[0.163,0.000]  macro_recall=0.0813  macro_f1=0.1399
+  → saved <REPO_ROOT>/out_r6/F_3_1_k1_s1_HV/seed_0.json
+
+============================================================
+Seed 1
+  cross_seed1 seed=1 ep=  1/50  l_ce=0.2143  l_kin=0.0000  [2s]
+  cross_seed1 seed=1 ep=  2/50  l_ce=0.0367  l_kin=0.0000  [4s]
+  cross_seed1 seed=1 ep=  3/50  l_ce=0.0054  l_kin=0.0000  [6s]
+  cross_seed1 seed=1 ep= 10/50  l_ce=0.0007  l_kin=0.0000  [20s]
+  cross_seed1 seed=1 ep= 20/50  l_ce=0.0003  l_kin=0.0000  [38s]
+  cross_seed1 seed=1 ep= 30/50  l_ce=0.0002  l_kin=0.0000  [58s]
+  cross_seed1 seed=1 ep= 40/50  l_ce=0.0002  l_kin=0.0000  [78s]
+  cross_seed1 seed=1 ep= 50/50  l_ce=0.0001  l_kin=0.0000  [96s]
+  cross_seed1 seed=1 FINAL (fixed-epoch, test evaluated once)  recall=[0.427,0.000]  macro_recall=0.2133  macro_f1=0.2990
+  → saved <REPO_ROOT>/out_r6/F_3_1_k1_s1_HV/seed_1.json
+
+============================================================
+CROSS-CONDITION RESULTS: macro_F1 = 21.95±11.25%
+                         macro_recall = 14.73±9.33%
+Per-seed F1:  ['13.99', '29.90']
+Summary saved to <REPO_ROOT>/out_r6/F_3_1_k1_s1_HV/summary.json

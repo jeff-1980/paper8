@@ -1,0 +1,48 @@
+\begin{table}[htbp]
+\caption{\label{tab:S_r6_bearing}Round~6, XJTU-SY condition~2$\to$3: accuracy (\%) on
+each test bearing (own-rule test set, mean over seeds; true class OR for 3\_1
+and 3\_5, IR for 3\_3 and 3\_4), macro-recall (\%) and macro-F1 on the common
+test set (\%).}
+\footnotesize
+\begin{tabular}{@{}lllcccccc}
+\br
+Learner & Onset rule & Input & 3\_1 & 3\_3 & 3\_4 & 3\_5 & macro-recall & macro-F1 (common) \\
+\mr
+Mamba-3 & H channel (main) & H & 100 & 35 & 19 & 100 & 61.6 & 54.4 \\
+Mamba-3 & H channel (main) & V & 98 & 23 & 100 & 75 & 83.5 & 88.6 \\
+Mamba-3 & H channel (main) & H+V & 100 & 93 & 74 & 100 & 89.5 & 89.4 \\
+\mr
+Mamba-3 & V channel & H & 100 & 40 & 18 & 100 & 62.3 & 56.1 \\
+Mamba-3 & V channel & V & 99 & 44 & 100 & 85 & 87.8 & 92.3 \\
+Mamba-3 & V channel & H+V & 100 & 91 & 84 & 100 & 92.7 & 93.0 \\
+\mr
+Mamba-3 & last 15\% of life & H & 75 & 63 & 14 & 100 & 49.6 & 65.4 \\
+Mamba-3 & last 15\% of life & V & 4 & 100 & 100 & 100 & 54.1 & 58.2 \\
+Mamba-3 & last 15\% of life & H+V & 16 & 99 & 98 & 97 & 59.1 & 77.8 \\
+\mr
+1D-CNN & H channel (main) & H & 100 & 1 & 0 & 100 & 50.1 & 34.1 \\
+1D-CNN & H channel (main) & V & 100 & 0 & 100 & 100 & 86.2 & 86.3 \\
+1D-CNN & H channel (main) & H+V & 100 & 0 & 7 & 100 & 52.7 & 39.6 \\
+\mr
+1D-CNN & V channel & H & 100 & 9 & 0 & 100 & 51.3 & 35.4 \\
+1D-CNN & V channel & V & 100 & 0 & 100 & 100 & 85.4 & 86.2 \\
+1D-CNN & V channel & H+V & 100 & 1 & 15 & 100 & 55.3 & 44.1 \\
+\mr
+1D-CNN & last 15\% of life & H & 96 & 64 & 2 & 100 & 55.1 & 45.7 \\
+1D-CNN & last 15\% of life & V & 93 & 8 & 100 & 100 & 87.8 & 86.7 \\
+1D-CNN & last 15\% of life & H+V & 100 & 82 & 84 & 100 & 91.6 & 82.1 \\
+\mr
+Mamba-2 & H channel (main) & H & 100 & 14 & 0 & 100 & 51.9 & 38.0 \\
+Mamba-2 & H channel (main) & V & 100 & 0 & 100 & 99 & 86.1 & 86.3 \\
+Mamba-2 & H channel (main) & H+V & 100 & 74 & 37 & 100 & 73.5 & 71.0 \\
+\mr
+Mamba-2 & V channel & H & 100 & 22 & 0 & 100 & 53.4 & 41.0 \\
+Mamba-2 & V channel & V & 100 & 0 & 100 & 99 & 85.3 & 86.3 \\
+Mamba-2 & V channel & H+V & 100 & 78 & 44 & 100 & 77.1 & 75.6 \\
+\mr
+Mamba-2 & last 15\% of life & H & 45 & 49 & 1 & 100 & 29.1 & 53.6 \\
+Mamba-2 & last 15\% of life & V & 38 & 28 & 100 & 100 & 63.5 & 73.6 \\
+Mamba-2 & last 15\% of life & H+V & 19 & 96 & 81 & 100 & 53.3 & 70.6 \\
+\br
+\end{tabular}
+\end{table}

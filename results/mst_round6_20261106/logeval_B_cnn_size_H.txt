@@ -1,0 +1,8 @@
+B_cnn_size_H seed0 last15 own F1 0.4763 (rec 0.47625572595560595) common F1 0.4056 
+B_cnn_size_H seed1 last15 own F1 0.5149 (rec 0.5149450661932937) common F1 0.4850 
+B_cnn_size_H seed2 last15 own F1 0.4841 (rec 0.4840785303181575) common F1 0.4744 
+B_cnn_size_H seed3 last15 own F1 0.4717 (rec 0.4716792296747827) common F1 0.4073 
+B_cnn_size_H seed4 last15 own F1 0.4816 (rec 0.4816012001162717) common F1 0.4450 
+B_cnn_size_H seed5 last15 own F1 0.4975 (rec 0.49752404535470895) common F1 0.4281 
+B_cnn_size_H seed6 last15 own F1 0.5303 (rec 0.5302785110816) common F1 0.5054 
+B_cnn_size_H seed7 last15 own F1 0.5418 (rec 0.5417789735501963) common F1 0.5068 

@@ -1,0 +1,70 @@
+[leakfree] Device: cuda  backbone=mamba3  lambda_kin=0.0  snr=-8.0dB  noise_type=awgn_corr0.9  seeds=[0, 1, 2, 3, 4]  epochs=50
+[leakfree] source snapshot: 4 files -> <REPO_ROOT>/out_r6/D4_DEFE_rho0.9_r2/source_snapshot
+[leakfree] split sizes (raw windows, pre-shuffle): train=4104 val=820 test=660
+[leakfree] disjointness check: PASS (40 files, guard=2048)
+
+============================================================
+Seed 0
+  seed=0 epoch=  1/50  l_ce=1.0263  l_kin=0.0000  val_acc=0.6463  [33s]
+  seed=0 epoch=  2/50  l_ce=0.7050  l_kin=0.0000  val_acc=0.7451  [38s]
+  seed=0 epoch=  3/50  l_ce=0.6002  l_kin=0.0000  val_acc=0.8195  [42s]
+  seed=0 epoch= 10/50  l_ce=0.1901  l_kin=0.0000  val_acc=0.9585  [73s]
+  seed=0 epoch= 20/50  l_ce=0.0193  l_kin=0.0000  val_acc=0.9793  [118s]
+  seed=0 epoch= 30/50  l_ce=0.0047  l_kin=0.0000  val_acc=0.9817  [162s]
+  seed=0 epoch= 40/50  l_ce=0.0027  l_kin=0.0000  val_acc=0.9829  [206s]
+  seed=0 epoch= 50/50  l_ce=0.0025  l_kin=0.0000  val_acc=0.9829  [250s]
+  → saved <REPO_ROOT>/out_r6/D4_DEFE_rho0.9_r2/seed_0.json
+
+============================================================
+Seed 1
+  seed=1 epoch=  1/50  l_ce=1.0206  l_kin=0.0000  val_acc=0.5854  [4s]
+  seed=1 epoch=  2/50  l_ce=0.7417  l_kin=0.0000  val_acc=0.7463  [9s]
+  seed=1 epoch=  3/50  l_ce=0.6236  l_kin=0.0000  val_acc=0.7866  [13s]
+  seed=1 epoch= 10/50  l_ce=0.2158  l_kin=0.0000  val_acc=0.9183  [44s]
+  seed=1 epoch= 20/50  l_ce=0.0844  l_kin=0.0000  val_acc=0.9573  [88s]
+  seed=1 epoch= 30/50  l_ce=0.0300  l_kin=0.0000  val_acc=0.9707  [133s]
+  seed=1 epoch= 40/50  l_ce=0.0175  l_kin=0.0000  val_acc=0.9756  [177s]
+  seed=1 epoch= 50/50  l_ce=0.0162  l_kin=0.0000  val_acc=0.9780  [221s]
+  → saved <REPO_ROOT>/out_r6/D4_DEFE_rho0.9_r2/seed_1.json
+
+============================================================
+Seed 2
+  seed=2 epoch=  1/50  l_ce=0.9229  l_kin=0.0000  val_acc=0.6622  [4s]
+  seed=2 epoch=  2/50  l_ce=0.6481  l_kin=0.0000  val_acc=0.7756  [10s]
+  seed=2 epoch=  3/50  l_ce=0.4907  l_kin=0.0000  val_acc=0.8305  [14s]
+  seed=2 epoch= 10/50  l_ce=0.1845  l_kin=0.0000  val_acc=0.9293  [45s]
+  seed=2 epoch= 20/50  l_ce=0.1068  l_kin=0.0000  val_acc=0.9390  [89s]
+  seed=2 epoch= 30/50  l_ce=0.0448  l_kin=0.0000  val_acc=0.9695  [133s]
+  seed=2 epoch= 40/50  l_ce=0.0365  l_kin=0.0000  val_acc=0.9707  [178s]
+  seed=2 epoch= 50/50  l_ce=0.0332  l_kin=0.0000  val_acc=0.9707  [221s]
+  → saved <REPO_ROOT>/out_r6/D4_DEFE_rho0.9_r2/seed_2.json
+
+============================================================
+Seed 3
+  seed=3 epoch=  1/50  l_ce=0.9773  l_kin=0.0000  val_acc=0.6183  [5s]
+  seed=3 epoch=  2/50  l_ce=0.7015  l_kin=0.0000  val_acc=0.6988  [9s]
+  seed=3 epoch=  3/50  l_ce=0.6379  l_kin=0.0000  val_acc=0.7171  [13s]
+  seed=3 epoch= 10/50  l_ce=0.2679  l_kin=0.0000  val_acc=0.9049  [45s]
+  seed=3 epoch= 20/50  l_ce=0.1595  l_kin=0.0000  val_acc=0.9305  [89s]
+  seed=3 epoch= 30/50  l_ce=0.0763  l_kin=0.0000  val_acc=0.9439  [134s]
+  seed=3 epoch= 40/50  l_ce=0.0586  l_kin=0.0000  val_acc=0.9549  [178s]
+  seed=3 epoch= 50/50  l_ce=0.0534  l_kin=0.0000  val_acc=0.9537  [223s]
+  → saved <REPO_ROOT>/out_r6/D4_DEFE_rho0.9_r2/seed_3.json
+
+============================================================
+Seed 4
+  seed=4 epoch=  1/50  l_ce=0.9652  l_kin=0.0000  val_acc=0.5561  [4s]
+  seed=4 epoch=  2/50  l_ce=0.7134  l_kin=0.0000  val_acc=0.6439  [9s]
+  seed=4 epoch=  3/50  l_ce=0.5792  l_kin=0.0000  val_acc=0.7256  [13s]
+  seed=4 epoch= 10/50  l_ce=0.2983  l_kin=0.0000  val_acc=0.9122  [44s]
+  seed=4 epoch= 20/50  l_ce=0.0976  l_kin=0.0000  val_acc=0.9293  [88s]
+  seed=4 epoch= 30/50  l_ce=0.0525  l_kin=0.0000  val_acc=0.9585  [133s]
+  seed=4 epoch= 40/50  l_ce=0.0360  l_kin=0.0000  val_acc=0.9537  [177s]
+  seed=4 epoch= 50/50  l_ce=0.0334  l_kin=0.0000  val_acc=0.9598  [221s]
+  → saved <REPO_ROOT>/out_r6/D4_DEFE_rho0.9_r2/seed_4.json
+
+============================================================
+RESULTS (test, leak-free): mean±std = 97.24±1.21%
+Per-seed test: ['98.18', '97.88', '98.18', '95.45', '96.52']
+(for reference) per-seed best_val: ['98.41', '97.93', '97.56', '95.73', '96.34']
+Summary saved to <REPO_ROOT>/out_r6/D4_DEFE_rho0.9_r2/summary.json
