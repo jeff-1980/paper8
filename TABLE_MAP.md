@@ -28,6 +28,9 @@
 > ```bash
 > python analysis/an_r6.py && python analysis/p7_detail.py && python analysis/gen_r6_tex.py && python analysis/make_r6_figs.py
 > ```
+> P7 sensitivity (main text section 4.6): `python analysis/holm_strat.py` recomputes the Holm adjustment with the
+> test-bearing-stratified P7 p of `p7_detail.json` (added in mst-v4.1).
+>
 > Exact Wilcoxon p values (all rounds 3, 4 and 6) use `scripts/stats_exact/exact_wilcoxon.py`: zero
 > differences dropped, mid-ranks for ties after rounding differences to 1e-9, full sign enumeration.
 >

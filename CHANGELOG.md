@@ -1,5 +1,12 @@
 # Changelog
 
+## mst-v4.1 (2026-11-13)
+
+Added
+* `analysis/holm_strat.py`, `analysis/holm_strat.json`: Holm adjustment of the seven primary contrasts with the
+  test-bearing-stratified exact permutation p for P7 (sensitivity analysis reported in the manuscript). No other
+  file changed; all mst-v4 outputs are unchanged.
+
 ## mst-v4 (2026-11-13) — manuscript rewritten after MST-140500 (reject, rewrite and resubmit)
 
 Added
